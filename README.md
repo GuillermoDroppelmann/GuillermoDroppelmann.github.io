@@ -14,8 +14,7 @@ Tu repositorio ya existe: https://github.com/GuillermoDroppelmann/GuillermoDropp
 ## Antes o después de publicar
 
 - **Tu foto:** guarda una foto profesional (cuadrada, ideal 400×400 px) como `images/profile.jpg`. Mientras no exista, se muestra un círculo con tus iniciales.
-- **LinkedIn:** el link actual es `https://www.linkedin.com/in/guillermo-droppelmann`. Si tu URL de LinkedIn es distinta, edita `index.html` (y el sidebar aparece en todas las páginas — se genera desde el mismo archivo, busca "linkedin" en cada .html y reemplaza).
-- **Email:** verifica que `guillermo.droppelmann@meds.cl` sea correcto (en tu CV aparecía "mesds.cl", asumí que era un error de tipeo).
+- **Email:** verifica que `guillermo.droppelmann@meds.cl` sea correcto.
 
 ## Para mejorar visibilidad (LinkedIn + Google Scholar)
 
