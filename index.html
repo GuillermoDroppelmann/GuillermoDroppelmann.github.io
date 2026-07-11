@@ -1,96 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teaching — Guillermo Droppelmann, Ph.D.</title>
-<link rel="stylesheet" href="../assets/css/style.css">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%2300e5ff'/%3E%3C/svg%3E">
+<title>Guillermo Droppelmann, PhD</title>
+<meta name="description" content="Clinical Researcher and PhD in Health Sciences. Machine and deep learning applied to musculoskeletal imaging and diagnostics. Deputy Head of Research, Clínica MEDS; Lecturer, PUCV.">
+<meta name="author" content="Guillermo Droppelmann">
+<meta property="og:title" content="Guillermo Droppelmann, PhD">
+<meta property="og:description" content="Clinical Researcher and PhD in Health Sciences. Machine and deep learning applied to musculoskeletal imaging and diagnostics. Deputy Head of Research, Clínica MEDS; Lecturer, PUCV.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://guillermodroppelmann.github.io/">
+<link rel="canonical" href="https://guillermodroppelmann.github.io/">
+<meta property="og:image" content="https://guillermodroppelmann.github.io/images/profile.jpg">
+<style>
+
+:root{--accent:#2a5db0;--text:#3d4144;--muted:#646769;--line:#e9e9e9;--bg:#fff;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+     color:var(--text);background:var(--bg);line-height:1.6;font-size:16px;}
+a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
+.masthead{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:10;}
+.masthead-inner{max-width:1100px;margin:0 auto;padding:0.7em 1em;display:flex;flex-wrap:wrap;
+  justify-content:space-between;align-items:center;gap:.5em;}
+.site-title{font-weight:700;font-size:1.05em;color:var(--text);}
+.masthead nav{display:flex;flex-wrap:wrap;gap:1.1em;}
+.masthead nav a{color:var(--text);font-weight:500;padding:.2em 0;border-bottom:2px solid transparent;}
+.masthead nav a.active,.masthead nav a:hover{border-bottom-color:var(--accent);text-decoration:none;color:var(--accent);}
+.layout{max-width:1100px;margin:0 auto;padding:2em 1em;display:grid;grid-template-columns:260px 1fr;gap:2.5em;}
+.layout.single{grid-template-columns:1fr;}
+.sidebar{text-align:left;}
+.avatar{width:175px;height:175px;border-radius:50%;object-fit:cover;display:block;}
+.avatar-fallback{width:175px;height:175px;border-radius:50%;background:var(--accent);color:#fff;
+  font-size:3.5em;font-weight:700;align-items:center;justify-content:center;}
+.author-name{font-size:1.25em;margin:.6em 0 .3em;}
+.author-bio{font-size:.86em;color:var(--muted);margin-bottom:1em;}
+.author-links{list-style:none;font-size:.9em;}
+.author-links li{margin:.35em 0;overflow-wrap:anywhere;}
+.content h1{font-size:1.7em;margin-bottom:.6em;}
+.content h2{font-size:1.25em;margin:1.6em 0 .6em;padding-bottom:.25em;border-bottom:1px solid var(--line);}
+.content h3{font-size:1.05em;margin:1.2em 0 .4em;color:var(--accent);}
+.content p{margin-bottom:.9em;}
+.content ul{margin:0 0 1em 1.2em;}
+.content ul li{margin-bottom:.45em;}
+ul.pub-list{list-style:none;margin-left:0;}
+.pub{border-bottom:1px solid var(--line);padding:1em 0;}
+.pub-title{font-weight:600;margin-bottom:.15em;}
+.pub-authors{font-size:.9em;color:var(--muted);margin-bottom:.1em;}
+.pub-journal{font-size:.9em;margin-bottom:.4em;}
+.pub-actions{display:flex;gap:.6em;}
+.btn{display:inline-block;font-size:.78em;padding:.28em .8em;border:1px solid var(--accent);
+  border-radius:4px;color:var(--accent);background:#fff;cursor:pointer;font-family:inherit;}
+.btn:hover{background:var(--accent);color:#fff;text-decoration:none;}
+.badge-review{background:#f5e9c8;color:#7a5c00;font-size:.8em;padding:.1em .5em;border-radius:3px;}
+.stats{display:flex;flex-wrap:wrap;gap:1em;margin:1em 0 1.5em;}
+.stat{border:1px solid var(--line);border-radius:8px;padding:.8em 1.2em;text-align:center;min-width:110px;}
+.stat b{display:block;font-size:1.5em;color:var(--accent);}
+.stat span{font-size:.8em;color:var(--muted);}
+.item{margin-bottom:1em;}
+.item .when{color:var(--muted);font-size:.85em;}
+.talk-type{display:inline-block;font-size:.72em;text-transform:uppercase;letter-spacing:.04em;
+  background:#eef3fb;color:var(--accent);padding:.12em .55em;border-radius:3px;margin-right:.4em;}
+.site-footer{border-top:1px solid var(--line);margin-top:2em;}
+.site-footer p{max-width:1100px;margin:0 auto;padding:1.2em 1em;font-size:.85em;color:var(--muted);}
+@media(max-width:800px){.layout{grid-template-columns:1fr;}
+  .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;}
+  .author-links{text-align:center;}}
+
+</style>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"Person",
+ "name":"Guillermo Droppelmann",
+ "honorificSuffix":"PhD",
+ "jobTitle":"Clinical Researcher, Deputy Head of Research",
+ "worksFor":{"@type":"Organization","name":"Clínica MEDS"},
+ "affiliation":{"@type":"Organization","name":"Pontificia Universidad Católica de Valparaíso"},
+ "email":"mailto:guillermo.droppelmann@meds.cl",
+ "url":"https://guillermodroppelmann.github.io/",
+ "sameAs":["https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en","https://www.researchgate.net/profile/Guillermo-Droppelmann","https://www.linkedin.com/in/guillermo-droppelmann"],
+ "knowsAbout":["Machine Learning","Deep Learning","Medical Imaging","Musculoskeletal Diagnostics","Clinical Research","Biostatistics","Epidemiology","Bioethics","Sports Medicine"]
+}
+</script>
 </head>
 <body>
-
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="../index.html" class="nav-brand"><span class="dot"></span> GD — CLINICAL SIGNAL</a>
-    <button class="nav-toggle" aria-label="Menu">≡</button>
-    <ul class="nav-links">
-      <li><a href="../index.html">Index</a></li>
-      <li><a href="publications.html">Publications</a></li>
-      <li><a href="grants.html">Grants &amp; Service</a></li>
-      <li><a href="talks.html">Talks</a></li>
-      <li><a href="teaching.html" class="active">Teaching</a></li>
-      <li><a href="cv.html">CV</a></li>
-    </ul>
+<header class="masthead">
+  <div class="masthead-inner">
+    <a class="site-title" href="index.html">Guillermo Droppelmann, PhD</a>
+    <nav>
+      <a href="index.html" class="active">About</a>
+      <a href="publications.html" >Publications</a>
+      <a href="talks.html" >Talks</a>
+      <a href="teaching.html" >Teaching</a>
+      <a href="cv.html" >CV</a>
+    </nav>
   </div>
-</nav>
-
-<header class="page-head reveal">
-  <div class="crumb">05 / Teaching</div>
-  <h1>Courses, seminars, <em>and supervision</em>.</h1>
-  <p class="lede">Undergraduate and postgraduate teaching across biostatistics, research methods, medical imaging, and clinical AI.</p>
 </header>
+<div class="layout"><aside class="sidebar">
+  <img src="images/profile.jpg" alt="Guillermo Droppelmann, PhD" class="avatar"
+       onerror="this.style.display='none';document.getElementById('avatar-fallback').style.display='flex';">
+  <div id="avatar-fallback" class="avatar-fallback" style="display:none;">GD</div>
+  <h2 class="author-name">Guillermo Droppelmann, PhD</h2>
+  <p class="author-bio">Clinical Researcher · Machine &amp; Deep Learning applied to Musculoskeletal Imaging. Deputy Head of Research, Clínica MEDS. Lecturer, PhD Program in Industrial Engineering, PUCV.</p>
+  <ul class="author-links">
+    <li>📍 Santiago, Chile</li>
+    <li>🏥 <a href="https://www.meds.cl" target="_blank" rel="noopener">Clínica MEDS</a></li>
+    <li>🎓 <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+    <li>🔬 <a href="https://www.researchgate.net/profile/Guillermo-Droppelmann" target="_blank" rel="noopener">ResearchGate</a></li>
+    <li>💼 <a href="https://www.linkedin.com/in/guillermo-droppelmann" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li>✉️ <a href="mailto:guillermo.droppelmann@meds.cl">guillermo.droppelmann@meds.cl</a></li>
+  </ul>
+</aside><main class="content">
+<h1>Guillermo Droppelmann, PhD</h1>
+<p>Guillermo Droppelmann is a <strong>Clinical Researcher and PhD in Health Sciences (Summa Cum Laude)</strong> with postdoctoral
+training in Industrial Engineering. He is a scientific leader bridging clinical practice and data science, with a research focus on
+<strong>machine and deep learning applied to musculoskeletal imaging and diagnostics</strong>. He is the author of 40+ peer-reviewed
+publications and 13 book chapters, principal investigator on competitive R&amp;D grants, and a Harvard-awarded teaching collaborator.</p>
+<p>He currently serves as <strong>Deputy Head of Research at Clínica MEDS</strong> (Santiago, Chile) and as
+<strong>Lecturer in the PhD Program in Industrial Engineering at Pontificia Universidad Católica de Valparaíso (PUCV)</strong>.
+He is also a PhD candidate in Bioengineering at Hospital Italiano de Buenos Aires, working on multimodal AI modeling of ECG signals
+and biomarkers for the detection of chemotherapy-induced cardiotoxicity in cancer patients.</p>
 
-<main class="content">
+<div class="stats">
+  <div class="stat"><b>40+</b><span>Journal articles</span></div>
+  <div class="stat"><b>13</b><span>Book chapters</span></div>
+  <div class="stat"><b>9</b><span>h-index (Scholar)</span></div>
+  <div class="stat"><b>40</b><span>Conference talks</span></div>
+</div>
 
-  <section class="cv-block reveal">
-    <h2>Current Courses</h2>
-    <div class="cv-item">
-      <div class="period">2024 —</div>
-      <div>
-        <div class="title">Research Methods &amp; Biostatistics</div>
-        <div class="sub">Postgraduate programme · Chilean university</div>
-        <p class="desc">Study design, hypothesis testing, effect sizes, survival analysis, diagnostic accuracy, reproducibility.</p>
-      </div>
-    </div>
-    <div class="cv-item">
-      <div class="period">2024 —</div>
-      <div>
-        <div class="title">Medical Image Analysis · Introductory Seminar</div>
-        <div class="sub">Undergraduate · Health sciences</div>
-        <p class="desc">From DICOM to deep learning — a pragmatic tour for clinicians who want to understand imaging pipelines.</p>
-      </div>
-    </div>
-  </section>
+<h2>Research areas</h2>
+<ul>
+<li>Machine learning and deep learning applied to medical imaging</li>
+<li>Musculoskeletal diagnostics (ultrasound and MRI)</li>
+<li>AI-assisted diagnosis and clinical decision support</li>
+<li>Clinical research methodology, biostatistics and epidemiology</li>
+<li>Bioethics and research ethics</li>
+<li>Occupational health (AI-based cardiovascular risk detection in high-altitude workers)</li>
+<li>Sports medicine and musculoskeletal rehabilitation</li>
+</ul>
+<p><em>Current research line:</em> detection of electrocardiographic signals and biomedical markers for the identification of
+comorbidities and disease burden in cancer patients.</p>
 
-  <section class="cv-block reveal">
-    <h2>Past Teaching</h2>
-    <div class="cv-item">
-      <div class="period">Multiple years</div>
-      <div>
-        <div class="title">Guest lectures · Clinical AI &amp; Diagnostic Methods</div>
-        <div class="sub">Various programmes in Chile · Extension at Harvard</div>
-      </div>
-    </div>
-  </section>
+<h2>Current appointments</h2>
+<ul>
+<li><strong>Lecturer, PhD Program in Industrial Engineering</strong>, Pontificia Universidad Católica de Valparaíso — <em>2025 to present</em></li>
+<li><strong>Deputy Head of Research</strong>, Clínica MEDS — <em>2024 to present</em></li>
+<li><strong>Coordinator, Musculoskeletal Kinesiology Area</strong>, Clínica MEDS — <em>2023 to present</em></li>
+<li><strong>Scientific Advisor</strong>, Rugby Chile (National Rugby Federation) — <em>2026 to present</em></li>
+<li><strong>Guest Editor</strong>, BMC Musculoskeletal Disorders (Springer Nature) — <em>2026 to present</em></li>
+</ul>
 
-  <section class="cv-block reveal">
-    <h2>Supervision</h2>
-    <div class="cv-item">
-      <div class="period">Ongoing</div>
-      <div>
-        <div class="title">Thesis committees · research mentoring</div>
-        <div class="sub">Medical students · residents · junior investigators at Clínica MEDS</div>
-      </div>
-    </div>
-  </section>
+<h2>Education</h2>
+<ul>
+<li><strong>PhD(c) in Bioengineering</strong>, Hospital Italiano de Buenos Aires, Argentina — <em>2026–2030</em></li>
+<li><strong>PhD in Health Sciences (Summa Cum Laude)</strong>, Universidad Católica San Antonio de Murcia (UCAM), Spain — <em>2025</em></li>
+<li><strong>Postdoctoral Research in Industrial Engineering</strong>, Pontificia Universidad Católica de Valparaíso, Chile — <em>2025</em></li>
+<li><strong>Clinical Research Specialization</strong>, Harvard University, USA — <em>2019</em></li>
+<li><strong>Master in Public Policy</strong>, Universidad del Desarrollo, Chile — <em>2019</em></li>
+<li><strong>Master in Epidemiology</strong>, Universidad de los Andes, Chile — <em>2017</em></li>
+<li><strong>Master in Neuroscience and Behavioral Biology</strong>, Universidad Pablo de Olavide, Spain — <em>2010</em></li>
+<li><strong>Master in Physiotherapy</strong>, Universitat de València, Spain — <em>2010</em></li>
+<li><strong>Professional Degree in Kinesiology</strong>, Universidad de La Frontera, Chile — <em>2009</em></li>
+</ul>
 
-  <p style="font-family: var(--f-mono); font-size: 11px; color: var(--ink-3); margin-top: 48px; letter-spacing: 0.1em;">
-    // Add course codes, institutional names, and years as appropriate.
-  </p>
-</main>
+<h2>Current and recent projects</h2>
+<ul>
+<li><strong>Innovation for Socio-Productive Engagement</strong> (InES I+D, PUCV, 2026–2028, co-PI): AI-driven innovation for socio-productive engagement.</li>
+<li><strong>InnoMatch OC1 Wave 2</strong> (European Union / European Innovation Council, 2026, co-PI): EIC Awardee + Buyer open call.</li>
+<li><strong>Seed Capital</strong> (Clínica MEDS, 2024–2026, PI): applied clinical AI development.</li>
+</ul>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-brand">Guillermo Droppelmann<em>.</em></div>
-    <ul class="footer-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a href="mailto:guillermo@example.cl">Email</a></li>
-    </ul>
-    <div class="footer-meta">© <span id="year"></span> · Built with Claude</div>
-  </div>
+<h2>Contact</h2>
+<p>Email: <a href="mailto:guillermo.droppelmann@meds.cl">guillermo.droppelmann@meds.cl</a><br>
+Clínica MEDS, Santiago, Chile<br>
+<a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> ·
+<a href="https://www.researchgate.net/profile/Guillermo-Droppelmann" target="_blank" rel="noopener">ResearchGate</a> ·
+<a href="https://www.linkedin.com/in/guillermo-droppelmann" target="_blank" rel="noopener">LinkedIn</a></p>
+</main></div>
+<footer class="site-footer">
+  <p>© 2026 Guillermo Droppelmann · <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> · Hosted on GitHub Pages</p>
 </footer>
-
-<script src="../assets/js/main.js"></script>
+<script>
+document.addEventListener('click', function(e){
+  var b = e.target.closest('.btn-cite');
+  if(!b) return;
+  navigator.clipboard.writeText(b.dataset.cite).then(function(){
+    var t = b.textContent; b.textContent = 'Copied!';
+    setTimeout(function(){ b.textContent = t; }, 1600);
+  });
+});
+</script>
 </body>
 </html>
