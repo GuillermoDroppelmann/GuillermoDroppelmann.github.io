@@ -43,17 +43,15 @@ a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
   border-bottom:2.5px solid transparent;}
 .masthead nav a.active,.masthead nav a:hover{border-bottom-color:var(--accent);color:var(--accent);text-decoration:none;}
 /* ---------- hero band ---------- */
-.hero-band{height:122px;position:relative;overflow:hidden;
+.hero-band{height:74px;position:relative;overflow:hidden;
   background:linear-gradient(120deg,#0b2244 0%,var(--navy-2) 55%,#2158a8 100%);}
 .hero-band::before{content:'';position:absolute;inset:0;
   background:radial-gradient(ellipse 60% 120% at 78% 10%,rgba(120,180,255,.28),transparent 60%),
              radial-gradient(ellipse 40% 90% at 15% 100%,rgba(47,111,219,.35),transparent 65%);}
-.hero-band::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:26px;
-  background:#fff;border-radius:100% 100% 0 0 / 40px 40px 0 0;}
 /* ---------- layout ---------- */
 .layout{max-width:1140px;margin:0 auto;padding:0 1.2em 3em;display:grid;
   grid-template-columns:280px 1fr;gap:3em;}
-.sidebar{margin-top:-72px;}
+.sidebar{margin-top:-52px;position:relative;z-index:5;}
 .avatar{width:190px;height:190px;border-radius:50%;object-fit:cover;display:block;
   border:5px solid #fff;box-shadow:0 6px 22px rgba(14,42,78,.22);}
 .avatar-fallback{width:190px;height:190px;border-radius:50%;background:var(--navy);color:#fff;
@@ -131,9 +129,9 @@ ul.talk-list{list-style:none;margin-left:0;}
 .site-footer a{color:#9ec3ff;}
 @media(max-width:840px){
   .layout{grid-template-columns:1fr;gap:1.5em;}
-  .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:-84px;}
+  .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:-52px;}
   .author-links li{justify-content:center;}
-  .hero-band{height:130px;}
+  .hero-band{height:84px;}
 }
 
 </style>
@@ -691,102 +689,6 @@ Click <strong>Cite</strong> to copy the reference, or <strong>Google Scholar</st
     <p class="pub-actions">
       <a class="btn" href="https://scholar.google.com/scholar?q=%22Patrones+Ultrasonogr%C3%A1ficos+y+Predicciones+seg%C3%BAn+Edad+en+Epicondilitis%22" target="_blank" rel="noopener">Google Scholar</a>
       <button class="btn btn-cite" data-cite="Droppelmann G, Cárcamo M, Opazo A, Rosales J, Greene C, González F, Yáñez R. Patrones Ultrasonográficos y Predicciones según Edad en Epicondilitis. Revista Observatorio del Deporte, 123–135, 2017.">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge">2016</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Tendón: ¿Un Problema de Salud Pública?</p>
-    <p class="pub-authors"><strong>Droppelmann G</strong></p>
-    <p class="pub-journal"><em>Archivos de la Sociedad Chilena de Medicina del Deporte</em>, 61(2)</p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Tend%C3%B3n%3A+%C2%BFUn+Problema+de+Salud+P%C3%BAblica%3F%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Droppelmann G. Tendón: ¿Un Problema de Salud Pública?. Archivos de la Sociedad Chilena de Medicina del Deporte, 61(2), 2016.">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge">2016</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Mortalidad por Accidente Vascular Encefálico (CIE I64x): Un Problema de Salud Pública en Chile</p>
-    <p class="pub-authors"><strong>Droppelmann G</strong></p>
-    <p class="pub-journal"><em>Revista Inclusiones</em>, 3(4):59–68</p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Mortalidad+por+Accidente+Vascular+Encef%C3%A1lico+%28CIE+I64x%29%3A+Un+Problema+de+Salud+P%C3%BAblica+en+Chile%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Droppelmann G. Mortalidad por Accidente Vascular Encefálico (CIE I64x): Un Problema de Salud Pública en Chile. Revista Inclusiones, 3(4):59–68, 2016.">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge">2016</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Políticas Públicas y Obesidad en los Escolares Chilenos: ¿Tenemos los Resultados que Queremos?</p>
-    <p class="pub-authors"><strong>Droppelmann G</strong>, González F</p>
-    <p class="pub-journal"><em>Revista de Humanidades y Ciencias Sociales y Multidisciplinaria</em>, 49–59</p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Pol%C3%ADticas+P%C3%BAblicas+y+Obesidad+en+los+Escolares+Chilenos%3A+%C2%BFTenemos+los+Resultados+que+Queremos%3F%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Droppelmann G, González F. Políticas Públicas y Obesidad en los Escolares Chilenos: ¿Tenemos los Resultados que Queremos?. Revista de Humanidades y Ciencias Sociales y Multidisciplinaria, 49–59, 2016.">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge">2016</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Publicaciones Científicas: Bases para el Desarrollo en Chile</p>
-    <p class="pub-authors"><strong>Droppelmann G</strong>, García S</p>
-    <p class="pub-journal"><em>Revista Ciencias de la Documentación</em>, 62–70</p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Publicaciones+Cient%C3%ADficas%3A+Bases+para+el+Desarrollo+en+Chile%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Droppelmann G, García S. Publicaciones Científicas: Bases para el Desarrollo en Chile. Revista Ciencias de la Documentación, 62–70, 2016.">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge">2016</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Ciencias de la Actividad Física y Medicina del Deporte: Una Revisión de la Calidad de las Revistas en América</p>
-    <p class="pub-authors"><strong>Droppelmann G</strong>, García S</p>
-    <p class="pub-journal"><em>Archivos de la Sociedad Chilena de Medicina del Deporte</em>, 61(1):52–58</p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Ciencias+de+la+Actividad+F%C3%ADsica+y+Medicina+del+Deporte%3A+Una+Revisi%C3%B3n+de+la+Calidad+de+las+Revistas+en+Am%C3%A9rica%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Droppelmann G, García S. Ciencias de la Actividad Física y Medicina del Deporte: Una Revisión de la Calidad de las Revistas en América. Archivos de la Sociedad Chilena de Medicina del Deporte, 61(1):52–58, 2016.">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge">2016</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Reflexión: Actividad Física y Deportes en las Enfermedades No Transmisibles en Chile. ¿Estamos Haciendo Bien las Cosas?</p>
-    <p class="pub-authors"><strong>Droppelmann G</strong>, González F</p>
-    <p class="pub-journal"><em>Revista de Humanidades y Ciencias Sociales y Multidisciplinaria</em>, 26–32</p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Reflexi%C3%B3n%3A+Actividad+F%C3%ADsica+y+Deportes+en+las+Enfermedades+No+Transmisibles+en+Chile.+%C2%BFEstamos+Haciendo+Bien+las+Cosas%3F%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Droppelmann G, González F. Reflexión: Actividad Física y Deportes en las Enfermedades No Transmisibles en Chile. ¿Estamos Haciendo Bien las Cosas?. Revista de Humanidades y Ciencias Sociales y Multidisciplinaria, 26–32, 2016.">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge">2016</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Algunos Hitos en Actividad Física y Medicina del Deporte en Chile</p>
-    <p class="pub-authors"><strong>Droppelmann G</strong></p>
-    <p class="pub-journal"><em>Archivos de la Sociedad Chilena de Medicina del Deporte</em>, 61(1)</p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Algunos+Hitos+en+Actividad+F%C3%ADsica+y+Medicina+del+Deporte+en+Chile%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Droppelmann G. Algunos Hitos en Actividad Física y Medicina del Deporte en Chile. Archivos de la Sociedad Chilena de Medicina del Deporte, 61(1), 2016.">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge">2010</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Clínicos Investigadores: Un Desafío en Salud</p>
-    <p class="pub-authors"><strong>Droppelmann G</strong></p>
-    <p class="pub-journal"><em>Health Research</em>, 10:131–43</p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Cl%C3%ADnicos+Investigadores%3A+Un+Desaf%C3%ADo+en+Salud%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Droppelmann G. Clínicos Investigadores: Un Desafío en Salud. Health Research, 10:131–43, 2010.">Cite</button>
     </p>
   </div>
 </li>
