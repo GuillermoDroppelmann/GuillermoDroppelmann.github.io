@@ -34,13 +34,22 @@ a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
   border-bottom:1px solid var(--line);z-index:50;}
 .masthead-inner{max-width:1140px;margin:0 auto;padding:.75em 1.2em;display:flex;flex-wrap:wrap;
   justify-content:space-between;align-items:center;gap:.5em;}
-.site-title{font-weight:800;font-size:1.02em;color:var(--navy);letter-spacing:-.01em;}
+.site-title{font-weight:800;font-size:.95em;color:#fff;background:linear-gradient(135deg,var(--navy),var(--accent));
+  width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  letter-spacing:.02em;box-shadow:0 3px 10px rgba(14,42,78,.25);}
+.site-title:hover{text-decoration:none;transform:scale(1.05);transition:transform .15s;}
 .masthead nav{display:flex;flex-wrap:wrap;gap:1.35em;}
 .masthead nav a{color:var(--text);font-weight:600;font-size:.92em;padding:.25em 0;
   border-bottom:2.5px solid transparent;}
 .masthead nav a.active,.masthead nav a:hover{border-bottom-color:var(--accent);color:var(--accent);text-decoration:none;}
 /* ---------- hero band ---------- */
-.hero-band{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 60%,#1d4e8f 100%);height:118px;}
+.hero-band{height:122px;position:relative;overflow:hidden;
+  background:linear-gradient(120deg,#0b2244 0%,var(--navy-2) 55%,#2158a8 100%);}
+.hero-band::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 120% at 78% 10%,rgba(120,180,255,.28),transparent 60%),
+             radial-gradient(ellipse 40% 90% at 15% 100%,rgba(47,111,219,.35),transparent 65%);}
+.hero-band::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:26px;
+  background:#fff;border-radius:100% 100% 0 0 / 40px 40px 0 0;}
 /* ---------- layout ---------- */
 .layout{max-width:1140px;margin:0 auto;padding:0 1.2em 3em;display:grid;
   grid-template-columns:280px 1fr;gap:3em;}
@@ -117,8 +126,9 @@ ul.talk-list{list-style:none;margin-left:0;}
 .cta-box h3{color:#fff;margin-top:0;}
 .cta-box a{color:#9ec3ff;font-weight:600;}
 /* ---------- footer ---------- */
-.site-footer{border-top:1px solid var(--line);margin-top:2.5em;background:var(--bg-soft);}
-.site-footer p{max-width:1140px;margin:0 auto;padding:1.4em 1.2em;font-size:.85em;color:var(--muted);}
+.site-footer{margin-top:3em;background:var(--navy);}
+.site-footer p{max-width:1140px;margin:0 auto;padding:1.5em 1.2em;font-size:.85em;color:#b9c8dd;}
+.site-footer a{color:#9ec3ff;}
 @media(max-width:840px){
   .layout{grid-template-columns:1fr;gap:1.5em;}
   .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:-84px;}
@@ -132,7 +142,7 @@ ul.talk-list{list-style:none;margin-left:0;}
 <body>
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="site-title" href="index.html">Guillermo Droppelmann, PhD</a>
+    <a class="site-title" href="index.html" aria-label="Home">GD</a>
     <nav>
       <a href="index.html">About</a>
       <a href="publications.html">Publications</a>

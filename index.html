@@ -34,13 +34,22 @@ a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
   border-bottom:1px solid var(--line);z-index:50;}
 .masthead-inner{max-width:1140px;margin:0 auto;padding:.75em 1.2em;display:flex;flex-wrap:wrap;
   justify-content:space-between;align-items:center;gap:.5em;}
-.site-title{font-weight:800;font-size:1.02em;color:var(--navy);letter-spacing:-.01em;}
+.site-title{font-weight:800;font-size:.95em;color:#fff;background:linear-gradient(135deg,var(--navy),var(--accent));
+  width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  letter-spacing:.02em;box-shadow:0 3px 10px rgba(14,42,78,.25);}
+.site-title:hover{text-decoration:none;transform:scale(1.05);transition:transform .15s;}
 .masthead nav{display:flex;flex-wrap:wrap;gap:1.35em;}
 .masthead nav a{color:var(--text);font-weight:600;font-size:.92em;padding:.25em 0;
   border-bottom:2.5px solid transparent;}
 .masthead nav a.active,.masthead nav a:hover{border-bottom-color:var(--accent);color:var(--accent);text-decoration:none;}
 /* ---------- hero band ---------- */
-.hero-band{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 60%,#1d4e8f 100%);height:118px;}
+.hero-band{height:122px;position:relative;overflow:hidden;
+  background:linear-gradient(120deg,#0b2244 0%,var(--navy-2) 55%,#2158a8 100%);}
+.hero-band::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 120% at 78% 10%,rgba(120,180,255,.28),transparent 60%),
+             radial-gradient(ellipse 40% 90% at 15% 100%,rgba(47,111,219,.35),transparent 65%);}
+.hero-band::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:26px;
+  background:#fff;border-radius:100% 100% 0 0 / 40px 40px 0 0;}
 /* ---------- layout ---------- */
 .layout{max-width:1140px;margin:0 auto;padding:0 1.2em 3em;display:grid;
   grid-template-columns:280px 1fr;gap:3em;}
@@ -117,8 +126,9 @@ ul.talk-list{list-style:none;margin-left:0;}
 .cta-box h3{color:#fff;margin-top:0;}
 .cta-box a{color:#9ec3ff;font-weight:600;}
 /* ---------- footer ---------- */
-.site-footer{border-top:1px solid var(--line);margin-top:2.5em;background:var(--bg-soft);}
-.site-footer p{max-width:1140px;margin:0 auto;padding:1.4em 1.2em;font-size:.85em;color:var(--muted);}
+.site-footer{margin-top:3em;background:var(--navy);}
+.site-footer p{max-width:1140px;margin:0 auto;padding:1.5em 1.2em;font-size:.85em;color:#b9c8dd;}
+.site-footer a{color:#9ec3ff;}
 @media(max-width:840px){
   .layout{grid-template-columns:1fr;gap:1.5em;}
   .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:-84px;}
@@ -146,7 +156,7 @@ ul.talk-list{list-style:none;margin-left:0;}
 <body>
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="site-title" href="index.html">Guillermo Droppelmann, PhD</a>
+    <a class="site-title" href="index.html" aria-label="Home">GD</a>
     <nav>
       <a href="index.html" class="active">About</a>
       <a href="publications.html">Publications</a>
@@ -183,14 +193,14 @@ publications and book chapters, principal investigator on competitive R&amp;D gr
 <p>He currently serves as <strong>Deputy Head of Research at Clínica MEDS</strong> (Santiago, Chile) and as
 <strong>Lecturer in the PhD Program in Industrial Engineering at Pontificia Universidad Católica de Valparaíso (PUCV)</strong>.
 He is currently pursuing his <strong>second doctoral degree — a PhD in Bioengineering</strong> at Hospital Italiano de Buenos Aires,
-working on multimodal AI modeling of ECG signals and biomarkers for the detection of chemotherapy-induced cardiotoxicity in cancer patients.</p>
+working on multimodal AI modeling of signals and biomarkers for the detection of chemotherapy-induced cardiotoxicity in cancer patients.</p>
 
 <h2>Research areas</h2>
 
 <ul>
 <li>Machine learning and deep learning applied to medical imaging</li>
-<li>Musculoskeletal diagnostics (ultrasound and MRI)</li>
-<li>AI-assisted diagnosis and clinical decision support</li>
+<li>Predictive analytics for occupational and cardiovascular health</li>
+<li>Clinical research methodology, biostatistics and research ethics</li>
 </ul>
 <p><em>Current research line:</em> detection of electrocardiographic signals and biomedical markers for the identification of
 comorbidities and disease burden in cancer patients.</p>
@@ -202,6 +212,7 @@ comorbidities and disease burden in cancer patients.</p>
 <li><strong>Deputy Head of Research</strong>, Clínica MEDS — <em>2024 to present</em></li>
 <li><strong>Coordinator, Musculoskeletal Kinesiology Area</strong>, Clínica MEDS — <em>2023 to present</em></li>
 <li><strong>Guest Editor</strong>, BMC Musculoskeletal Disorders (Springer Nature) — <em>2026 to present</em></li>
+<li><strong>Physiotherapist, Upper Limb</strong>, Clínica MEDS — <em>2010 to present</em></li>
 </ul>
 
 <h2>Education</h2>
@@ -221,8 +232,9 @@ comorbidities and disease burden in cancer patients.</p>
 <h2>Current and recent projects</h2>
 
 <ul>
-<li><strong>Innovation for Socio-Productive Engagement</strong> (InES I+D, PUCV, 2026–2028, co-PI): AI-driven innovation for socio-productive engagement.</li>
-<li><strong>Seed Capital</strong> (Clínica MEDS, 2024–2026, PI): applied clinical AI development.</li>
+<li><strong>Innovation for Socio-Productive Engagement</strong> (InES I+D, PUCV, 2026–2028, co-PI): AI-driven innovation for socio-productive engagement. Funding: USD $27,000.</li>
+<li><strong>InnoMatch Open Call for EIC Awardee + Buyer, Wave 2</strong> (European Union / European Innovation Council, 2026, co-PI). Funding: €60,000.</li>
+<li><strong>Seed Capital</strong> (Clínica MEDS, 2024–2026, PI): applied clinical AI development. Funding: USD $5,400.</li>
 </ul>
 
 <h2>Contact</h2>

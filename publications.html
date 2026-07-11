@@ -34,13 +34,22 @@ a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
   border-bottom:1px solid var(--line);z-index:50;}
 .masthead-inner{max-width:1140px;margin:0 auto;padding:.75em 1.2em;display:flex;flex-wrap:wrap;
   justify-content:space-between;align-items:center;gap:.5em;}
-.site-title{font-weight:800;font-size:1.02em;color:var(--navy);letter-spacing:-.01em;}
+.site-title{font-weight:800;font-size:.95em;color:#fff;background:linear-gradient(135deg,var(--navy),var(--accent));
+  width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  letter-spacing:.02em;box-shadow:0 3px 10px rgba(14,42,78,.25);}
+.site-title:hover{text-decoration:none;transform:scale(1.05);transition:transform .15s;}
 .masthead nav{display:flex;flex-wrap:wrap;gap:1.35em;}
 .masthead nav a{color:var(--text);font-weight:600;font-size:.92em;padding:.25em 0;
   border-bottom:2.5px solid transparent;}
 .masthead nav a.active,.masthead nav a:hover{border-bottom-color:var(--accent);color:var(--accent);text-decoration:none;}
 /* ---------- hero band ---------- */
-.hero-band{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 60%,#1d4e8f 100%);height:118px;}
+.hero-band{height:122px;position:relative;overflow:hidden;
+  background:linear-gradient(120deg,#0b2244 0%,var(--navy-2) 55%,#2158a8 100%);}
+.hero-band::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 120% at 78% 10%,rgba(120,180,255,.28),transparent 60%),
+             radial-gradient(ellipse 40% 90% at 15% 100%,rgba(47,111,219,.35),transparent 65%);}
+.hero-band::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:26px;
+  background:#fff;border-radius:100% 100% 0 0 / 40px 40px 0 0;}
 /* ---------- layout ---------- */
 .layout{max-width:1140px;margin:0 auto;padding:0 1.2em 3em;display:grid;
   grid-template-columns:280px 1fr;gap:3em;}
@@ -117,8 +126,9 @@ ul.talk-list{list-style:none;margin-left:0;}
 .cta-box h3{color:#fff;margin-top:0;}
 .cta-box a{color:#9ec3ff;font-weight:600;}
 /* ---------- footer ---------- */
-.site-footer{border-top:1px solid var(--line);margin-top:2.5em;background:var(--bg-soft);}
-.site-footer p{max-width:1140px;margin:0 auto;padding:1.4em 1.2em;font-size:.85em;color:var(--muted);}
+.site-footer{margin-top:3em;background:var(--navy);}
+.site-footer p{max-width:1140px;margin:0 auto;padding:1.5em 1.2em;font-size:.85em;color:#b9c8dd;}
+.site-footer a{color:#9ec3ff;}
 @media(max-width:840px){
   .layout{grid-template-columns:1fr;gap:1.5em;}
   .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:-84px;}
@@ -132,7 +142,7 @@ ul.talk-list{list-style:none;margin-left:0;}
 <body>
 <header class="masthead">
   <div class="masthead-inner">
-    <a class="site-title" href="index.html">Guillermo Droppelmann, PhD</a>
+    <a class="site-title" href="index.html" aria-label="Home">GD</a>
     <nav>
       <a href="index.html">About</a>
       <a href="publications.html" class="active">Publications</a>
@@ -792,7 +802,7 @@ Click <strong>Cite</strong> to copy the reference, or <strong>Google Scholar</st
     <p class="pub-authors"><strong>Droppelmann G</strong>, González R, Yáñez R, Vargas M (Editors)</p>
     <p class="pub-journal"><em>Editorial Ígneo</em>, 348 pp. ISBN 978-9564240527</p>
     <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Kinesiolog%C3%ADa+Musculoesquel%C3%A9tica%3A+Experiencia%2C+Tecnolog%C3%ADa+e+Innovaci%C3%B3n%22" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="btn" href="https://www.amazon.com/-/es/Guillermo-Droppelmann-Diaz-ebook/dp/B0G2TGF8L6" target="_blank" rel="noopener">View on Amazon</a>
       <button class="btn btn-cite" data-cite="Droppelmann G, González R, Yáñez R, Vargas M (Editors). Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación. Editorial Ígneo, 348 pp. ISBN 978-9564240527, 2025.">Cite</button>
     </p>
   </div>
@@ -1008,107 +1018,6 @@ Click <strong>Cite</strong> to copy the reference, or <strong>Google Scholar</st
     <p class="pub-actions">
       <a class="btn" href="https://scholar.google.com/scholar?q=%22Enfermedades+Cr%C3%B3nicas+No+Transmisibles%2C+Actividad+F%C3%ADsica+y+Pol%C3%ADticas+P%C3%BAblicas%22" target="_blank" rel="noopener">Google Scholar</a>
       <button class="btn btn-cite" data-cite="Droppelmann G. Enfermedades Crónicas No Transmisibles, Actividad Física y Políticas Públicas. In: Actividad Física y Ejercicio en Salud y Enfermedad, 415–426. Mediterráneo, 2017.">Cite</button>
-    </p>
-  </div>
-</li>
-</ul>
-
-<h2>Manuscripts under review (2026)</h2>
-
-<ul class="pub-list">
-<li class="pub">
-  <div class="pub-side"><span class="year-badge review">In review</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Assessment of Temporal Health Risks in the Working Population: An Urgent National Challenge</p>
-    <p class="pub-authors">Jorquera R, <strong>Droppelmann G</strong>, Dollmann M, Feijoo F</p>
-    <p class="pub-journal"><em>Journal of Occupational and Environmental Medicine</em></p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Assessment+of+Temporal+Health+Risks+in+the+Working+Population%3A+An+Urgent+National+Challenge%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Jorquera R, Droppelmann G, Dollmann M, Feijoo F. Assessment of Temporal Health Risks in the Working Population: An Urgent National Challenge. Journal of Occupational and Environmental Medicine, n.d..">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge review">In review</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Advanced Deep Learning Approaches for Shoulder MRI: GANs and RKANs for Automated Detection of Supraspinatus Tendon Tears</p>
-    <p class="pub-authors">Chahuán L, <strong>Droppelmann G</strong>, Albornoz L, Jorquera C, Kokaly M, Álvarez de Araya I, Feijoo F</p>
-    <p class="pub-journal"><em>BMC Medical Imaging</em></p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Advanced+Deep+Learning+Approaches+for+Shoulder+MRI%3A+GANs+and+RKANs+for+Automated+Detection+of+Supraspinatus+Tendon+Tears%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Chahuán L, Droppelmann G, Albornoz L, Jorquera C, Kokaly M, Álvarez de Araya I, Feijoo F. Advanced Deep Learning Approaches for Shoulder MRI: GANs and RKANs for Automated Detection of Supraspinatus Tendon Tears. BMC Medical Imaging, n.d..">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge review">In review</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Diagnostic Performance of Machine and Deep Learning Models for Cartilage Injury Detection in Medical Imaging: A Meta-Analysis</p>
-    <p class="pub-authors"><strong>Droppelmann G</strong>, Varas E, Villagrán J, Jorquera C, Feijoo F</p>
-    <p class="pub-journal"><em>EFORT Open Reviews</em></p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Diagnostic+Performance+of+Machine+and+Deep+Learning+Models+for+Cartilage+Injury+Detection+in+Medical+Imaging%3A+A+Meta-Analysis%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Droppelmann G, Varas E, Villagrán J, Jorquera C, Feijoo F. Diagnostic Performance of Machine and Deep Learning Models for Cartilage Injury Detection in Medical Imaging: A Meta-Analysis. EFORT Open Reviews, n.d..">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge review">In review</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Effects of Jet and Vibrating Mesh Nebulizers on IPAP and EPAP Ventilatory Pressures during Non-Invasive Ventilation: An In Vitro Study</p>
-    <p class="pub-authors">Wood D, Stöwhas K, Aguilar D, Aguilera C, Jorquera C, <strong>Droppelmann-Díaz G</strong></p>
-    <p class="pub-journal"><em>Life</em></p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Effects+of+Jet+and+Vibrating+Mesh+Nebulizers+on+IPAP+and+EPAP+Ventilatory+Pressures+during+Non-Invasive+Ventilation%3A+An+In+Vitro+Study%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Wood D, Stöwhas K, Aguilar D, Aguilera C, Jorquera C, Droppelmann-Díaz G. Effects of Jet and Vibrating Mesh Nebulizers on IPAP and EPAP Ventilatory Pressures during Non-Invasive Ventilation: An In Vitro Study. Life, n.d..">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge review">In review</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Clinical Trial Duration: A Challenge for the Pharmaceutical Industry</p>
-    <p class="pub-authors">Bustos N, <strong>Droppelmann G</strong>, Matis T, Bernstein J, Das TK, Feijoo F</p>
-    <p class="pub-journal"><em>Socio-Economic Planning Sciences</em></p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Clinical+Trial+Duration%3A+A+Challenge+for+the+Pharmaceutical+Industry%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Bustos N, Droppelmann G, Matis T, Bernstein J, Das TK, Feijoo F. Clinical Trial Duration: A Challenge for the Pharmaceutical Industry. Socio-Economic Planning Sciences, n.d..">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge review">In review</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Arthroscopic Double-Layer Repair of Delaminated Posterosuperior Rotator Cuff Tears</p>
-    <p class="pub-authors">Debandi A, González N, Díaz C, García N, Vargas P, Girardi D, <strong>Droppelmann G</strong></p>
-    <p class="pub-journal"><em>Journal of Shoulder and Elbow Surgery</em></p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Arthroscopic+Double-Layer+Repair+of+Delaminated+Posterosuperior+Rotator+Cuff+Tears%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Debandi A, González N, Díaz C, García N, Vargas P, Girardi D, Droppelmann G. Arthroscopic Double-Layer Repair of Delaminated Posterosuperior Rotator Cuff Tears. Journal of Shoulder and Elbow Surgery, n.d..">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge review">In review</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Postoperative Evolution of Muscle Atrophy and Fatty Infiltration in Posterosuperior Rotator Cuff Tears: A Retrospective MRI Cohort Study</p>
-    <p class="pub-authors">Debandi A, Torrealba J, Díaz C, García N, Solis D, González C, Spichiger S, <strong>Droppelmann G</strong></p>
-    <p class="pub-journal"><em>Journal of Shoulder and Elbow Surgery</em></p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Postoperative+Evolution+of+Muscle+Atrophy+and+Fatty+Infiltration+in+Posterosuperior+Rotator+Cuff+Tears%3A+A+Retrospective+MRI+Cohort+Study%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Debandi A, Torrealba J, Díaz C, García N, Solis D, González C, Spichiger S, Droppelmann G. Postoperative Evolution of Muscle Atrophy and Fatty Infiltration in Posterosuperior Rotator Cuff Tears: A Retrospective MRI Cohort Study. Journal of Shoulder and Elbow Surgery, n.d..">Cite</button>
-    </p>
-  </div>
-</li>
-<li class="pub">
-  <div class="pub-side"><span class="year-badge review">In review</span></div>
-  <div class="pub-main">
-    <p class="pub-title">Body Composition and Physical Demands in Professional Rugby Players: A Comparative Analysis between Backs and Forwards</p>
-    <p class="pub-authors">Jorquera C, Vargas F, Acosta M, Romero L, Andrades O, Carvajal C, <strong>Droppelmann G</strong>, Araya S, Ulloa D</p>
-    <p class="pub-journal"><em>PeerJ</em></p>
-    <p class="pub-actions">
-      <a class="btn" href="https://scholar.google.com/scholar?q=%22Body+Composition+and+Physical+Demands+in+Professional+Rugby+Players%3A+A+Comparative+Analysis+between+Backs+and+Forwards%22" target="_blank" rel="noopener">Google Scholar</a>
-      <button class="btn btn-cite" data-cite="Jorquera C, Vargas F, Acosta M, Romero L, Andrades O, Carvajal C, Droppelmann G, Araya S, Ulloa D. Body Composition and Physical Demands in Professional Rugby Players: A Comparative Analysis between Backs and Forwards. PeerJ, n.d..">Cite</button>
     </p>
   </div>
 </li>
