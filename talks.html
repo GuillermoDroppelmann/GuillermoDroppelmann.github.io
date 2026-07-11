@@ -4,67 +4,127 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Talks — Guillermo Droppelmann, PhD</title>
-<meta name="description" content="Conference presentations, invited talks, seminars and workshops by Guillermo Droppelmann.">
+<meta name="description" content="Upcoming and past talks by Guillermo Droppelmann: conferences, seminars and courses on AI in medical imaging and clinical research.">
 <meta name="author" content="Guillermo Droppelmann">
 <meta property="og:title" content="Talks — Guillermo Droppelmann, PhD">
-<meta property="og:description" content="Conference presentations, invited talks, seminars and workshops by Guillermo Droppelmann.">
+<meta property="og:description" content="Upcoming and past talks by Guillermo Droppelmann: conferences, seminars and courses on AI in medical imaging and clinical research.">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://guillermodroppelmann.github.io/talks.html">
 <link rel="canonical" href="https://guillermodroppelmann.github.io/talks.html">
 <meta property="og:image" content="https://guillermodroppelmann.github.io/images/profile.jpg">
 <style>
 
-:root{--accent:#2a5db0;--text:#3d4144;--muted:#646769;--line:#e9e9e9;--bg:#fff;}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;1,400&display=swap');
+:root{
+  --navy:#0e2a4e; --navy-2:#143a6b; --accent:#2f6fdb; --accent-soft:#e8f0fd;
+  --text:#25313f; --muted:#5c6b7a; --line:#e3e8ee; --bg:#fff; --bg-soft:#f6f8fb;
+  --chip-conference:#e8f0fd; --chip-conference-t:#2057b8;
+  --chip-course:#e5f6ec; --chip-course-t:#1b7a45;
+  --chip-symposium:#f1e9fb; --chip-symposium-t:#6d3fb5;
+  --chip-seminar:#fdf0e2; --chip-seminar-t:#a86412;
+  --chip-workshop:#e2f5f5; --chip-workshop-t:#0e7a7a;
+}
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-     color:var(--text);background:var(--bg);line-height:1.6;font-size:16px;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  color:var(--text);background:var(--bg);line-height:1.65;font-size:16px;}
 a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
-.masthead{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:10;}
-.masthead-inner{max-width:1100px;margin:0 auto;padding:0.7em 1em;display:flex;flex-wrap:wrap;
+/* ---------- header ---------- */
+.masthead{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);z-index:50;}
+.masthead-inner{max-width:1140px;margin:0 auto;padding:.75em 1.2em;display:flex;flex-wrap:wrap;
   justify-content:space-between;align-items:center;gap:.5em;}
-.site-title{font-weight:700;font-size:1.05em;color:var(--text);}
-.masthead nav{display:flex;flex-wrap:wrap;gap:1.1em;}
-.masthead nav a{color:var(--text);font-weight:500;padding:.2em 0;border-bottom:2px solid transparent;}
-.masthead nav a.active,.masthead nav a:hover{border-bottom-color:var(--accent);text-decoration:none;color:var(--accent);}
-.layout{max-width:1100px;margin:0 auto;padding:2em 1em;display:grid;grid-template-columns:260px 1fr;gap:2.5em;}
-.layout.single{grid-template-columns:1fr;}
-.sidebar{text-align:left;}
-.avatar{width:175px;height:175px;border-radius:50%;object-fit:cover;display:block;}
-.avatar-fallback{width:175px;height:175px;border-radius:50%;background:var(--accent);color:#fff;
-  font-size:3.5em;font-weight:700;align-items:center;justify-content:center;}
-.author-name{font-size:1.25em;margin:.6em 0 .3em;}
-.author-bio{font-size:.86em;color:var(--muted);margin-bottom:1em;}
+.site-title{font-weight:800;font-size:1.02em;color:var(--navy);letter-spacing:-.01em;}
+.masthead nav{display:flex;flex-wrap:wrap;gap:1.35em;}
+.masthead nav a{color:var(--text);font-weight:600;font-size:.92em;padding:.25em 0;
+  border-bottom:2.5px solid transparent;}
+.masthead nav a.active,.masthead nav a:hover{border-bottom-color:var(--accent);color:var(--accent);text-decoration:none;}
+/* ---------- hero band ---------- */
+.hero-band{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 60%,#1d4e8f 100%);height:118px;}
+/* ---------- layout ---------- */
+.layout{max-width:1140px;margin:0 auto;padding:0 1.2em 3em;display:grid;
+  grid-template-columns:280px 1fr;gap:3em;}
+.sidebar{margin-top:-72px;}
+.avatar{width:190px;height:190px;border-radius:50%;object-fit:cover;display:block;
+  border:5px solid #fff;box-shadow:0 6px 22px rgba(14,42,78,.22);}
+.avatar-fallback{width:190px;height:190px;border-radius:50%;background:var(--navy);color:#fff;
+  font-size:3.6em;font-weight:800;align-items:center;justify-content:center;border:5px solid #fff;
+  box-shadow:0 6px 22px rgba(14,42,78,.22);}
+.author-name{font-size:1.28em;margin:.7em 0 .25em;color:var(--navy);font-weight:800;letter-spacing:-.01em;}
+.author-bio{font-size:.86em;color:var(--muted);margin-bottom:1.1em;}
 .author-links{list-style:none;font-size:.9em;}
-.author-links li{margin:.35em 0;overflow-wrap:anywhere;}
-.content h1{font-size:1.7em;margin-bottom:.6em;}
-.content h2{font-size:1.25em;margin:1.6em 0 .6em;padding-bottom:.25em;border-bottom:1px solid var(--line);}
-.content h3{font-size:1.05em;margin:1.2em 0 .4em;color:var(--accent);}
-.content p{margin-bottom:.9em;}
-.content ul{margin:0 0 1em 1.2em;}
-.content ul li{margin-bottom:.45em;}
+.author-links li{margin:.5em 0;overflow-wrap:anywhere;display:flex;gap:.5em;align-items:baseline;}
+.author-links a{font-weight:500;}
+.content{padding-top:2.2em;min-width:0;}
+/* ---------- typography ---------- */
+.content h1{font-family:'Lora',Georgia,serif;font-size:2em;margin-bottom:.5em;color:var(--navy);letter-spacing:-.01em;}
+.content h2{font-size:1.22em;font-weight:700;color:var(--navy);margin:2em 0 .8em;padding-left:.65em;
+  border-left:4px solid var(--accent);}
+.content h3{font-size:1em;margin:1.3em 0 .5em;color:var(--accent);font-weight:700;}
+.content p{margin-bottom:1em;}
+.content ul{margin:0 0 1.2em 1.25em;}
+.content ul li{margin-bottom:.5em;}
+.lead{font-size:1.05em;}
+/* ---------- publications ---------- */
 ul.pub-list{list-style:none;margin-left:0;}
-.pub{border-bottom:1px solid var(--line);padding:1em 0;}
-.pub-title{font-weight:600;margin-bottom:.15em;}
-.pub-authors{font-size:.9em;color:var(--muted);margin-bottom:.1em;}
-.pub-journal{font-size:.9em;margin-bottom:.4em;}
-.pub-actions{display:flex;gap:.6em;}
-.btn{display:inline-block;font-size:.78em;padding:.28em .8em;border:1px solid var(--accent);
-  border-radius:4px;color:var(--accent);background:#fff;cursor:pointer;font-family:inherit;}
+.pub{display:flex;gap:1.1em;background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:1.05em 1.2em;margin-bottom:.9em;transition:box-shadow .18s,transform .18s;}
+.pub:hover{box-shadow:0 8px 22px rgba(14,42,78,.10);transform:translateY(-2px);}
+.pub-side{flex:0 0 auto;}
+.pub-main{min-width:0;}
+.year-badge{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:700;
+  font-size:.8em;padding:.28em .7em;border-radius:999px;white-space:nowrap;}
+.year-badge.review{background:#fdf3d7;color:#8a6400;}
+.pub-title{font-weight:600;margin-bottom:.2em;line-height:1.45;}
+.pub-authors{font-size:.88em;color:var(--muted);margin-bottom:.15em;}
+.pub-journal{font-size:.88em;margin-bottom:.55em;}
+.pub-actions{display:flex;gap:.6em;margin-bottom:0!important;}
+.btn{display:inline-block;font-size:.78em;font-weight:600;padding:.32em .95em;border:1.5px solid var(--accent);
+  border-radius:999px;color:var(--accent);background:#fff;cursor:pointer;font-family:inherit;transition:all .15s;}
 .btn:hover{background:var(--accent);color:#fff;text-decoration:none;}
-.badge-review{background:#f5e9c8;color:#7a5c00;font-size:.8em;padding:.1em .5em;border-radius:3px;}
-.stats{display:flex;flex-wrap:wrap;gap:1em;margin:1em 0 1.5em;}
-.stat{border:1px solid var(--line);border-radius:8px;padding:.8em 1.2em;text-align:center;min-width:110px;}
-.stat b{display:block;font-size:1.5em;color:var(--accent);}
-.stat span{font-size:.8em;color:var(--muted);}
-.item{margin-bottom:1em;}
-.item .when{color:var(--muted);font-size:.85em;}
-.talk-type{display:inline-block;font-size:.72em;text-transform:uppercase;letter-spacing:.04em;
-  background:#eef3fb;color:var(--accent);padding:.12em .55em;border-radius:3px;margin-right:.4em;}
-.site-footer{border-top:1px solid var(--line);margin-top:2em;}
-.site-footer p{max-width:1100px;margin:0 auto;padding:1.2em 1em;font-size:.85em;color:var(--muted);}
-@media(max-width:800px){.layout{grid-template-columns:1fr;}
-  .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;}
-  .author-links{text-align:center;}}
+.chapter-thumb{max-width:290px;width:100%;border:1px solid var(--line);border-radius:8px;
+  box-shadow:0 3px 10px rgba(14,42,78,.10);margin:.3em 0 .7em;display:block;transition:transform .18s;}
+.chapter-thumb:hover{transform:scale(1.02);}
+/* ---------- talks ---------- */
+.talk-year{font-family:'Lora',Georgia,serif;font-size:1.35em;color:var(--navy);margin:1.6em 0 .7em;}
+ul.talk-list{list-style:none;margin-left:0;}
+.talk{border-left:3px solid var(--line);padding:.15em 0 .9em 1.15em;position:relative;margin-left:.35em;}
+.talk::before{content:'';position:absolute;left:-7px;top:.42em;width:11px;height:11px;border-radius:50%;
+  background:var(--accent);border:2.5px solid #fff;box-shadow:0 0 0 1.5px var(--accent);}
+.talk-type{display:inline-block;font-size:.7em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  padding:.18em .65em;border-radius:999px;margin-right:.45em;vertical-align:1px;}
+.tt-conference{background:var(--chip-conference);color:var(--chip-conference-t);}
+.tt-course{background:var(--chip-course);color:var(--chip-course-t);}
+.tt-symposium{background:var(--chip-symposium);color:var(--chip-symposium-t);}
+.tt-seminar{background:var(--chip-seminar);color:var(--chip-seminar-t);}
+.tt-workshop{background:var(--chip-workshop);color:var(--chip-workshop-t);}
+.talk-title{font-weight:600;}
+.talk-meta{font-size:.88em;color:var(--muted);}
+.upcoming-box{background:linear-gradient(120deg,var(--accent-soft),#f2f7ff);border:1.5px dashed var(--accent);
+  border-radius:12px;padding:1.2em 1.4em;margin-bottom:1.5em;}
+.upcoming-box p{margin-bottom:.3em;}
+/* ---------- consulting ---------- */
+.consulting-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1em;margin:1.2em 0;}
+.consult-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.3em 1.4em;
+  transition:box-shadow .18s,transform .18s;display:flex;flex-direction:column;}
+.consult-card:hover{box-shadow:0 10px 26px rgba(14,42,78,.12);transform:translateY(-3px);}
+.consult-tag{align-self:flex-start;font-size:.7em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  background:var(--accent-soft);color:var(--accent);padding:.2em .7em;border-radius:999px;margin-bottom:.7em;}
+.consult-card h3{margin:0 0 .25em;color:var(--navy);font-size:1.02em;}
+.consult-client{font-size:.85em;color:var(--muted);font-weight:600;margin-bottom:.5em;}
+.consult-card p.desc{font-size:.9em;color:var(--text);margin-bottom:0;}
+.cta-box{background:var(--navy);color:#fff;border-radius:14px;padding:1.5em 1.7em;margin-top:1.8em;}
+.cta-box h3{color:#fff;margin-top:0;}
+.cta-box a{color:#9ec3ff;font-weight:600;}
+/* ---------- footer ---------- */
+.site-footer{border-top:1px solid var(--line);margin-top:2.5em;background:var(--bg-soft);}
+.site-footer p{max-width:1140px;margin:0 auto;padding:1.4em 1.2em;font-size:.85em;color:var(--muted);}
+@media(max-width:840px){
+  .layout{grid-template-columns:1fr;gap:1.5em;}
+  .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:-84px;}
+  .author-links li{justify-content:center;}
+  .hero-band{height:130px;}
+}
 
 </style>
 
@@ -74,106 +134,161 @@ ul.pub-list{list-style:none;margin-left:0;}
   <div class="masthead-inner">
     <a class="site-title" href="index.html">Guillermo Droppelmann, PhD</a>
     <nav>
-      <a href="index.html" >About</a>
-      <a href="publications.html" >Publications</a>
+      <a href="index.html">About</a>
+      <a href="publications.html">Publications</a>
       <a href="talks.html" class="active">Talks</a>
-      <a href="teaching.html" >Teaching</a>
-      <a href="cv.html" >CV</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
     </nav>
   </div>
 </header>
-<div class="layout"><aside class="sidebar">
+<div class="hero-band"></div>
+<div class="layout">
+<aside class="sidebar">
   <img src="images/profile.jpg" alt="Guillermo Droppelmann, PhD" class="avatar"
        onerror="this.style.display='none';document.getElementById('avatar-fallback').style.display='flex';">
   <div id="avatar-fallback" class="avatar-fallback" style="display:none;">GD</div>
   <h2 class="author-name">Guillermo Droppelmann, PhD</h2>
   <p class="author-bio">Clinical Researcher · Machine &amp; Deep Learning applied to Musculoskeletal Imaging. Deputy Head of Research, Clínica MEDS. Lecturer, PhD Program in Industrial Engineering, PUCV.</p>
   <ul class="author-links">
-    <li>📍 Santiago, Chile</li>
+    <li>📍 <span>Santiago, Chile</span></li>
     <li>🏥 <a href="https://www.meds.cl/especialistas/guillermo-droppelmann/" target="_blank" rel="noopener">Clínica MEDS</a></li>
     <li>🎓 <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
     <li>💼 <a href="https://www.linkedin.com/in/guillermo-droppelmann-3b06b7385/" target="_blank" rel="noopener">LinkedIn</a></li>
     <li>✉️ <a href="mailto:guillermo.droppelmann@meds.cl">guillermo.droppelmann@meds.cl</a></li>
   </ul>
-</aside><main class="content"><h1>Talks &amp; presentations</h1>
+</aside>
+<main class="content">
+
+<h1>Talks &amp; presentations</h1>
+
+<div class="upcoming-box">
+<h3 style="margin-top:0;">📅 Upcoming talks</h3>
+<p>New dates will be announced soon. For speaking invitations on <strong>AI in medical imaging, clinical research methodology, or research ethics</strong>, please reach out at <a href="mailto:guillermo.droppelmann@meds.cl">guillermo.droppelmann@meds.cl</a>.</p>
+</div>
+
 <p>40 works presented at national and international conferences, seminars, workshops and courses.</p>
-<h2>2026</h2>
-<ul>
-<li><span class="talk-type">Conference</span><strong>Detección Oportuna del Riesgo Metabólico con IA en Minería</strong>. 1er Trendy Patagónico: Factores de Riesgo Cardiovascular en Ámbito Laboral — Neuquén, Argentina.</li>
-<li><span class="talk-type">Conference</span><strong>La IA en la Investigación Clínica: Desde el Dato a la Toma de Decisiones Éticas en Salud</strong>. Ciclo de Conferencias 2026 — Comité de Ética Científico Bradford Hill — Santiago, Chile.</li>
-<li><span class="talk-type">Course</span><strong>Uso de Inteligencia Artificial en Investigación: Aspectos Éticos</strong>. Curso Ética de la Investigación — Universidad del Desarrollo — Santiago, Chile.</li>
+<h2 class="talk-year">2026</h2>
+<ul class="talk-list">
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Detección Oportuna del Riesgo Metabólico con IA en Minería</span><br>
+<span class="talk-meta">1er Trendy Patagónico: Factores de Riesgo Cardiovascular en Ámbito Laboral — Neuquén, Argentina</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">La IA en la Investigación Clínica: Desde el Dato a la Toma de Decisiones Éticas en Salud</span><br>
+<span class="talk-meta">Ciclo de Conferencias 2026 — Comité de Ética Científico Bradford Hill — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-course">Course</span><span class="talk-title">Uso de Inteligencia Artificial en Investigación: Aspectos Éticos</span><br>
+<span class="talk-meta">Curso Ética de la Investigación — Universidad del Desarrollo — Santiago, Chile</span></li>
 </ul>
-<h2>2025</h2>
-<ul>
-<li><span class="talk-type">Conference</span><strong>Defining the Basis: Key Biomarkers for Occupational Health Prediction in High-Altitude Workers</strong>. 3rd Conference of the Scientific Committee on Occupational Medicine, ICOH — Lima, Peru.</li>
-<li><span class="talk-type">Conference</span><strong>Saving the Future: Early Cardiovascular Detection for Safer Work Environments</strong>. 3rd Conference of the Scientific Committee on Occupational Medicine, ICOH — Lima, Peru.</li>
-<li><span class="talk-type">Conference</span><strong>The Time Factor: Assessing Temporal Health Risks in the National Workforce</strong>. 3rd Conference of the Scientific Committee on Occupational Medicine, ICOH — Lima, Peru.</li>
-<li><span class="talk-type">Conference</span><strong>Descifrando el Supraespinoso: IA y Rehabilitación de Precisión en la Infiltración Grasa y la Tendinopatía</strong>. Congreso de Kinesiología Musculoesquelética — Módulo de Hombro — Santiago, Chile.</li>
-<li><span class="talk-type">Conference</span><strong>Epicondilitis Digital: De la Imagen al Tratamiento Personalizado</strong>. Congreso de Kinesiología Musculoesquelética — Módulo de Codo — Santiago, Chile.</li>
-<li><span class="talk-type">Conference</span><strong>Inteligencia Artificial y Síndromes Musculoesqueléticos</strong>. Congreso de Kinesiología Musculoesquelética — Módulo de Innovación — Santiago, Chile.</li>
-<li><span class="talk-type">Conference</span><strong>Inteligencia Artificial y Patología Musculoesquelética</strong>. Sociedad Chilena de Medicina del Deporte — Santiago, Chile.</li>
-<li><span class="talk-type">Course</span><strong>IA en la Toma de Decisiones en Extremidad Superior</strong>. Jornada de Actualización en Kinesiología Musculoesquelética — Tren Superior — Santiago, Chile.</li>
-<li><span class="talk-type">Course</span><strong>IA en Desórdenes Musculoesqueléticos</strong>. Jornada de Actualización en Kinesiología Musculoesquelética — Nuevas Tecnologías — Santiago, Chile.</li>
+<h2 class="talk-year">2025</h2>
+<ul class="talk-list">
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Defining the Basis: Key Biomarkers for Occupational Health Prediction in High-Altitude Workers</span><br>
+<span class="talk-meta">3rd Conference of the Scientific Committee on Occupational Medicine, ICOH — Lima, Peru</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Saving the Future: Early Cardiovascular Detection for Safer Work Environments</span><br>
+<span class="talk-meta">3rd Conference of the Scientific Committee on Occupational Medicine, ICOH — Lima, Peru</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">The Time Factor: Assessing Temporal Health Risks in the National Workforce</span><br>
+<span class="talk-meta">3rd Conference of the Scientific Committee on Occupational Medicine, ICOH — Lima, Peru</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Descifrando el Supraespinoso: IA y Rehabilitación de Precisión en la Infiltración Grasa y la Tendinopatía</span><br>
+<span class="talk-meta">Congreso de Kinesiología Musculoesquelética — Módulo de Hombro — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Epicondilitis Digital: De la Imagen al Tratamiento Personalizado</span><br>
+<span class="talk-meta">Congreso de Kinesiología Musculoesquelética — Módulo de Codo — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Inteligencia Artificial y Síndromes Musculoesqueléticos</span><br>
+<span class="talk-meta">Congreso de Kinesiología Musculoesquelética — Módulo de Innovación — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Inteligencia Artificial y Patología Musculoesquelética</span><br>
+<span class="talk-meta">Sociedad Chilena de Medicina del Deporte — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-course">Course</span><span class="talk-title">IA en la Toma de Decisiones en Extremidad Superior</span><br>
+<span class="talk-meta">Jornada de Actualización en Kinesiología Musculoesquelética — Tren Superior — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-course">Course</span><span class="talk-title">IA en Desórdenes Musculoesqueléticos</span><br>
+<span class="talk-meta">Jornada de Actualización en Kinesiología Musculoesquelética — Nuevas Tecnologías — Santiago, Chile</span></li>
 </ul>
-<h2>2024</h2>
-<ul>
-<li><span class="talk-type">Symposium</span><strong>Predicción del Estado de Salud de Trabajadores Expuestos a Gran Altitud mediante IA</strong>. I Simposio Internacional: Trabajo, Sueño y Fatiga en Gran Altitud — PUC — Santiago, Chile.</li>
-<li><span class="talk-type">Seminar</span><strong>Bioética en la Era de la IA: Desafíos Éticos de los Avances en Investigación en Salud</strong>. Comisión de Ética, Ministerio de Salud — Santiago, Chile.</li>
-<li><span class="talk-type">Workshop</span><strong>IA en Trastornos Musculoesqueléticos</strong>. Taller: Investigación e Innovación en Anatomía y Morfología — Sociedad Chilena de Anatomía — Viña del Mar, Chile.</li>
+<h2 class="talk-year">2024</h2>
+<ul class="talk-list">
+<li class="talk"><span class="talk-type tt-symposium">Symposium</span><span class="talk-title">Predicción del Estado de Salud de Trabajadores Expuestos a Gran Altitud mediante IA</span><br>
+<span class="talk-meta">I Simposio Internacional: Trabajo, Sueño y Fatiga en Gran Altitud — PUC — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-seminar">Seminar</span><span class="talk-title">Bioética en la Era de la IA: Desafíos Éticos de los Avances en Investigación en Salud</span><br>
+<span class="talk-meta">Comisión de Ética, Ministerio de Salud — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-workshop">Workshop</span><span class="talk-title">IA en Trastornos Musculoesqueléticos</span><br>
+<span class="talk-meta">Taller: Investigación e Innovación en Anatomía y Morfología — Sociedad Chilena de Anatomía — Viña del Mar, Chile</span></li>
 </ul>
-<h2>2023</h2>
-<ul>
-<li><span class="talk-type">Seminar</span><strong>Inteligencia Artificial y Tendinopatías</strong>. Avances Tecnológicos en Rehabilitación Musculoesquelética — Clínica MEDS / Lab. Bagó — Santiago, Chile.</li>
+<h2 class="talk-year">2023</h2>
+<ul class="talk-list">
+<li class="talk"><span class="talk-type tt-seminar">Seminar</span><span class="talk-title">Inteligencia Artificial y Tendinopatías</span><br>
+<span class="talk-meta">Avances Tecnológicos en Rehabilitación Musculoesquelética — Clínica MEDS / Lab. Bagó — Santiago, Chile</span></li>
 </ul>
-<h2>2022</h2>
-<ul>
-<li><span class="talk-type">Conference</span><strong>A Deep Learning Model for the Classification of Supraspinatus Fatty Infiltration from Shoulder MRI</strong>. INFORMS Annual Meeting 2022 — Indianapolis, USA.</li>
+<h2 class="talk-year">2022</h2>
+<ul class="talk-list">
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">A Deep Learning Model for the Classification of Supraspinatus Fatty Infiltration from Shoulder MRI</span><br>
+<span class="talk-meta">INFORMS Annual Meeting 2022 — Indianapolis, USA</span></li>
 </ul>
-<h2>2020</h2>
-<ul>
-<li><span class="talk-type">Conference</span><strong>Análisis Biomecánico del Control Rotacional de la Tenodesis Extraarticular en la Reconstrucción del LCA</strong>. Congreso SLARD — Santiago, Chile.</li>
-<li><span class="talk-type">Conference</span><strong>Cohorte de la Fuerza Isométrica Máxima Extensora de Rodilla en Pacientes con Inhibición Muscular Artrogénica Post-LCA</strong>. Congreso SLARD — Santiago, Chile.</li>
-<li><span class="talk-type">Conference</span><strong>Efecto de la Anestesia Raquídea sobre la Prueba de Pivot Shift en Pacientes con Rotura del LCA</strong>. Congreso SLARD — Santiago, Chile.</li>
-<li><span class="talk-type">Conference</span><strong>Improving Pain While Doing WALANT</strong>. 12th Asian Pacific Federation of Societies for Surgery of the Hand — Melbourne, Australia.</li>
-<li><span class="talk-type">Conference</span><strong>Symptoms, Functionality, and Ultrasound Findings over 30,000 Images in Lateral Epicondylitis</strong>. 12th Asian Pacific Federation of Societies for Surgery of the Hand — Melbourne, Australia.</li>
-<li><span class="talk-type">Seminar</span><strong>Epicondilitis e Inteligencia Artificial</strong>. Lesiones de Codo en Deportistas — Clínica MEDS / Lab. Bagó — Santiago, Chile.</li>
+<h2 class="talk-year">2020</h2>
+<ul class="talk-list">
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Análisis Biomecánico del Control Rotacional de la Tenodesis Extraarticular en la Reconstrucción del LCA</span><br>
+<span class="talk-meta">Congreso SLARD — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Cohorte de la Fuerza Isométrica Máxima Extensora de Rodilla en Pacientes con Inhibición Muscular Artrogénica Post-LCA</span><br>
+<span class="talk-meta">Congreso SLARD — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Efecto de la Anestesia Raquídea sobre la Prueba de Pivot Shift en Pacientes con Rotura del LCA</span><br>
+<span class="talk-meta">Congreso SLARD — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Improving Pain While Doing WALANT</span><br>
+<span class="talk-meta">12th Asian Pacific Federation of Societies for Surgery of the Hand — Melbourne, Australia</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Symptoms, Functionality, and Ultrasound Findings over 30,000 Images in Lateral Epicondylitis</span><br>
+<span class="talk-meta">12th Asian Pacific Federation of Societies for Surgery of the Hand — Melbourne, Australia</span></li>
+<li class="talk"><span class="talk-type tt-seminar">Seminar</span><span class="talk-title">Epicondilitis e Inteligencia Artificial</span><br>
+<span class="talk-meta">Lesiones de Codo en Deportistas — Clínica MEDS / Lab. Bagó — Santiago, Chile</span></li>
 </ul>
-<h2>2019</h2>
-<ul>
-<li><span class="talk-type">Conference</span><strong>Anomalía Fibro-Adiposa Vascular en Antebrazo, un Nuevo y Raro Desorden</strong>. 54º Congreso Chileno de Ortopedia y Traumatología — Santiago, Chile.</li>
-<li><span class="talk-type">Conference</span><strong>Bilateral Endoscopic Carpal Tunnel Release versus Unilateral Carpal Tunnel Release</strong>. 14th IFSSH & 11th IFSHT Triennial Congress — Berlin, Germany.</li>
-<li><span class="talk-type">Conference</span><strong>Descripción Imagenológica de las Tendinopatías Cálcicas en la Mano y Muñeca</strong>. 54º Congreso Chileno de Ortopedia y Traumatología — Santiago, Chile.</li>
-<li><span class="talk-type">Conference</span><strong>Diagnóstico de Roturas de Manguito Rotador con Ecografía y RM: ¿La Morfología Acromial Influye?</strong>. 55º Congreso Chileno de Ortopedia y Traumatología — Santiago, Chile.</li>
-<li><span class="talk-type">Conference</span><strong>High Accuracy in Ultrasonographic Patterns Detection over 30,000 Images in Lateral Elbow Tendinopathy with AI</strong>. INFORMS Annual Meeting 2019 — Seattle, USA.</li>
-<li><span class="talk-type">Symposium</span><strong>Epicondilitis: Evolución Natural o Patología del Tendón</strong>. V Jornada de Investigación y Doctorado Ciencias sin Fronteras — UCAM — Murcia, Spain.</li>
-<li><span class="talk-type">Symposium</span><strong>Diferencias Electromiográficas entre los Planos Clavicular y Escapulohumeral</strong>. 4º Simposio Internacional SICE — U. Mayor — Santiago, Chile.</li>
-<li><span class="talk-type">Symposium</span><strong>Formación de Estudiantes de Medicina en Latinoamérica: Un Olvido de la Actividad Física</strong>. 4º Simposio Internacional SICE — U. Mayor — Santiago, Chile.</li>
-<li><span class="talk-type">Symposium</span><strong>Sintomatología y Patrones Ultrasonográficos en el Codo del Tenista</strong>. 4º Simposio Internacional SICE — U. Mayor — Santiago, Chile.</li>
-<li><span class="talk-type">Symposium</span><strong>Síndrome del Túnel Radial: Manejo de un Diagnóstico en el Dolor del Tenista</strong>. 4º Simposio Internacional SICE — U. Mayor — Santiago, Chile.</li>
-<li><span class="talk-type">Symposium</span><strong>¿Existe Más de un Codo de Tenista?</strong>. 4º Simposio Internacional SICE — U. Mayor — Santiago, Chile.</li>
+<h2 class="talk-year">2019</h2>
+<ul class="talk-list">
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Anomalía Fibro-Adiposa Vascular en Antebrazo, un Nuevo y Raro Desorden</span><br>
+<span class="talk-meta">54º Congreso Chileno de Ortopedia y Traumatología — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Bilateral Endoscopic Carpal Tunnel Release versus Unilateral Carpal Tunnel Release</span><br>
+<span class="talk-meta">14th IFSSH & 11th IFSHT Triennial Congress — Berlin, Germany</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Descripción Imagenológica de las Tendinopatías Cálcicas en la Mano y Muñeca</span><br>
+<span class="talk-meta">54º Congreso Chileno de Ortopedia y Traumatología — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Diagnóstico de Roturas de Manguito Rotador con Ecografía y RM: ¿La Morfología Acromial Influye?</span><br>
+<span class="talk-meta">55º Congreso Chileno de Ortopedia y Traumatología — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">High Accuracy in Ultrasonographic Patterns Detection over 30,000 Images in Lateral Elbow Tendinopathy with AI</span><br>
+<span class="talk-meta">INFORMS Annual Meeting 2019 — Seattle, USA</span></li>
+<li class="talk"><span class="talk-type tt-symposium">Symposium</span><span class="talk-title">Epicondilitis: Evolución Natural o Patología del Tendón</span><br>
+<span class="talk-meta">V Jornada de Investigación y Doctorado Ciencias sin Fronteras — UCAM — Murcia, Spain</span></li>
+<li class="talk"><span class="talk-type tt-symposium">Symposium</span><span class="talk-title">Diferencias Electromiográficas entre los Planos Clavicular y Escapulohumeral</span><br>
+<span class="talk-meta">4º Simposio Internacional SICE — U. Mayor — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-symposium">Symposium</span><span class="talk-title">Formación de Estudiantes de Medicina en Latinoamérica: Un Olvido de la Actividad Física</span><br>
+<span class="talk-meta">4º Simposio Internacional SICE — U. Mayor — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-symposium">Symposium</span><span class="talk-title">Sintomatología y Patrones Ultrasonográficos en el Codo del Tenista</span><br>
+<span class="talk-meta">4º Simposio Internacional SICE — U. Mayor — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-symposium">Symposium</span><span class="talk-title">Síndrome del Túnel Radial: Manejo de un Diagnóstico en el Dolor del Tenista</span><br>
+<span class="talk-meta">4º Simposio Internacional SICE — U. Mayor — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-symposium">Symposium</span><span class="talk-title">¿Existe Más de un Codo de Tenista?</span><br>
+<span class="talk-meta">4º Simposio Internacional SICE — U. Mayor — Santiago, Chile</span></li>
 </ul>
-<h2>2018</h2>
-<ul>
-<li><span class="talk-type">Conference</span><strong>Asociación entre Síntomas Gastrointestinales y Rendimiento Deportivo en Atletas de la Maratón de Santiago</strong>. 63º Congreso SOCHMEDEP — Santiago, Chile.</li>
-<li><span class="talk-type">Conference</span><strong>Caracterización y Seguimiento de una Cohorte de Pacientes Inmigrantes con Diabetes Mellitus Tipo 1</strong>. Congreso de la Sociedad Chilena de Endocrinología y Diabetes — Santiago, Chile.</li>
-<li><span class="talk-type">Symposium</span><strong>50 Años de Evolución de Enfermedades No Transmisibles en Chile</strong>. 3er Simposio Internacional SICE — U. Mayor — Santiago, Chile.</li>
-<li><span class="talk-type">Symposium</span><strong>Cambio de Paradigmas en el Manejo de la Epicondilitis</strong>. V Jornada Científica de Kinesiología UC — PUC — Santiago, Chile.</li>
+<h2 class="talk-year">2018</h2>
+<ul class="talk-list">
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Asociación entre Síntomas Gastrointestinales y Rendimiento Deportivo en Atletas de la Maratón de Santiago</span><br>
+<span class="talk-meta">63º Congreso SOCHMEDEP — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Caracterización y Seguimiento de una Cohorte de Pacientes Inmigrantes con Diabetes Mellitus Tipo 1</span><br>
+<span class="talk-meta">Congreso de la Sociedad Chilena de Endocrinología y Diabetes — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-symposium">Symposium</span><span class="talk-title">50 Años de Evolución de Enfermedades No Transmisibles en Chile</span><br>
+<span class="talk-meta">3er Simposio Internacional SICE — U. Mayor — Santiago, Chile</span></li>
+<li class="talk"><span class="talk-type tt-symposium">Symposium</span><span class="talk-title">Cambio de Paradigmas en el Manejo de la Epicondilitis</span><br>
+<span class="talk-meta">V Jornada Científica de Kinesiología UC — PUC — Santiago, Chile</span></li>
 </ul>
-<h2>2017</h2>
-<ul>
-<li><span class="talk-type">Conference</span><strong>First Interosseous Muscle Training for CMC Osteoarthritis: Which is the Exercise We Can Trust?</strong>. XXII FESSH Congress & XII EFSHT Congress — Budapest, Hungary.</li>
-<li><span class="talk-type">Conference</span><strong>Radial Tunnel Syndrome: Ultrasonography-Guided Hydraulic Release Associated with Corticosteroids</strong>. XXII FESSH Congress & XII EFSHT Congress — Budapest, Hungary.</li>
+<h2 class="talk-year">2017</h2>
+<ul class="talk-list">
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">First Interosseous Muscle Training for CMC Osteoarthritis: Which is the Exercise We Can Trust?</span><br>
+<span class="talk-meta">XXII FESSH Congress & XII EFSHT Congress — Budapest, Hungary</span></li>
+<li class="talk"><span class="talk-type tt-conference">Conference</span><span class="talk-title">Radial Tunnel Syndrome: Ultrasonography-Guided Hydraulic Release Associated with Corticosteroids</span><br>
+<span class="talk-meta">XXII FESSH Congress & XII EFSHT Congress — Budapest, Hungary</span></li>
 </ul>
-</main></div>
+
+
+</main>
+</div>
 <footer class="site-footer">
-  <p>© 2026 Guillermo Droppelmann · <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> · Hosted on GitHub Pages</p>
+  <p>© 2026 Guillermo Droppelmann · <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://www.linkedin.com/in/guillermo-droppelmann-3b06b7385/" target="_blank" rel="noopener">LinkedIn</a></p>
 </footer>
 <script>
 document.addEventListener('click', function(e){
   var b = e.target.closest('.btn-cite');
   if(!b) return;
   navigator.clipboard.writeText(b.dataset.cite).then(function(){
-    var t = b.textContent; b.textContent = 'Copied!';
+    var t = b.textContent; b.textContent = '✓ Copied';
     setTimeout(function(){ b.textContent = t; }, 1600);
   });
 });

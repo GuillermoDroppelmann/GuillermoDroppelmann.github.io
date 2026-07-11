@@ -4,67 +4,127 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Publications — Guillermo Droppelmann, PhD</title>
-<meta name="description" content="Peer-reviewed publications by Guillermo Droppelmann: machine learning, deep learning, medical imaging, musculoskeletal diagnostics, sports medicine.">
+<meta name="description" content="Peer-reviewed publications by Guillermo Droppelmann: machine learning, deep learning, medical imaging, musculoskeletal diagnostics, sports medicine. Mirrors Google Scholar.">
 <meta name="author" content="Guillermo Droppelmann">
 <meta property="og:title" content="Publications — Guillermo Droppelmann, PhD">
-<meta property="og:description" content="Peer-reviewed publications by Guillermo Droppelmann: machine learning, deep learning, medical imaging, musculoskeletal diagnostics, sports medicine.">
+<meta property="og:description" content="Peer-reviewed publications by Guillermo Droppelmann: machine learning, deep learning, medical imaging, musculoskeletal diagnostics, sports medicine. Mirrors Google Scholar.">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://guillermodroppelmann.github.io/publications.html">
 <link rel="canonical" href="https://guillermodroppelmann.github.io/publications.html">
 <meta property="og:image" content="https://guillermodroppelmann.github.io/images/profile.jpg">
 <style>
 
-:root{--accent:#2a5db0;--text:#3d4144;--muted:#646769;--line:#e9e9e9;--bg:#fff;}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;1,400&display=swap');
+:root{
+  --navy:#0e2a4e; --navy-2:#143a6b; --accent:#2f6fdb; --accent-soft:#e8f0fd;
+  --text:#25313f; --muted:#5c6b7a; --line:#e3e8ee; --bg:#fff; --bg-soft:#f6f8fb;
+  --chip-conference:#e8f0fd; --chip-conference-t:#2057b8;
+  --chip-course:#e5f6ec; --chip-course-t:#1b7a45;
+  --chip-symposium:#f1e9fb; --chip-symposium-t:#6d3fb5;
+  --chip-seminar:#fdf0e2; --chip-seminar-t:#a86412;
+  --chip-workshop:#e2f5f5; --chip-workshop-t:#0e7a7a;
+}
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-     color:var(--text);background:var(--bg);line-height:1.6;font-size:16px;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  color:var(--text);background:var(--bg);line-height:1.65;font-size:16px;}
 a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
-.masthead{border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:10;}
-.masthead-inner{max-width:1100px;margin:0 auto;padding:0.7em 1em;display:flex;flex-wrap:wrap;
+/* ---------- header ---------- */
+.masthead{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);z-index:50;}
+.masthead-inner{max-width:1140px;margin:0 auto;padding:.75em 1.2em;display:flex;flex-wrap:wrap;
   justify-content:space-between;align-items:center;gap:.5em;}
-.site-title{font-weight:700;font-size:1.05em;color:var(--text);}
-.masthead nav{display:flex;flex-wrap:wrap;gap:1.1em;}
-.masthead nav a{color:var(--text);font-weight:500;padding:.2em 0;border-bottom:2px solid transparent;}
-.masthead nav a.active,.masthead nav a:hover{border-bottom-color:var(--accent);text-decoration:none;color:var(--accent);}
-.layout{max-width:1100px;margin:0 auto;padding:2em 1em;display:grid;grid-template-columns:260px 1fr;gap:2.5em;}
-.layout.single{grid-template-columns:1fr;}
-.sidebar{text-align:left;}
-.avatar{width:175px;height:175px;border-radius:50%;object-fit:cover;display:block;}
-.avatar-fallback{width:175px;height:175px;border-radius:50%;background:var(--accent);color:#fff;
-  font-size:3.5em;font-weight:700;align-items:center;justify-content:center;}
-.author-name{font-size:1.25em;margin:.6em 0 .3em;}
-.author-bio{font-size:.86em;color:var(--muted);margin-bottom:1em;}
+.site-title{font-weight:800;font-size:1.02em;color:var(--navy);letter-spacing:-.01em;}
+.masthead nav{display:flex;flex-wrap:wrap;gap:1.35em;}
+.masthead nav a{color:var(--text);font-weight:600;font-size:.92em;padding:.25em 0;
+  border-bottom:2.5px solid transparent;}
+.masthead nav a.active,.masthead nav a:hover{border-bottom-color:var(--accent);color:var(--accent);text-decoration:none;}
+/* ---------- hero band ---------- */
+.hero-band{background:linear-gradient(120deg,var(--navy) 0%,var(--navy-2) 60%,#1d4e8f 100%);height:118px;}
+/* ---------- layout ---------- */
+.layout{max-width:1140px;margin:0 auto;padding:0 1.2em 3em;display:grid;
+  grid-template-columns:280px 1fr;gap:3em;}
+.sidebar{margin-top:-72px;}
+.avatar{width:190px;height:190px;border-radius:50%;object-fit:cover;display:block;
+  border:5px solid #fff;box-shadow:0 6px 22px rgba(14,42,78,.22);}
+.avatar-fallback{width:190px;height:190px;border-radius:50%;background:var(--navy);color:#fff;
+  font-size:3.6em;font-weight:800;align-items:center;justify-content:center;border:5px solid #fff;
+  box-shadow:0 6px 22px rgba(14,42,78,.22);}
+.author-name{font-size:1.28em;margin:.7em 0 .25em;color:var(--navy);font-weight:800;letter-spacing:-.01em;}
+.author-bio{font-size:.86em;color:var(--muted);margin-bottom:1.1em;}
 .author-links{list-style:none;font-size:.9em;}
-.author-links li{margin:.35em 0;overflow-wrap:anywhere;}
-.content h1{font-size:1.7em;margin-bottom:.6em;}
-.content h2{font-size:1.25em;margin:1.6em 0 .6em;padding-bottom:.25em;border-bottom:1px solid var(--line);}
-.content h3{font-size:1.05em;margin:1.2em 0 .4em;color:var(--accent);}
-.content p{margin-bottom:.9em;}
-.content ul{margin:0 0 1em 1.2em;}
-.content ul li{margin-bottom:.45em;}
+.author-links li{margin:.5em 0;overflow-wrap:anywhere;display:flex;gap:.5em;align-items:baseline;}
+.author-links a{font-weight:500;}
+.content{padding-top:2.2em;min-width:0;}
+/* ---------- typography ---------- */
+.content h1{font-family:'Lora',Georgia,serif;font-size:2em;margin-bottom:.5em;color:var(--navy);letter-spacing:-.01em;}
+.content h2{font-size:1.22em;font-weight:700;color:var(--navy);margin:2em 0 .8em;padding-left:.65em;
+  border-left:4px solid var(--accent);}
+.content h3{font-size:1em;margin:1.3em 0 .5em;color:var(--accent);font-weight:700;}
+.content p{margin-bottom:1em;}
+.content ul{margin:0 0 1.2em 1.25em;}
+.content ul li{margin-bottom:.5em;}
+.lead{font-size:1.05em;}
+/* ---------- publications ---------- */
 ul.pub-list{list-style:none;margin-left:0;}
-.pub{border-bottom:1px solid var(--line);padding:1em 0;}
-.pub-title{font-weight:600;margin-bottom:.15em;}
-.pub-authors{font-size:.9em;color:var(--muted);margin-bottom:.1em;}
-.pub-journal{font-size:.9em;margin-bottom:.4em;}
-.pub-actions{display:flex;gap:.6em;}
-.btn{display:inline-block;font-size:.78em;padding:.28em .8em;border:1px solid var(--accent);
-  border-radius:4px;color:var(--accent);background:#fff;cursor:pointer;font-family:inherit;}
+.pub{display:flex;gap:1.1em;background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:1.05em 1.2em;margin-bottom:.9em;transition:box-shadow .18s,transform .18s;}
+.pub:hover{box-shadow:0 8px 22px rgba(14,42,78,.10);transform:translateY(-2px);}
+.pub-side{flex:0 0 auto;}
+.pub-main{min-width:0;}
+.year-badge{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:700;
+  font-size:.8em;padding:.28em .7em;border-radius:999px;white-space:nowrap;}
+.year-badge.review{background:#fdf3d7;color:#8a6400;}
+.pub-title{font-weight:600;margin-bottom:.2em;line-height:1.45;}
+.pub-authors{font-size:.88em;color:var(--muted);margin-bottom:.15em;}
+.pub-journal{font-size:.88em;margin-bottom:.55em;}
+.pub-actions{display:flex;gap:.6em;margin-bottom:0!important;}
+.btn{display:inline-block;font-size:.78em;font-weight:600;padding:.32em .95em;border:1.5px solid var(--accent);
+  border-radius:999px;color:var(--accent);background:#fff;cursor:pointer;font-family:inherit;transition:all .15s;}
 .btn:hover{background:var(--accent);color:#fff;text-decoration:none;}
-.badge-review{background:#f5e9c8;color:#7a5c00;font-size:.8em;padding:.1em .5em;border-radius:3px;}
-.stats{display:flex;flex-wrap:wrap;gap:1em;margin:1em 0 1.5em;}
-.stat{border:1px solid var(--line);border-radius:8px;padding:.8em 1.2em;text-align:center;min-width:110px;}
-.stat b{display:block;font-size:1.5em;color:var(--accent);}
-.stat span{font-size:.8em;color:var(--muted);}
-.item{margin-bottom:1em;}
-.item .when{color:var(--muted);font-size:.85em;}
-.talk-type{display:inline-block;font-size:.72em;text-transform:uppercase;letter-spacing:.04em;
-  background:#eef3fb;color:var(--accent);padding:.12em .55em;border-radius:3px;margin-right:.4em;}
-.site-footer{border-top:1px solid var(--line);margin-top:2em;}
-.site-footer p{max-width:1100px;margin:0 auto;padding:1.2em 1em;font-size:.85em;color:var(--muted);}
-@media(max-width:800px){.layout{grid-template-columns:1fr;}
-  .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;}
-  .author-links{text-align:center;}}
+.chapter-thumb{max-width:290px;width:100%;border:1px solid var(--line);border-radius:8px;
+  box-shadow:0 3px 10px rgba(14,42,78,.10);margin:.3em 0 .7em;display:block;transition:transform .18s;}
+.chapter-thumb:hover{transform:scale(1.02);}
+/* ---------- talks ---------- */
+.talk-year{font-family:'Lora',Georgia,serif;font-size:1.35em;color:var(--navy);margin:1.6em 0 .7em;}
+ul.talk-list{list-style:none;margin-left:0;}
+.talk{border-left:3px solid var(--line);padding:.15em 0 .9em 1.15em;position:relative;margin-left:.35em;}
+.talk::before{content:'';position:absolute;left:-7px;top:.42em;width:11px;height:11px;border-radius:50%;
+  background:var(--accent);border:2.5px solid #fff;box-shadow:0 0 0 1.5px var(--accent);}
+.talk-type{display:inline-block;font-size:.7em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  padding:.18em .65em;border-radius:999px;margin-right:.45em;vertical-align:1px;}
+.tt-conference{background:var(--chip-conference);color:var(--chip-conference-t);}
+.tt-course{background:var(--chip-course);color:var(--chip-course-t);}
+.tt-symposium{background:var(--chip-symposium);color:var(--chip-symposium-t);}
+.tt-seminar{background:var(--chip-seminar);color:var(--chip-seminar-t);}
+.tt-workshop{background:var(--chip-workshop);color:var(--chip-workshop-t);}
+.talk-title{font-weight:600;}
+.talk-meta{font-size:.88em;color:var(--muted);}
+.upcoming-box{background:linear-gradient(120deg,var(--accent-soft),#f2f7ff);border:1.5px dashed var(--accent);
+  border-radius:12px;padding:1.2em 1.4em;margin-bottom:1.5em;}
+.upcoming-box p{margin-bottom:.3em;}
+/* ---------- consulting ---------- */
+.consulting-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1em;margin:1.2em 0;}
+.consult-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.3em 1.4em;
+  transition:box-shadow .18s,transform .18s;display:flex;flex-direction:column;}
+.consult-card:hover{box-shadow:0 10px 26px rgba(14,42,78,.12);transform:translateY(-3px);}
+.consult-tag{align-self:flex-start;font-size:.7em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  background:var(--accent-soft);color:var(--accent);padding:.2em .7em;border-radius:999px;margin-bottom:.7em;}
+.consult-card h3{margin:0 0 .25em;color:var(--navy);font-size:1.02em;}
+.consult-client{font-size:.85em;color:var(--muted);font-weight:600;margin-bottom:.5em;}
+.consult-card p.desc{font-size:.9em;color:var(--text);margin-bottom:0;}
+.cta-box{background:var(--navy);color:#fff;border-radius:14px;padding:1.5em 1.7em;margin-top:1.8em;}
+.cta-box h3{color:#fff;margin-top:0;}
+.cta-box a{color:#9ec3ff;font-weight:600;}
+/* ---------- footer ---------- */
+.site-footer{border-top:1px solid var(--line);margin-top:2.5em;background:var(--bg-soft);}
+.site-footer p{max-width:1140px;margin:0 auto;padding:1.4em 1.2em;font-size:.85em;color:var(--muted);}
+@media(max-width:840px){
+  .layout{grid-template-columns:1fr;gap:1.5em;}
+  .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:-84px;}
+  .author-links li{justify-content:center;}
+  .hero-band{height:130px;}
+}
 
 </style>
 
@@ -74,612 +134,997 @@ ul.pub-list{list-style:none;margin-left:0;}
   <div class="masthead-inner">
     <a class="site-title" href="index.html">Guillermo Droppelmann, PhD</a>
     <nav>
-      <a href="index.html" >About</a>
+      <a href="index.html">About</a>
       <a href="publications.html" class="active">Publications</a>
-      <a href="talks.html" >Talks</a>
-      <a href="teaching.html" >Teaching</a>
-      <a href="cv.html" >CV</a>
+      <a href="talks.html">Talks</a>
+      <a href="consulting.html">Consulting</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="cv.html">CV</a>
     </nav>
   </div>
 </header>
-<div class="layout"><aside class="sidebar">
+<div class="hero-band"></div>
+<div class="layout">
+<aside class="sidebar">
   <img src="images/profile.jpg" alt="Guillermo Droppelmann, PhD" class="avatar"
        onerror="this.style.display='none';document.getElementById('avatar-fallback').style.display='flex';">
   <div id="avatar-fallback" class="avatar-fallback" style="display:none;">GD</div>
   <h2 class="author-name">Guillermo Droppelmann, PhD</h2>
   <p class="author-bio">Clinical Researcher · Machine &amp; Deep Learning applied to Musculoskeletal Imaging. Deputy Head of Research, Clínica MEDS. Lecturer, PhD Program in Industrial Engineering, PUCV.</p>
   <ul class="author-links">
-    <li>📍 Santiago, Chile</li>
+    <li>📍 <span>Santiago, Chile</span></li>
     <li>🏥 <a href="https://www.meds.cl/especialistas/guillermo-droppelmann/" target="_blank" rel="noopener">Clínica MEDS</a></li>
     <li>🎓 <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
     <li>💼 <a href="https://www.linkedin.com/in/guillermo-droppelmann-3b06b7385/" target="_blank" rel="noopener">LinkedIn</a></li>
     <li>✉️ <a href="mailto:guillermo.droppelmann@meds.cl">guillermo.droppelmann@meds.cl</a></li>
   </ul>
-</aside><main class="content">
-<h1>Publications</h1>
-<p>Full and up-to-date citation metrics on my
-<a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener"><strong>Google Scholar profile</strong></a> (h-index: 9).
-Click <strong>Cite</strong> to copy the reference, or <strong>Google Scholar</strong> to view and cite each paper.</p>
+</aside>
+<main class="content">
 
-<h2>Peer-reviewed journal articles</h2>
+<h1>Publications</h1>
+<p>This list mirrors my <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener"><strong>Google Scholar profile</strong></a>.
+Click <strong>Cite</strong> to copy the reference, or <strong>Google Scholar</strong> to view and cite each work.</p>
+
+<h2>Peer-reviewed journal articles &amp; indexed works</h2>
+
 <ul class="pub-list">
 <li class="pub">
-  <p class="pub-title">Cardiometabolic Pattern of Workers Unfit for High-Altitude Occupational Exposure in Chile: A Large-Scale Retrospective Analysis Using a Random Forest Model</p>
-  <p class="pub-authors">Jorquera R, <strong>Droppelmann G</strong>, Blanco G, Dollmann M, Ahumada I, Feijoo F</p>
-  <p class="pub-journal"><em>Work and Health</em>, 2026</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Cardiometabolic+Pattern+of+Workers+Unfit+for+High-Altitude+Occupational+Exposure+in+Chile%3A+A+Large-Scale+Retrospective+Analysis+Using+a+Random+Forest+Model%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Jorquera R, Droppelmann G, Blanco G, Dollmann M, Ahumada I, Feijoo F. Cardiometabolic Pattern of Workers Unfit for High-Altitude Occupational Exposure in Chile: A Large-Scale Retrospective Analysis Using a Random Forest Model. Work and Health, 2026.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2026</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Cardiometabolic Pattern of Workers Unfit for High-Altitude Occupational Exposure in Chile: A Large-Scale Retrospective Analysis Using a Random Forest Model</p>
+    <p class="pub-authors">Jorquera R, <strong>Droppelmann G</strong>, Blanco G, Dollmann M, Ahumada I, Feijoo F</p>
+    <p class="pub-journal"><em>Work and Health</em>, 2(2):10</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Cardiometabolic+Pattern+of+Workers+Unfit+for+High-Altitude+Occupational+Exposure+in+Chile%3A+A+Large-Scale+Retrospective+Analysis+Using+a+Random+Forest+Model%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Jorquera R, Droppelmann G, Blanco G, Dollmann M, Ahumada I, Feijoo F. Cardiometabolic Pattern of Workers Unfit for High-Altitude Occupational Exposure in Chile: A Large-Scale Retrospective Analysis Using a Random Forest Model. Work and Health, 2(2):10, 2026.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Machine and deep learning models for ligament injury recognition: a systematic review and meta-analysis of imaging and novel diagnostic techniques</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Varas E, Villagrán J, Jorquera C, Feijoo F</p>
-  <p class="pub-journal"><em>EFORT Open Reviews</em>, 11(1):3–16, 2026</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Machine+and+deep+learning+models+for+ligament+injury+recognition%3A+a+systematic+review+and+meta-analysis+of+imaging+and+novel+diagnostic+techniques%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Varas E, Villagrán J, Jorquera C, Feijoo F. Machine and deep learning models for ligament injury recognition: a systematic review and meta-analysis of imaging and novel diagnostic techniques. EFORT Open Reviews, 11(1):3–16, 2026.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2026</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Surgeons Can Decrease the Pain of WALANT Local Anesthesia Injection if They Ask for Patient Feedback</p>
+    <p class="pub-authors">Greene C, <strong>Droppelmann G</strong>, Fodor D, Lalonde DH</p>
+    <p class="pub-journal"><em>Plastic Surgery</em>, 34(2):253–258</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Surgeons+Can+Decrease+the+Pain+of+WALANT+Local+Anesthesia+Injection+if+They+Ask+for+Patient+Feedback%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Greene C, Droppelmann G, Fodor D, Lalonde DH. Surgeons Can Decrease the Pain of WALANT Local Anesthesia Injection if They Ask for Patient Feedback. Plastic Surgery, 34(2):253–258, 2026.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Data-driven identification of metabolic and cardiovascular biomarkers in high-altitude workers: a machine learning approach</p>
-  <p class="pub-authors">Jorquera R, <strong>Droppelmann G</strong>, Blanco G, Dollmann M, Ahumada I, Feijoo F</p>
-  <p class="pub-journal"><em>Frontiers in Public Health</em>, 13, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Data-driven+identification+of+metabolic+and+cardiovascular+biomarkers+in+high-altitude+workers%3A+a+machine+learning+approach%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Jorquera R, Droppelmann G, Blanco G, Dollmann M, Ahumada I, Feijoo F. Data-driven identification of metabolic and cardiovascular biomarkers in high-altitude workers: a machine learning approach. Frontiers in Public Health, 13, 2025.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2026</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Machine and Deep Learning Models for Ligament Injury Recognition: A Systematic Review and Meta-Analysis of Imaging and Novel Diagnostic Techniques</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Varas E, Villagrán J, Jorquera C, Feijoo F</p>
+    <p class="pub-journal"><em>EFORT Open Reviews</em>, 11(1):3–16</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Machine+and+Deep+Learning+Models+for+Ligament+Injury+Recognition%3A+A+Systematic+Review+and+Meta-Analysis+of+Imaging+and+Novel+Diagnostic+Techniques%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Varas E, Villagrán J, Jorquera C, Feijoo F. Machine and Deep Learning Models for Ligament Injury Recognition: A Systematic Review and Meta-Analysis of Imaging and Novel Diagnostic Techniques. EFORT Open Reviews, 11(1):3–16, 2026.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Mining the risk: early cardiovascular detection in workers</p>
-  <p class="pub-authors">Jorquera R, <strong>Droppelmann G</strong>, Dollmann M, Blanco G, Ahumada I, Lira A, Feijoo F</p>
-  <p class="pub-journal"><em>Frontiers in Medicine</em>, 12, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Mining+the+risk%3A+early+cardiovascular+detection+in+workers%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Jorquera R, Droppelmann G, Dollmann M, Blanco G, Ahumada I, Lira A, Feijoo F. Mining the risk: early cardiovascular detection in workers. Frontiers in Medicine, 12, 2025.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Ultrasound-Guided Perineural Corticosteroid Injection for Lacertus Fibrosus Syndrome: A Retrospective Cohort Study</p>
+    <p class="pub-authors">Greene C, <strong>Droppelmann G</strong>, García N, Jorquera C, Rosales J</p>
+    <p class="pub-journal"><em>Orthopedic Research and Reviews</em>, 229–240</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Ultrasound-Guided+Perineural+Corticosteroid+Injection+for+Lacertus+Fibrosus+Syndrome%3A+A+Retrospective+Cohort+Study%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Greene C, Droppelmann G, García N, Jorquera C, Rosales J. Ultrasound-Guided Perineural Corticosteroid Injection for Lacertus Fibrosus Syndrome: A Retrospective Cohort Study. Orthopedic Research and Reviews, 229–240, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Impact of Exercise Dose–Response on Maternal Mental Health and Perinatal Depression Prevention: A Systematic Review and Meta-Analysis</p>
-  <p class="pub-authors">Fuenzalida P, <strong>Droppelmann G</strong>, Mahecha S, Feijoo F</p>
-  <p class="pub-journal"><em>International Journal of Public Health</em>, 70, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Impact+of+Exercise+Dose%E2%80%93Response+on+Maternal+Mental+Health+and+Perinatal+Depression+Prevention%3A+A+Systematic+Review+and+Meta-Analysis%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Fuenzalida P, Droppelmann G, Mahecha S, Feijoo F. Impact of Exercise Dose–Response on Maternal Mental Health and Perinatal Depression Prevention: A Systematic Review and Meta-Analysis. International Journal of Public Health, 70, 2025.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Data-Driven Identification of Metabolic and Cardiovascular Biomarkers in High-Altitude Workers: A Machine Learning Approach</p>
+    <p class="pub-authors">Jorquera R, <strong>Droppelmann G</strong>, Blanco G, Dollmann M, Ahumada I, Feijoo F</p>
+    <p class="pub-journal"><em>Frontiers in Public Health</em>, 13</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Data-Driven+Identification+of+Metabolic+and+Cardiovascular+Biomarkers+in+High-Altitude+Workers%3A+A+Machine+Learning+Approach%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Jorquera R, Droppelmann G, Blanco G, Dollmann M, Ahumada I, Feijoo F. Data-Driven Identification of Metabolic and Cardiovascular Biomarkers in High-Altitude Workers: A Machine Learning Approach. Frontiers in Public Health, 13, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Hydration Status of Elite Youth Soccer Players: Training Versus FIFA Competition</p>
-  <p class="pub-authors">Jorquera C, <strong>Droppelmann G</strong>, Romero L, Andrades O, Barrientos C, Cofré C, Silva J, Araya S, Ulloa D</p>
-  <p class="pub-journal"><em>Life</em>, 15(10), 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Hydration+Status+of+Elite+Youth+Soccer+Players%3A+Training+Versus+FIFA+Competition%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Jorquera C, Droppelmann G, Romero L, Andrades O, Barrientos C, Cofré C, Silva J, Araya S, Ulloa D. Hydration Status of Elite Youth Soccer Players: Training Versus FIFA Competition. Life, 15(10), 2025.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Mining the Risk: Early Cardiovascular Detection in Workers</p>
+    <p class="pub-authors">Jorquera R, <strong>Droppelmann G</strong>, Dollmann M, Blanco G, Ahumada I, Lira A, Feijoo F</p>
+    <p class="pub-journal"><em>Frontiers in Medicine</em>, 12</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Mining+the+Risk%3A+Early+Cardiovascular+Detection+in+Workers%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Jorquera R, Droppelmann G, Dollmann M, Blanco G, Ahumada I, Lira A, Feijoo F. Mining the Risk: Early Cardiovascular Detection in Workers. Frontiers in Medicine, 12, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Myotendinous Junction Anesthesia: An Alternative Infiltration Site for Ultrasound-Guided Injections</p>
-  <p class="pub-authors">Rosales J, <strong>Droppelmann G</strong>, García N, Saravia A, Molina C, Jorquera C</p>
-  <p class="pub-journal"><em>Arthroscopy Techniques</em>, 14(1), 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Myotendinous+Junction+Anesthesia%3A+An+Alternative+Infiltration+Site+for+Ultrasound-Guided+Injections%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Rosales J, Droppelmann G, García N, Saravia A, Molina C, Jorquera C. Myotendinous Junction Anesthesia: An Alternative Infiltration Site for Ultrasound-Guided Injections. Arthroscopy Techniques, 14(1), 2025.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Impact of Exercise Dose–Response on Maternal Mental Health and Perinatal Depression Prevention: A Systematic Review and Meta-Analysis</p>
+    <p class="pub-authors">Fuenzalida P, <strong>Droppelmann G</strong>, Mahecha S, Feijoo F</p>
+    <p class="pub-journal"><em>International Journal of Public Health</em>, 70:1608940</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Impact+of+Exercise+Dose%E2%80%93Response+on+Maternal+Mental+Health+and+Perinatal+Depression+Prevention%3A+A+Systematic+Review+and+Meta-Analysis%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Fuenzalida P, Droppelmann G, Mahecha S, Feijoo F. Impact of Exercise Dose–Response on Maternal Mental Health and Perinatal Depression Prevention: A Systematic Review and Meta-Analysis. International Journal of Public Health, 70:1608940, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Surgeons can decrease the pain of WALANT local anesthesia injection if they ask for patient feedback</p>
-  <p class="pub-authors">Greene C, <strong>Droppelmann G</strong>, Fodor D, Lalonde D</p>
-  <p class="pub-journal"><em>Plastic Surgery</em>, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Surgeons+can+decrease+the+pain+of+WALANT+local+anesthesia+injection+if+they+ask+for+patient+feedback%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Greene C, Droppelmann G, Fodor D, Lalonde D. Surgeons can decrease the pain of WALANT local anesthesia injection if they ask for patient feedback. Plastic Surgery, 2025.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Hydration Status of Elite Youth Soccer Players: Training Versus FIFA Competition</p>
+    <p class="pub-authors">Jorquera-Aguilera C, <strong>Droppelmann-Díaz G</strong>, Romero-Vera L, Andrades O, Barrientos C, Cofré C, Silva J, Araya S, Ulloa D</p>
+    <p class="pub-journal"><em>Life</em>, 15(10):1546</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Hydration+Status+of+Elite+Youth+Soccer+Players%3A+Training+Versus+FIFA+Competition%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Jorquera-Aguilera C, Droppelmann-Díaz G, Romero-Vera L, Andrades O, Barrientos C, Cofré C, Silva J, Araya S, Ulloa D. Hydration Status of Elite Youth Soccer Players: Training Versus FIFA Competition. Life, 15(10):1546, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Ultrasound-Guided Perineural Corticosteroid Injection for Lacertus Fibrosus Syndrome: A Retrospective Cohort Study</p>
-  <p class="pub-authors">Greene C, <strong>Droppelmann G</strong>, García N, Jorquera C, Rosales J</p>
-  <p class="pub-journal"><em>Orthopedic Research and Reviews</em>, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Ultrasound-Guided+Perineural+Corticosteroid+Injection+for+Lacertus+Fibrosus+Syndrome%3A+A+Retrospective+Cohort+Study%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Greene C, Droppelmann G, García N, Jorquera C, Rosales J. Ultrasound-Guided Perineural Corticosteroid Injection for Lacertus Fibrosus Syndrome: A Retrospective Cohort Study. Orthopedic Research and Reviews, 2025.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Myotendinous Junction Anesthesia: An Alternative Infiltration Site for Ultrasound-Guided Injections</p>
+    <p class="pub-authors">Rosales J, <strong>Droppelmann G</strong>, García N, Saravia A, Molina C, Jorquera C</p>
+    <p class="pub-journal"><em>Arthroscopy Techniques</em>, 14(2):103195</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Myotendinous+Junction+Anesthesia%3A+An+Alternative+Infiltration+Site+for+Ultrasound-Guided+Injections%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Rosales J, Droppelmann G, García N, Saravia A, Molina C, Jorquera C. Myotendinous Junction Anesthesia: An Alternative Infiltration Site for Ultrasound-Guided Injections. Arthroscopy Techniques, 14(2):103195, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Artificial Intelligence in Diagnosing Upper Limb Musculoskeletal Disorders: A Systematic Review and Meta-Analysis of Diagnostic Tests</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Rodríguez C, Jorquera C, Feijoo F</p>
-  <p class="pub-journal"><em>EFORT Open Reviews</em>, 9(4):241–251, 2024</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Artificial+Intelligence+in+Diagnosing+Upper+Limb+Musculoskeletal+Disorders%3A+A+Systematic+Review+and+Meta-Analysis+of+Diagnostic+Tests%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Rodríguez C, Jorquera C, Feijoo F. Artificial Intelligence in Diagnosing Upper Limb Musculoskeletal Disorders: A Systematic Review and Meta-Analysis of Diagnostic Tests. EFORT Open Reviews, 9(4):241–251, 2024.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2024</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Deep Learning Models for Tendinopathy Detection: A Systematic Review and Meta-Analysis of Diagnostic Tests</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Rodríguez C, Smague D, Jorquera C, Feijoo F</p>
+    <p class="pub-journal"><em>EFORT Open Reviews</em>, 9(10):941–952</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Deep+Learning+Models+for+Tendinopathy+Detection%3A+A+Systematic+Review+and+Meta-Analysis+of+Diagnostic+Tests%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Rodríguez C, Smague D, Jorquera C, Feijoo F. Deep Learning Models for Tendinopathy Detection: A Systematic Review and Meta-Analysis of Diagnostic Tests. EFORT Open Reviews, 9(10):941–952, 2024.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Automated Segmentation and Classification of Supraspinatus Fatty Infiltration in Shoulder MRI using a Convolutional Neural Network</p>
-  <p class="pub-authors">Saavedra JP, <strong>Droppelmann G</strong>, Jorquera C, Feijoo F</p>
-  <p class="pub-journal"><em>Frontiers in Medicine</em>, 11:1416169, 2024</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Automated+Segmentation+and+Classification+of+Supraspinatus+Fatty+Infiltration+in+Shoulder+MRI+using+a+Convolutional+Neural+Network%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Saavedra JP, Droppelmann G, Jorquera C, Feijoo F. Automated Segmentation and Classification of Supraspinatus Fatty Infiltration in Shoulder MRI using a Convolutional Neural Network. Frontiers in Medicine, 11:1416169, 2024.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2024</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Postural and Lumbopelvic Control: Crucial Factors in the Functionality of Patients with Low Back Pain — A Descriptive Cross-Sectional Study</p>
+    <p class="pub-authors">Stöwhas K, <strong>Droppelmann G</strong>, Jorquera C, Feijoo F</p>
+    <p class="pub-journal"><em>Journal of Clinical Medicine</em>, 13(13):3836</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Postural+and+Lumbopelvic+Control%3A+Crucial+Factors+in+the+Functionality+of+Patients+with+Low+Back+Pain+%E2%80%94+A+Descriptive+Cross-Sectional+Study%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Stöwhas K, Droppelmann G, Jorquera C, Feijoo F. Postural and Lumbopelvic Control: Crucial Factors in the Functionality of Patients with Low Back Pain — A Descriptive Cross-Sectional Study. Journal of Clinical Medicine, 13(13):3836, 2024.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Chilean Market Protein Shakes Composition</p>
-  <p class="pub-authors">Jorquera C, <strong>Droppelmann G</strong>, Pridal P, Faúndez J, Feijoo F</p>
-  <p class="pub-journal"><em>Nutrients</em>, 16(8):1129, 2024</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Chilean+Market+Protein+Shakes+Composition%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Jorquera C, Droppelmann G, Pridal P, Faúndez J, Feijoo F. Chilean Market Protein Shakes Composition. Nutrients, 16(8):1129, 2024.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2024</span></div>
+  <div class="pub-main">
+    <p class="pub-title">The Critical Shoulder Angle: A Significant Radiological Measure in Rotator Cuff vs. Glenohumeral Osteoarthritis in Chilean Patients — A Descriptive Cross-Sectional Study</p>
+    <p class="pub-authors">Rojas W, Vargas P, <strong>Droppelmann G</strong>, Jorquera C, Stöwhas K, Godoy A, García N</p>
+    <p class="pub-journal"><em>Journal of Clinical Medicine</em>, 13(12):3408</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22The+Critical+Shoulder+Angle%3A+A+Significant+Radiological+Measure+in+Rotator+Cuff+vs.+Glenohumeral+Osteoarthritis+in+Chilean+Patients+%E2%80%94+A+Descriptive+Cross-Sectional+Study%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Rojas W, Vargas P, Droppelmann G, Jorquera C, Stöwhas K, Godoy A, García N. The Critical Shoulder Angle: A Significant Radiological Measure in Rotator Cuff vs. Glenohumeral Osteoarthritis in Chilean Patients — A Descriptive Cross-Sectional Study. Journal of Clinical Medicine, 13(12):3408, 2024.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Deep Learning Models for Tendinopathy Detection: A Systematic Review and Meta-Analysis of Diagnostic Tests</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Rodríguez C, Smague D, Jorquera C, Feijoo F</p>
-  <p class="pub-journal"><em>EFORT Open Reviews</em>, 9(10):941–952, 2024</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Deep+Learning+Models+for+Tendinopathy+Detection%3A+A+Systematic+Review+and+Meta-Analysis+of+Diagnostic+Tests%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Rodríguez C, Smague D, Jorquera C, Feijoo F. Deep Learning Models for Tendinopathy Detection: A Systematic Review and Meta-Analysis of Diagnostic Tests. EFORT Open Reviews, 9(10):941–952, 2024.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2024</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Chilean Market Protein Shakes Composition</p>
+    <p class="pub-authors">Jorquera C, <strong>Droppelmann G</strong>, Pridal P, Faúndez J, Feijoo F</p>
+    <p class="pub-journal"><em>Nutrients</em>, 16(8):1129</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Chilean+Market+Protein+Shakes+Composition%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Jorquera C, Droppelmann G, Pridal P, Faúndez J, Feijoo F. Chilean Market Protein Shakes Composition. Nutrients, 16(8):1129, 2024.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Nonsurgical Management of Shoulder Pain in Rotator Cuff Tears: Ultrasound-Guided Biceps Tenotomy Combined With Corticosteroid Injection</p>
-  <p class="pub-authors">García N, <strong>Droppelmann G</strong>, Oliver N, Jorquera C, Rosales J</p>
-  <p class="pub-journal"><em>Arthroscopy Techniques</em>, 13(2):102847, 2024</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Nonsurgical+Management+of+Shoulder+Pain+in+Rotator+Cuff+Tears%3A+Ultrasound-Guided+Biceps+Tenotomy+Combined+With+Corticosteroid+Injection%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="García N, Droppelmann G, Oliver N, Jorquera C, Rosales J. Nonsurgical Management of Shoulder Pain in Rotator Cuff Tears: Ultrasound-Guided Biceps Tenotomy Combined With Corticosteroid Injection. Arthroscopy Techniques, 13(2):102847, 2024.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2024</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Artificial Intelligence in Diagnosing Upper Limb Musculoskeletal Disorders: A Systematic Review and Meta-Analysis of Diagnostic Tests</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Rodríguez C, Jorquera C, Feijoo F</p>
+    <p class="pub-journal"><em>EFORT Open Reviews</em>, 9(4):241–251</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Artificial+Intelligence+in+Diagnosing+Upper+Limb+Musculoskeletal+Disorders%3A+A+Systematic+Review+and+Meta-Analysis+of+Diagnostic+Tests%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Rodríguez C, Jorquera C, Feijoo F. Artificial Intelligence in Diagnosing Upper Limb Musculoskeletal Disorders: A Systematic Review and Meta-Analysis of Diagnostic Tests. EFORT Open Reviews, 9(4):241–251, 2024.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Postural and Lumbopelvic Control: Crucial Factors in the Functionality of Patients with Low Back Pain — A Descriptive Cross-Sectional Study</p>
-  <p class="pub-authors">Stöwhas K, <strong>Droppelmann G</strong>, Jorquera C, Feijoo F</p>
-  <p class="pub-journal"><em>Journal of Clinical Medicine</em>, 13(13), 2024</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Postural+and+Lumbopelvic+Control%3A+Crucial+Factors+in+the+Functionality+of+Patients+with+Low+Back+Pain+%E2%80%94+A+Descriptive+Cross-Sectional+Study%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Stöwhas K, Droppelmann G, Jorquera C, Feijoo F. Postural and Lumbopelvic Control: Crucial Factors in the Functionality of Patients with Low Back Pain — A Descriptive Cross-Sectional Study. Journal of Clinical Medicine, 13(13), 2024.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2024</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Nonsurgical Management of Shoulder Pain in Rotator Cuff Tears: Ultrasound-Guided Biceps Tenotomy Combined With Corticosteroid Injection</p>
+    <p class="pub-authors">García N, <strong>Droppelmann G</strong>, Oliver N, Jorquera C, Rosales J</p>
+    <p class="pub-journal"><em>Arthroscopy Techniques</em>, 13(2):102847</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Nonsurgical+Management+of+Shoulder+Pain+in+Rotator+Cuff+Tears%3A+Ultrasound-Guided+Biceps+Tenotomy+Combined+With+Corticosteroid+Injection%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="García N, Droppelmann G, Oliver N, Jorquera C, Rosales J. Nonsurgical Management of Shoulder Pain in Rotator Cuff Tears: Ultrasound-Guided Biceps Tenotomy Combined With Corticosteroid Injection. Arthroscopy Techniques, 13(2):102847, 2024.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">The Critical Shoulder Angle: A Significant Radiological Measure in Rotator Cuff vs. Glenohumeral Osteoarthritis in Chilean Patients — A Descriptive Cross-Sectional Study</p>
-  <p class="pub-authors">Rojas W, Vargas P, <strong>Droppelmann G</strong>, Jorquera C, Stöwhas K, Godoy A, García N</p>
-  <p class="pub-journal"><em>Journal of Clinical Medicine</em>, 13(12):3208, 2024</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22The+Critical+Shoulder+Angle%3A+A+Significant+Radiological+Measure+in+Rotator+Cuff+vs.+Glenohumeral+Osteoarthritis+in+Chilean+Patients+%E2%80%94+A+Descriptive+Cross-Sectional+Study%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Rojas W, Vargas P, Droppelmann G, Jorquera C, Stöwhas K, Godoy A, García N. The Critical Shoulder Angle: A Significant Radiological Measure in Rotator Cuff vs. Glenohumeral Osteoarthritis in Chilean Patients — A Descriptive Cross-Sectional Study. Journal of Clinical Medicine, 13(12):3208, 2024.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2024</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Automated Segmentation and Classification of Supraspinatus Fatty Infiltration in Shoulder MRI Using a Convolutional Neural Network</p>
+    <p class="pub-authors">Saavedra JP, <strong>Droppelmann G</strong>, Jorquera C, Feijoo F</p>
+    <p class="pub-journal"><em>Frontiers in Medicine</em>, 11:1416169</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Automated+Segmentation+and+Classification+of+Supraspinatus+Fatty+Infiltration+in+Shoulder+MRI+Using+a+Convolutional+Neural+Network%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Saavedra JP, Droppelmann G, Jorquera C, Feijoo F. Automated Segmentation and Classification of Supraspinatus Fatty Infiltration in Shoulder MRI Using a Convolutional Neural Network. Frontiers in Medicine, 11:1416169, 2024.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Consentimiento Informado en Medicina del Deporte: Un Ejemplo</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Morán M, Kalazich C</p>
-  <p class="pub-journal"><em>Revista Observatorio del Deporte</em>, 9(2):1–23, 2023</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Consentimiento+Informado+en+Medicina+del+Deporte%3A+Un+Ejemplo%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Morán M, Kalazich C. Consentimiento Informado en Medicina del Deporte: Un Ejemplo. Revista Observatorio del Deporte, 9(2):1–23, 2023.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2023</span></div>
+  <div class="pub-main">
+    <p class="pub-title">High-Accuracy Detection of Supraspinatus Fatty Infiltration in Shoulder MRI Using Convolutional Neural Network Algorithms</p>
+    <p class="pub-authors">Saavedra JP, <strong>Droppelmann G</strong>, García N, Jorquera C, Feijoo F</p>
+    <p class="pub-journal"><em>Frontiers in Medicine</em>, 10:1070499</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22High-Accuracy+Detection+of+Supraspinatus+Fatty+Infiltration+in+Shoulder+MRI+Using+Convolutional+Neural+Network+Algorithms%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Saavedra JP, Droppelmann G, García N, Jorquera C, Feijoo F. High-Accuracy Detection of Supraspinatus Fatty Infiltration in Shoulder MRI Using Convolutional Neural Network Algorithms. Frontiers in Medicine, 10:1070499, 2023.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">High-Accuracy Detection of Supraspinatus Fatty Infiltration in Shoulder MRI using convolutional neural network algorithms</p>
-  <p class="pub-authors">Saavedra JP, <strong>Droppelmann G</strong>, García N, Jorquera C, Feijoo F</p>
-  <p class="pub-journal"><em>Frontiers in Medicine</em>, 10:1070499, 2023</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22High-Accuracy+Detection+of+Supraspinatus+Fatty+Infiltration+in+Shoulder+MRI+using+convolutional+neural+network+algorithms%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Saavedra JP, Droppelmann G, García N, Jorquera C, Feijoo F. High-Accuracy Detection of Supraspinatus Fatty Infiltration in Shoulder MRI using convolutional neural network algorithms. Frontiers in Medicine, 10:1070499, 2023.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2023</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Consentimiento Informado en Medicina del Deporte: Un Ejemplo</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Morán M, Kalazich C</p>
+    <p class="pub-journal"><em>Revista Observatorio del Deporte</em>, 9(2):1–23</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Consentimiento+Informado+en+Medicina+del+Deporte%3A+Un+Ejemplo%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Morán M, Kalazich C. Consentimiento Informado en Medicina del Deporte: Un Ejemplo. Revista Observatorio del Deporte, 9(2):1–23, 2023.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">A New Test for the Advanced Diagnosis of Lateral Elbow Tendinopathy with Concomitant Intrasubstance Tear: Failure to Resist Extension Effort (The FREE Test)</p>
-  <p class="pub-authors">Greene C, <strong>Droppelmann G</strong>, García N, Jorquera C, Verdugo A</p>
-  <p class="pub-journal"><em>Orthopedic Research and Reviews</em>, 495–503, 2022</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22A+New+Test+for+the+Advanced+Diagnosis+of+Lateral+Elbow+Tendinopathy+with+Concomitant+Intrasubstance+Tear%3A+Failure+to+Resist+Extension+Effort+%28The+FREE+Test%29%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Greene C, Droppelmann G, García N, Jorquera C, Verdugo A. A New Test for the Advanced Diagnosis of Lateral Elbow Tendinopathy with Concomitant Intrasubstance Tear: Failure to Resist Extension Effort (The FREE Test). Orthopedic Research and Reviews, 495–503, 2022.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2022</span></div>
+  <div class="pub-main">
+    <p class="pub-title">A New Test for the Advanced Diagnosis of Lateral Elbow Tendinopathy with Concomitant Intrasubstance Tear: Failure to Resist Extension Effort (The FREE Test)</p>
+    <p class="pub-authors">Greene C, <strong>Droppelmann G</strong>, García N, Jorquera C, Verdugo A</p>
+    <p class="pub-journal"><em>Orthopedic Research and Reviews</em>, 495–503</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22A+New+Test+for+the+Advanced+Diagnosis+of+Lateral+Elbow+Tendinopathy+with+Concomitant+Intrasubstance+Tear%3A+Failure+to+Resist+Extension+Effort+%28The+FREE+Test%29%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Greene C, Droppelmann G, García N, Jorquera C, Verdugo A. A New Test for the Advanced Diagnosis of Lateral Elbow Tendinopathy with Concomitant Intrasubstance Tear: Failure to Resist Extension Effort (The FREE Test). Orthopedic Research and Reviews, 495–503, 2022.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Diagnóstico de Roturas del Manguito Rotador por Ecografía y Resonancia Magnética: ¿La morfología acromial influye en los resultados?</p>
-  <p class="pub-authors">Melean P, Rojas W, Angloni M, <strong>Droppelmann G</strong></p>
-  <p class="pub-journal"><em>Revista Chilena de Ortopedia y Traumatología</em>, 63(2):e77–e82, 2022</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Diagn%C3%B3stico+de+Roturas+del+Manguito+Rotador+por+Ecograf%C3%ADa+y+Resonancia+Magn%C3%A9tica%3A+%C2%BFLa+morfolog%C3%ADa+acromial+influye+en+los+resultados%3F%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Melean P, Rojas W, Angloni M, Droppelmann G. Diagnóstico de Roturas del Manguito Rotador por Ecografía y Resonancia Magnética: ¿La morfología acromial influye en los resultados?. Revista Chilena de Ortopedia y Traumatología, 63(2):e77–e82, 2022.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2022</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Lateral Elbow Tendinopathy and Artificial Intelligence: Binary and Multilabel Findings Detection Using Machine Learning Algorithms</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Tello M, García N, Greene C, Jorquera C, Feijoo F</p>
+    <p class="pub-journal"><em>Frontiers in Medicine</em>, 9:945698</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Lateral+Elbow+Tendinopathy+and+Artificial+Intelligence%3A+Binary+and+Multilabel+Findings+Detection+Using+Machine+Learning+Algorithms%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Tello M, García N, Greene C, Jorquera C, Feijoo F. Lateral Elbow Tendinopathy and Artificial Intelligence: Binary and Multilabel Findings Detection Using Machine Learning Algorithms. Frontiers in Medicine, 9:945698, 2022.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Lateral Elbow Tendinopathy and Artificial Intelligence: Binary and Multilabel Findings Detection using Machine Learning Algorithms</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Tello M, García N, Greene C, Jorquera C, Feijoo F</p>
-  <p class="pub-journal"><em>Frontiers in Medicine</em>, 9:945698, 2022</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Lateral+Elbow+Tendinopathy+and+Artificial+Intelligence%3A+Binary+and+Multilabel+Findings+Detection+using+Machine+Learning+Algorithms%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Tello M, García N, Greene C, Jorquera C, Feijoo F. Lateral Elbow Tendinopathy and Artificial Intelligence: Binary and Multilabel Findings Detection using Machine Learning Algorithms. Frontiers in Medicine, 9:945698, 2022.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2022</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Supraspinatus Activation Precedes the Infraspinatus Muscle During the Shoulder Abduction in Different Levels of Handgrip Strengths</p>
+    <p class="pub-authors">Torres J, <strong>Droppelmann G</strong>, Silvestre R, De la Fuente C</p>
+    <p class="pub-journal"><em>Sport Sciences for Health</em>, 18(3):915–921</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Supraspinatus+Activation+Precedes+the+Infraspinatus+Muscle+During+the+Shoulder+Abduction+in+Different+Levels+of+Handgrip+Strengths%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Torres J, Droppelmann G, Silvestre R, De la Fuente C. Supraspinatus Activation Precedes the Infraspinatus Muscle During the Shoulder Abduction in Different Levels of Handgrip Strengths. Sport Sciences for Health, 18(3):915–921, 2022.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Low-Load Exercise Program and Platelet-Rich Plasma for Intrasubstance Tear in Lateral Elbow Tendinopathy: Protocol for a Double-Blinded Randomized Clinical Trial</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Torrez A, García N, Greene C</p>
-  <p class="pub-journal"><em>Principles and Practice of Clinical Research</em>, 8(4), 2022</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Low-Load+Exercise+Program+and+Platelet-Rich+Plasma+for+Intrasubstance+Tear+in+Lateral+Elbow+Tendinopathy%3A+Protocol+for+a+Double-Blinded+Randomized+Clinical+Trial%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Torrez A, García N, Greene C. Low-Load Exercise Program and Platelet-Rich Plasma for Intrasubstance Tear in Lateral Elbow Tendinopathy: Protocol for a Double-Blinded Randomized Clinical Trial. Principles and Practice of Clinical Research, 8(4), 2022.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2022</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Diagnóstico de Roturas del Manguito Rotador por Ecografía y Resonancia Magnética: ¿La Morfología Acromial Influye en los Resultados?</p>
+    <p class="pub-authors">Meleán P, Rojas W, Agloni M, <strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>Revista Chilena de Ortopedia y Traumatología</em>, 63(2):e77–e82</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Diagn%C3%B3stico+de+Roturas+del+Manguito+Rotador+por+Ecograf%C3%ADa+y+Resonancia+Magn%C3%A9tica%3A+%C2%BFLa+Morfolog%C3%ADa+Acromial+Influye+en+los+Resultados%3F%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Meleán P, Rojas W, Agloni M, Droppelmann G. Diagnóstico de Roturas del Manguito Rotador por Ecografía y Resonancia Magnética: ¿La Morfología Acromial Influye en los Resultados?. Revista Chilena de Ortopedia y Traumatología, 63(2):e77–e82, 2022.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Machine Learning Techniques as an Efficient Alternative Diagnostic Tool for COVID-19 Cases</p>
-  <p class="pub-authors">Bustos N, Tello M, <strong>Droppelmann G</strong>, García N, Feijoo F, Leiva V</p>
-  <p class="pub-journal"><em>Signa Vitae</em>, 18(1):23–33, 2022</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Machine+Learning+Techniques+as+an+Efficient+Alternative+Diagnostic+Tool+for+COVID-19+Cases%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Bustos N, Tello M, Droppelmann G, García N, Feijoo F, Leiva V. Machine Learning Techniques as an Efficient Alternative Diagnostic Tool for COVID-19 Cases. Signa Vitae, 18(1):23–33, 2022.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2022</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Ultrasound Findings in Lateral Elbow Tendinopathy: A Retrospective Analysis of Radiological Tendon Features</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Feijoo F, Greene C, Tello M, Rosales J, Yáñez R, Jorquera C, Prieto D</p>
+    <p class="pub-journal"><em>F1000Research</em>, 11(44)</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Ultrasound+Findings+in+Lateral+Elbow+Tendinopathy%3A+A+Retrospective+Analysis+of+Radiological+Tendon+Features%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Feijoo F, Greene C, Tello M, Rosales J, Yáñez R, Jorquera C, Prieto D. Ultrasound Findings in Lateral Elbow Tendinopathy: A Retrospective Analysis of Radiological Tendon Features. F1000Research, 11(44), 2022.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Management of Triceps Surae Muscle Injuries in Young Adult and Middle-Aged Athletes: A Narrative Literature Review</p>
-  <p class="pub-authors">Caracciollo G, Yáñez R, García N, Dölz R, <strong>Droppelmann G</strong>, De la Fuente C</p>
-  <p class="pub-journal"><em>Revista Española de Artroscopía y Cirugía Articular</em>, 29(75), 2022</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Management+of+Triceps+Surae+Muscle+Injuries+in+Young+Adult+and+Middle-Aged+Athletes%3A+A+Narrative+Literature+Review%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Caracciollo G, Yáñez R, García N, Dölz R, Droppelmann G, De la Fuente C. Management of Triceps Surae Muscle Injuries in Young Adult and Middle-Aged Athletes: A Narrative Literature Review. Revista Española de Artroscopía y Cirugía Articular, 29(75), 2022.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2022</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Management of Triceps Surae Muscle Injuries in Young Adult and Middle-Aged Athletes: A Narrative Literature Review</p>
+    <p class="pub-authors">Caracciollo G, Yáñez R, García N, Dölz R, <strong>Droppelmann G</strong>, De la Fuente C</p>
+    <p class="pub-journal"><em>Revista Española de Artroscopía y Cirugía Articular</em>, 29(75)</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Management+of+Triceps+Surae+Muscle+Injuries+in+Young+Adult+and+Middle-Aged+Athletes%3A+A+Narrative+Literature+Review%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Caracciollo G, Yáñez R, García N, Dölz R, Droppelmann G, De la Fuente C. Management of Triceps Surae Muscle Injuries in Young Adult and Middle-Aged Athletes: A Narrative Literature Review. Revista Española de Artroscopía y Cirugía Articular, 29(75), 2022.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Supraspinatus Activation Precedes the Infraspinatus Muscle During the Shoulder Abduction in Different Levels of Handgrip Strengths</p>
-  <p class="pub-authors">Torres J, <strong>Droppelmann G</strong>, Silvestre R, De la Fuente C</p>
-  <p class="pub-journal"><em>Sport Sciences for Health</em>, 18(3):915–921, 2022</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Supraspinatus+Activation+Precedes+the+Infraspinatus+Muscle+During+the+Shoulder+Abduction+in+Different+Levels+of+Handgrip+Strengths%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Torres J, Droppelmann G, Silvestre R, De la Fuente C. Supraspinatus Activation Precedes the Infraspinatus Muscle During the Shoulder Abduction in Different Levels of Handgrip Strengths. Sport Sciences for Health, 18(3):915–921, 2022.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2022</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Machine Learning Techniques as an Efficient Alternative Diagnostic Tool for COVID-19 Cases</p>
+    <p class="pub-authors">Bustos N, Tello M, <strong>Droppelmann G</strong>, García N, Feijoo F, Leiva V</p>
+    <p class="pub-journal"><em>Signa Vitae</em>, 18(1):23–33</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Machine+Learning+Techniques+as+an+Efficient+Alternative+Diagnostic+Tool+for+COVID-19+Cases%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Bustos N, Tello M, Droppelmann G, García N, Feijoo F, Leiva V. Machine Learning Techniques as an Efficient Alternative Diagnostic Tool for COVID-19 Cases. Signa Vitae, 18(1):23–33, 2022.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Ultrasound findings in lateral elbow tendinopathy: A Retrospective Analysis of Radiological Tendon Features</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Feijoo F, Greene C, Tello M, Rosales J, Yáñez R, Jorquera C, Prieto D</p>
-  <p class="pub-journal"><em>F1000Research</em>, 11(44), 2022</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Ultrasound+findings+in+lateral+elbow+tendinopathy%3A+A+Retrospective+Analysis+of+Radiological+Tendon+Features%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Feijoo F, Greene C, Tello M, Rosales J, Yáñez R, Jorquera C, Prieto D. Ultrasound findings in lateral elbow tendinopathy: A Retrospective Analysis of Radiological Tendon Features. F1000Research, 11(44), 2022.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2022</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Low-Load Exercise Program and Platelet-Rich Plasma for Intrasubstance Tear in Lateral Elbow Tendinopathy: Protocol for a Double-Blinded Randomized Clinical Trial</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Torrez A, García N, Greene C</p>
+    <p class="pub-journal"><em>Principles and Practice of Clinical Research</em>, 8(4)</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Low-Load+Exercise+Program+and+Platelet-Rich+Plasma+for+Intrasubstance+Tear+in+Lateral+Elbow+Tendinopathy%3A+Protocol+for+a+Double-Blinded+Randomized+Clinical+Trial%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Torrez A, García N, Greene C. Low-Load Exercise Program and Platelet-Rich Plasma for Intrasubstance Tear in Lateral Elbow Tendinopathy: Protocol for a Double-Blinded Randomized Clinical Trial. Principles and Practice of Clinical Research, 8(4), 2022.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">IMPORTANCE Trial: A Provisional Study Design of a Multicenter Phase II, Double-Blinded, Placebo-Controlled Randomized 4-Week Study</p>
-  <p class="pub-authors">Fernandes M, Schelotto M, Doldi P, et al., <strong>Droppelmann G</strong>, Vaz de Macedo A, Nakamura R, Fregni F</p>
-  <p class="pub-journal"><em>F1000Research</em>, 10(42), 2021</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22IMPORTANCE+Trial%3A+A+Provisional+Study+Design+of+a+Multicenter+Phase+II%2C+Double-Blinded%2C+Placebo-Controlled+Randomized+4-Week+Study%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Fernandes M, Schelotto M, Doldi P, et al., Droppelmann G, Vaz de Macedo A, Nakamura R, Fregni F. IMPORTANCE Trial: A Provisional Study Design of a Multicenter Phase II, Double-Blinded, Placebo-Controlled Randomized 4-Week Study. F1000Research, 10(42), 2021.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2021</span></div>
+  <div class="pub-main">
+    <p class="pub-title">IMPORTANCE Trial: A Provisional Study Design of a Multicenter Phase II, Double-Blinded, Placebo-Controlled Randomized 4-Week Study</p>
+    <p class="pub-authors">Fernandes M, Schelotto M, Doldi PM, Milani G, Ariza Manzano AA, et al. (incl. <strong>Droppelmann G</strong>)</p>
+    <p class="pub-journal"><em>F1000Research</em>, 10(42)</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22IMPORTANCE+Trial%3A+A+Provisional+Study+Design+of+a+Multicenter+Phase+II%2C+Double-Blinded%2C+Placebo-Controlled+Randomized+4-Week+Study%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Fernandes M, Schelotto M, Doldi PM, Milani G, Ariza Manzano AA, et al. (incl. Droppelmann G). IMPORTANCE Trial: A Provisional Study Design of a Multicenter Phase II, Double-Blinded, Placebo-Controlled Randomized 4-Week Study. F1000Research, 10(42), 2021.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Patellar Tendinopathy: Ultrasound Diagnosis and Therapeutic Management</p>
-  <p class="pub-authors">Rosales J, García N, Butrón S, Yáñez R, <strong>Droppelmann G</strong>, Verdugo A</p>
-  <p class="pub-journal"><em>Imaging and Intervention</em>, 1(2):38–43, 2021</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Patellar+Tendinopathy%3A+Ultrasound+Diagnosis+and+Therapeutic+Management%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Rosales J, García N, Butrón S, Yáñez R, Droppelmann G, Verdugo A. Patellar Tendinopathy: Ultrasound Diagnosis and Therapeutic Management. Imaging and Intervention, 1(2):38–43, 2021.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2021</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Patellar Tendinopathy: Ultrasound Diagnosis and Therapeutic Management</p>
+    <p class="pub-authors">Rosales J, García N, Butrón S, Yáñez R, <strong>Droppelmann G</strong>, Verdugo MA</p>
+    <p class="pub-journal"><em>Imaging and Intervention</em>, 1(2):38–43</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Patellar+Tendinopathy%3A+Ultrasound+Diagnosis+and+Therapeutic+Management%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Rosales J, García N, Butrón S, Yáñez R, Droppelmann G, Verdugo MA. Patellar Tendinopathy: Ultrasound Diagnosis and Therapeutic Management. Imaging and Intervention, 1(2):38–43, 2021.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">The Effect of Regenerative Therapy in Functional Outcome in the Treatment of Patellar and Achilles Tendinopathy: A Meta-Analysis of Randomized Controlled Clinical Trials</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Saavedra A, Apablaza F, Macedo A</p>
-  <p class="pub-journal"><em>Principles and Practice of Clinical Research</em>, 7(4):27–37, 2021</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22The+Effect+of+Regenerative+Therapy+in+Functional+Outcome+in+the+Treatment+of+Patellar+and+Achilles+Tendinopathy%3A+A+Meta-Analysis+of+Randomized+Controlled+Clinical+Trials%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Saavedra A, Apablaza F, Macedo A. The Effect of Regenerative Therapy in Functional Outcome in the Treatment of Patellar and Achilles Tendinopathy: A Meta-Analysis of Randomized Controlled Clinical Trials. Principles and Practice of Clinical Research, 7(4):27–37, 2021.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2021</span></div>
+  <div class="pub-main">
+    <p class="pub-title">The Effect of Regenerative Therapy in Functional Outcome in the Treatment of Patellar and Achilles Tendinopathy: A Meta-Analysis of Randomized Controlled Clinical Trials</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Saavedra A, Apablaza F, Macedo A</p>
+    <p class="pub-journal"><em>Principles and Practice of Clinical Research</em>, 7(4):27–37</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22The+Effect+of+Regenerative+Therapy+in+Functional+Outcome+in+the+Treatment+of+Patellar+and+Achilles+Tendinopathy%3A+A+Meta-Analysis+of+Randomized+Controlled+Clinical+Trials%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Saavedra A, Apablaza F, Macedo A. The Effect of Regenerative Therapy in Functional Outcome in the Treatment of Patellar and Achilles Tendinopathy: A Meta-Analysis of Randomized Controlled Clinical Trials. Principles and Practice of Clinical Research, 7(4):27–37, 2021.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Ultrasound-Guided Hydraulic Release Associated With Corticosteroids in Radial Tunnel Syndrome: Description of Technique and Preliminary Clinical Results</p>
-  <p class="pub-authors">García N, Rosales J, Greene C, <strong>Droppelmann G</strong>, Verdugo A</p>
-  <p class="pub-journal"><em>Journal of Ultrasound in Medicine</em>, 39(1):165–168, 2020</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Ultrasound-Guided+Hydraulic+Release+Associated+With+Corticosteroids+in+Radial+Tunnel+Syndrome%3A+Description+of+Technique+and+Preliminary+Clinical+Results%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="García N, Rosales J, Greene C, Droppelmann G, Verdugo A. Ultrasound-Guided Hydraulic Release Associated With Corticosteroids in Radial Tunnel Syndrome: Description of Technique and Preliminary Clinical Results. Journal of Ultrasound in Medicine, 39(1):165–168, 2020.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2020</span></div>
+  <div class="pub-main">
+    <p class="pub-title">¿Certificación en Buenas Prácticas Éticas de la Investigación? Una Necesidad para Incentivar la Producción Científica</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Feijoo F, Prieto D</p>
+    <p class="pub-journal"><em>EIDON. Revista Española de Bioética</em>, 53:47–63</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22%C2%BFCertificaci%C3%B3n+en+Buenas+Pr%C3%A1cticas+%C3%89ticas+de+la+Investigaci%C3%B3n%3F+Una+Necesidad+para+Incentivar+la+Producci%C3%B3n+Cient%C3%ADfica%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Feijoo F, Prieto D. ¿Certificación en Buenas Prácticas Éticas de la Investigación? Una Necesidad para Incentivar la Producción Científica. EIDON. Revista Española de Bioética, 53:47–63, 2020.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">¿Certificación en Buenas Prácticas Éticas de la Investigación? Una Necesidad para Incentivar la Producción Científica</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Feijoo F, Prieto D</p>
-  <p class="pub-journal"><em>EIDON. Revista Española de Bioética</em>, 53:47–63, 2020</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22%C2%BFCertificaci%C3%B3n+en+Buenas+Pr%C3%A1cticas+%C3%89ticas+de+la+Investigaci%C3%B3n%3F+Una+Necesidad+para+Incentivar+la+Producci%C3%B3n+Cient%C3%ADfica%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Feijoo F, Prieto D. ¿Certificación en Buenas Prácticas Éticas de la Investigación? Una Necesidad para Incentivar la Producción Científica. EIDON. Revista Española de Bioética, 53:47–63, 2020.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2020</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Ultrasound-Guided Hydraulic Release Associated With Corticosteroids in Radial Tunnel Syndrome: Description of Technique and Preliminary Clinical Results</p>
+    <p class="pub-authors">García N, Rosales J, Greene C, <strong>Droppelmann G</strong>, Verdugo MA</p>
+    <p class="pub-journal"><em>Journal of Ultrasound in Medicine</em>, 39(1):165–168</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Ultrasound-Guided+Hydraulic+Release+Associated+With+Corticosteroids+in+Radial+Tunnel+Syndrome%3A+Description+of+Technique+and+Preliminary+Clinical+Results%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="García N, Rosales J, Greene C, Droppelmann G, Verdugo MA. Ultrasound-Guided Hydraulic Release Associated With Corticosteroids in Radial Tunnel Syndrome: Description of Technique and Preliminary Clinical Results. Journal of Ultrasound in Medicine, 39(1):165–168, 2020.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Principios y Requisitos Éticos en Investigación desde la Medicina del Deporte</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal"><em>Revista Observatorio del Deporte</em>, 24–36, 2019</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Principios+y+Requisitos+%C3%89ticos+en+Investigaci%C3%B3n+desde+la+Medicina+del+Deporte%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. Principios y Requisitos Éticos en Investigación desde la Medicina del Deporte. Revista Observatorio del Deporte, 24–36, 2019.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2019</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Principios y Requisitos Éticos en Investigación desde la Medicina del Deporte</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>Revista Observatorio del Deporte</em>, 24–36</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Principios+y+Requisitos+%C3%89ticos+en+Investigaci%C3%B3n+desde+la+Medicina+del+Deporte%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Principios y Requisitos Éticos en Investigación desde la Medicina del Deporte. Revista Observatorio del Deporte, 24–36, 2019.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Cardiovascular Risk, Physical Fitness According to Socioeconomic Level and Geographical in a National Sample</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Feijoo F, de Souza J, Mahecha S</p>
-  <p class="pub-journal"><em>Medicine & Science in Sports & Exercise</em>, 50(5), 2018</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Cardiovascular+Risk%2C+Physical+Fitness+According+to+Socioeconomic+Level+and+Geographical+in+a+National+Sample%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Feijoo F, de Souza J, Mahecha S. Cardiovascular Risk, Physical Fitness According to Socioeconomic Level and Geographical in a National Sample. Medicine &amp; Science in Sports &amp; Exercise, 50(5), 2018.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2019</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Riesgo de Apnea Obstructiva del Sueño y Nivel de Actividad Física y su Asociación con Riesgo Cardiovascular Elevado en Adultos Chilenos</p>
+    <p class="pub-authors">Carrillo J, Mahecha-Matsudo S, <strong>Droppelmann G</strong>, Fernández MB, et al.</p>
+    <p class="pub-journal"><em>Revista Chilena de Enfermedades Respiratorias</em>, 35(1):22–32</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Riesgo+de+Apnea+Obstructiva+del+Sue%C3%B1o+y+Nivel+de+Actividad+F%C3%ADsica+y+su+Asociaci%C3%B3n+con+Riesgo+Cardiovascular+Elevado+en+Adultos+Chilenos%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Carrillo J, Mahecha-Matsudo S, Droppelmann G, Fernández MB, et al.. Riesgo de Apnea Obstructiva del Sueño y Nivel de Actividad Física y su Asociación con Riesgo Cardiovascular Elevado en Adultos Chilenos. Revista Chilena de Enfermedades Respiratorias, 35(1):22–32, 2019.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">La Instrumentalización Metodológica en la Ética de la Investigación</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal"><em>EIDON. Revista Española de Bioética</em>, 49:102–114, 2018</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22La+Instrumentalizaci%C3%B3n+Metodol%C3%B3gica+en+la+%C3%89tica+de+la+Investigaci%C3%B3n%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. La Instrumentalización Metodológica en la Ética de la Investigación. EIDON. Revista Española de Bioética, 49:102–114, 2018.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2018</span></div>
+  <div class="pub-main">
+    <p class="pub-title">El Desafío es Investigar</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>Archivos de la Sociedad Chilena de Medicina del Deporte</em>, 63(2)</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22El+Desaf%C3%ADo+es+Investigar%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. El Desafío es Investigar. Archivos de la Sociedad Chilena de Medicina del Deporte, 63(2), 2018.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Obstructive Sleep Apnea and Levels of Physical Activity and its Association with Elevated Cardiovascular Risk in Chilean Adults</p>
-  <p class="pub-authors">Carrillo J, Mahecha S, <strong>Droppelmann G</strong>, Fernández MB, Yáñez F, Fernández P, Cisternas A</p>
-  <p class="pub-journal"><em>European Respiratory Journal</em>, 62, 2018</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Obstructive+Sleep+Apnea+and+Levels+of+Physical+Activity+and+its+Association+with+Elevated+Cardiovascular+Risk+in+Chilean+Adults%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Carrillo J, Mahecha S, Droppelmann G, Fernández MB, Yáñez F, Fernández P, Cisternas A. Obstructive Sleep Apnea and Levels of Physical Activity and its Association with Elevated Cardiovascular Risk in Chilean Adults. European Respiratory Journal, 62, 2018.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2018</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Ética del Valor P: Una Oportunidad para Nuevas Metodologías</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Nickel R, Feijoo F</p>
+    <p class="pub-journal"><em>EIDON. Revista Española de Bioética</em>, 50:35–47</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22%C3%89tica+del+Valor+P%3A+Una+Oportunidad+para+Nuevas+Metodolog%C3%ADas%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Nickel R, Feijoo F. Ética del Valor P: Una Oportunidad para Nuevas Metodologías. EIDON. Revista Española de Bioética, 50:35–47, 2018.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Ética del Valor P: Una Oportunidad para Nuevas Metodologías</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Rolf N, Feijoo F</p>
-  <p class="pub-journal"><em>EIDON. Revista Española de Bioética</em>, 50:35–47, 2018</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22%C3%89tica+del+Valor+P%3A+Una+Oportunidad+para+Nuevas+Metodolog%C3%ADas%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Rolf N, Feijoo F. Ética del Valor P: Una Oportunidad para Nuevas Metodologías. EIDON. Revista Española de Bioética, 50:35–47, 2018.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2018</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Obstructive Sleep Apnea and Levels of Physical Activity and its Association with Elevated Cardiovascular Risk in Chilean Adults</p>
+    <p class="pub-authors">Carrillo J, Mahecha-Matsudo S, <strong>Droppelmann G</strong>, Fernández MB, Yáñez F, et al.</p>
+    <p class="pub-journal"><em>European Respiratory Journal</em>, 52(suppl 62)</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Obstructive+Sleep+Apnea+and+Levels+of+Physical+Activity+and+its+Association+with+Elevated+Cardiovascular+Risk+in+Chilean+Adults%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Carrillo J, Mahecha-Matsudo S, Droppelmann G, Fernández MB, Yáñez F, et al.. Obstructive Sleep Apnea and Levels of Physical Activity and its Association with Elevated Cardiovascular Risk in Chilean Adults. European Respiratory Journal, 52(suppl 62), 2018.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">El Desafío es Investigar</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal"><em>Archivos de la Sociedad Chilena de Medicina del Deporte</em>, 63(2), 2018</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22El+Desaf%C3%ADo+es+Investigar%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. El Desafío es Investigar. Archivos de la Sociedad Chilena de Medicina del Deporte, 63(2), 2018.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2018</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Cardiovascular Risk, Physical Fitness According to Socioeconomic Level and Geographical in a National Sample</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Feijoo F, de Souza J, Mahecha-Matsudo S</p>
+    <p class="pub-journal"><em>Medicine & Science in Sports & Exercise</em>, 50(5S):63</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Cardiovascular+Risk%2C+Physical+Fitness+According+to+Socioeconomic+Level+and+Geographical+in+a+National+Sample%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Feijoo F, de Souza J, Mahecha-Matsudo S. Cardiovascular Risk, Physical Fitness According to Socioeconomic Level and Geographical in a National Sample. Medicine &amp; Science in Sports &amp; Exercise, 50(5S):63, 2018.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Estadística Fácil: Pruebas de Normalidad</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal"><em>Revista Actualizaciones Clínica MEDS</em>, 2018</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Estad%C3%ADstica+F%C3%A1cil%3A+Pruebas+de+Normalidad%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. Estadística Fácil: Pruebas de Normalidad. Revista Actualizaciones Clínica MEDS, 2018.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2018</span></div>
+  <div class="pub-main">
+    <p class="pub-title">La Instrumentalización Metodológica en la Ética de la Investigación</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>EIDON. Revista Española de Bioética</em>, 49:102–114</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22La+Instrumentalizaci%C3%B3n+Metodol%C3%B3gica+en+la+%C3%89tica+de+la+Investigaci%C3%B3n%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. La Instrumentalización Metodológica en la Ética de la Investigación. EIDON. Revista Española de Bioética, 49:102–114, 2018.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Obstructive Sleep Apnea, Cardiometabolic Risk, and Levels of Physical Activity in Chilean Adults</p>
-  <p class="pub-authors">Carrillo J, Mahecha S, <strong>Droppelmann G</strong>, Yáñez F, Cisternas A, Fernández MB</p>
-  <p class="pub-journal"><em>European Respiratory Journal</em>, 61, 2017</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Obstructive+Sleep+Apnea%2C+Cardiometabolic+Risk%2C+and+Levels+of+Physical+Activity+in+Chilean+Adults%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Carrillo J, Mahecha S, Droppelmann G, Yáñez F, Cisternas A, Fernández MB. Obstructive Sleep Apnea, Cardiometabolic Risk, and Levels of Physical Activity in Chilean Adults. European Respiratory Journal, 61, 2017.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2018</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Pruebas de Normalidad</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>Revista Actualizaciones Clínica MEDS</em>, 2(1):39–43</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Pruebas+de+Normalidad%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Pruebas de Normalidad. Revista Actualizaciones Clínica MEDS, 2(1):39–43, 2018.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Patrones Ultrasonográficos y Predicciones según Edad en Epicondilitis</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Cárcamo M, Opazo A, Rosales J, Greene C, González F, Yáñez R</p>
-  <p class="pub-journal"><em>Revista Observatorio del Deporte</em>, 123–135, 2017</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Patrones+Ultrasonogr%C3%A1ficos+y+Predicciones+seg%C3%BAn+Edad+en+Epicondilitis%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Cárcamo M, Opazo A, Rosales J, Greene C, González F, Yáñez R. Patrones Ultrasonográficos y Predicciones según Edad en Epicondilitis. Revista Observatorio del Deporte, 123–135, 2017.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2017</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Obstructive Sleep Apnea, Cardiometabolic Risk, and Levels of Physical Activity in Chilean Adults</p>
+    <p class="pub-authors">Carrillo J, Mahecha-Matsudo S, <strong>Droppelmann G</strong>, Yáñez F, Fernández P, et al.</p>
+    <p class="pub-journal"><em>European Respiratory Journal</em>, 50(suppl 61)</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Obstructive+Sleep+Apnea%2C+Cardiometabolic+Risk%2C+and+Levels+of+Physical+Activity+in+Chilean+Adults%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Carrillo J, Mahecha-Matsudo S, Droppelmann G, Yáñez F, Fernández P, et al.. Obstructive Sleep Apnea, Cardiometabolic Risk, and Levels of Physical Activity in Chilean Adults. European Respiratory Journal, 50(suppl 61), 2017.">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Physical Activity Levels and Counseling Practices of Physicians & Patients in a Chilean Sports Medicine Clinic</p>
-  <p class="pub-authors">Mahecha S, <strong>Droppelmann G</strong>, González F</p>
-  <p class="pub-journal"><em>Medicine and Science in Sports and Exercise</em>, 49(5):297, 2017</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Physical+Activity+Levels+and+Counseling+Practices+of+Physicians+%26+Patients+in+a+Chilean+Sports+Medicine+Clinic%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Mahecha S, Droppelmann G, González F. Physical Activity Levels and Counseling Practices of Physicians &amp; Patients in a Chilean Sports Medicine Clinic. Medicine and Science in Sports and Exercise, 49(5):297, 2017.">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge">2017</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Physical Activity Levels and Counseling Practices of Physicians &amp; Patients in a Chilean Sports Medicine Clinic</p>
+    <p class="pub-authors">Mahecha-Matsudo S, <strong>Droppelmann G</strong>, González F</p>
+    <p class="pub-journal"><em>Medicine and Science in Sports and Exercise</em>, 49(5):297</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Physical+Activity+Levels+and+Counseling+Practices+of+Physicians+%26+Patients+in+a+Chilean+Sports+Medicine+Clinic%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Mahecha-Matsudo S, Droppelmann G, González F. Physical Activity Levels and Counseling Practices of Physicians &amp; Patients in a Chilean Sports Medicine Clinic. Medicine and Science in Sports and Exercise, 49(5):297, 2017.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2017</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Protocolo de Derivación y Aplicación del Tratamiento de Punción Seca</p>
+    <p class="pub-authors">Latorre R, <strong>Droppelmann G</strong>, Blascke P, Gómez JM</p>
+    <p class="pub-journal"><em>Revista Actualizaciones Clínica MEDS</em>, 1(2):6–19</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Protocolo+de+Derivaci%C3%B3n+y+Aplicaci%C3%B3n+del+Tratamiento+de+Punci%C3%B3n+Seca%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Latorre R, Droppelmann G, Blascke P, Gómez JM. Protocolo de Derivación y Aplicación del Tratamiento de Punción Seca. Revista Actualizaciones Clínica MEDS, 1(2):6–19, 2017.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2017</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Patrones Ultrasonográficos y Predicciones según Edad en Epicondilitis</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Cárcamo M, Opazo A, Rosales J, Greene C, González F, Yáñez R</p>
+    <p class="pub-journal"><em>Revista Observatorio del Deporte</em>, 123–135</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Patrones+Ultrasonogr%C3%A1ficos+y+Predicciones+seg%C3%BAn+Edad+en+Epicondilitis%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Cárcamo M, Opazo A, Rosales J, Greene C, González F, Yáñez R. Patrones Ultrasonográficos y Predicciones según Edad en Epicondilitis. Revista Observatorio del Deporte, 123–135, 2017.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2016</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Tendón: ¿Un Problema de Salud Pública?</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>Archivos de la Sociedad Chilena de Medicina del Deporte</em>, 61(2)</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Tend%C3%B3n%3A+%C2%BFUn+Problema+de+Salud+P%C3%BAblica%3F%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Tendón: ¿Un Problema de Salud Pública?. Archivos de la Sociedad Chilena de Medicina del Deporte, 61(2), 2016.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2016</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Mortalidad por Accidente Vascular Encefálico (CIE I64x): Un Problema de Salud Pública en Chile</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>Revista Inclusiones</em>, 3(4):59–68</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Mortalidad+por+Accidente+Vascular+Encef%C3%A1lico+%28CIE+I64x%29%3A+Un+Problema+de+Salud+P%C3%BAblica+en+Chile%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Mortalidad por Accidente Vascular Encefálico (CIE I64x): Un Problema de Salud Pública en Chile. Revista Inclusiones, 3(4):59–68, 2016.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2016</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Políticas Públicas y Obesidad en los Escolares Chilenos: ¿Tenemos los Resultados que Queremos?</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, González F</p>
+    <p class="pub-journal"><em>Revista de Humanidades y Ciencias Sociales y Multidisciplinaria</em>, 49–59</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Pol%C3%ADticas+P%C3%BAblicas+y+Obesidad+en+los+Escolares+Chilenos%3A+%C2%BFTenemos+los+Resultados+que+Queremos%3F%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, González F. Políticas Públicas y Obesidad en los Escolares Chilenos: ¿Tenemos los Resultados que Queremos?. Revista de Humanidades y Ciencias Sociales y Multidisciplinaria, 49–59, 2016.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2016</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Publicaciones Científicas: Bases para el Desarrollo en Chile</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, García S</p>
+    <p class="pub-journal"><em>Revista Ciencias de la Documentación</em>, 62–70</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Publicaciones+Cient%C3%ADficas%3A+Bases+para+el+Desarrollo+en+Chile%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, García S. Publicaciones Científicas: Bases para el Desarrollo en Chile. Revista Ciencias de la Documentación, 62–70, 2016.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2016</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Ciencias de la Actividad Física y Medicina del Deporte: Una Revisión de la Calidad de las Revistas en América</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, García S</p>
+    <p class="pub-journal"><em>Archivos de la Sociedad Chilena de Medicina del Deporte</em>, 61(1):52–58</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Ciencias+de+la+Actividad+F%C3%ADsica+y+Medicina+del+Deporte%3A+Una+Revisi%C3%B3n+de+la+Calidad+de+las+Revistas+en+Am%C3%A9rica%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, García S. Ciencias de la Actividad Física y Medicina del Deporte: Una Revisión de la Calidad de las Revistas en América. Archivos de la Sociedad Chilena de Medicina del Deporte, 61(1):52–58, 2016.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2016</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Reflexión: Actividad Física y Deportes en las Enfermedades No Transmisibles en Chile. ¿Estamos Haciendo Bien las Cosas?</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, González F</p>
+    <p class="pub-journal"><em>Revista de Humanidades y Ciencias Sociales y Multidisciplinaria</em>, 26–32</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Reflexi%C3%B3n%3A+Actividad+F%C3%ADsica+y+Deportes+en+las+Enfermedades+No+Transmisibles+en+Chile.+%C2%BFEstamos+Haciendo+Bien+las+Cosas%3F%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, González F. Reflexión: Actividad Física y Deportes en las Enfermedades No Transmisibles en Chile. ¿Estamos Haciendo Bien las Cosas?. Revista de Humanidades y Ciencias Sociales y Multidisciplinaria, 26–32, 2016.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2016</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Algunos Hitos en Actividad Física y Medicina del Deporte en Chile</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>Archivos de la Sociedad Chilena de Medicina del Deporte</em>, 61(1)</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Algunos+Hitos+en+Actividad+F%C3%ADsica+y+Medicina+del+Deporte+en+Chile%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Algunos Hitos en Actividad Física y Medicina del Deporte en Chile. Archivos de la Sociedad Chilena de Medicina del Deporte, 61(1), 2016.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2010</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Clínicos Investigadores: Un Desafío en Salud</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>Health Research</em>, 10:131–43</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Cl%C3%ADnicos+Investigadores%3A+Un+Desaf%C3%ADo+en+Salud%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Clínicos Investigadores: Un Desafío en Salud. Health Research, 10:131–43, 2010.">Cite</button>
+    </p>
+  </div>
+</li>
+</ul>
+
+<h2>Edited book</h2>
+
+<ul class="pub-list">
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, González R, Yáñez R, Vargas M (Editors)</p>
+    <p class="pub-journal"><em>Editorial Ígneo</em>, 348 pp. ISBN 978-9564240527</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Kinesiolog%C3%ADa+Musculoesquel%C3%A9tica%3A+Experiencia%2C+Tecnolog%C3%ADa+e+Innovaci%C3%B3n%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, González R, Yáñez R, Vargas M (Editors). Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación. Editorial Ígneo, 348 pp. ISBN 978-9564240527, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
 </ul>
 
 <h2>Book chapters</h2>
+<p>First pages are shown where available so readers can preview and cite each chapter.</p>
+
 <ul class="pub-list">
-<li class="pub">
-  <p class="pub-title">Artrosis Trapeciometacarpiana</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 99–102. Editorial Ígneo, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Artrosis+Trapeciometacarpiana%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. Artrosis Trapeciometacarpiana. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 99–102. Editorial Ígneo, 2025.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Artrosis Trapeciometacarpiana</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Greene C</p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 99–102. Editorial Ígneo</p>
+    <a href="images/chapters/artrosis-trapeciometacarpiana.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/artrosis-trapeciometacarpiana.jpg" alt="First page of chapter: Artrosis Trapeciometacarpiana" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Artrosis+Trapeciometacarpiana%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Greene C. Artrosis Trapeciometacarpiana. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 99–102. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Atrapamientos Neurales</p>
-  <p class="pub-authors">Maya J, Vega R, <strong>Droppelmann G</strong></p>
-  <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 85–89. Editorial Ígneo, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Atrapamientos+Neurales%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Maya J, Vega R, Droppelmann G. Atrapamientos Neurales. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 85–89. Editorial Ígneo, 2025.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Atrapamientos Neurales</p>
+    <p class="pub-authors">Maya J, Vega R, <strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 85–89. Editorial Ígneo</p>
+    <a href="images/chapters/atrapamientos-neurales.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/atrapamientos-neurales.jpg" alt="First page of chapter: Atrapamientos Neurales" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Atrapamientos+Neurales%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Maya J, Vega R, Droppelmann G. Atrapamientos Neurales. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 85–89. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Capsulitis Adhesiva de Hombro</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 138–143. Editorial Ígneo, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Capsulitis+Adhesiva+de+Hombro%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. Capsulitis Adhesiva de Hombro. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 138–143. Editorial Ígneo, 2025.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Capsulitis Adhesiva de Hombro</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 138–143. Editorial Ígneo</p>
+    <a href="images/chapters/capsulitis-adhesiva.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/capsulitis-adhesiva.jpg" alt="First page of chapter: Capsulitis Adhesiva de Hombro" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Capsulitis+Adhesiva+de+Hombro%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Capsulitis Adhesiva de Hombro. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 138–143. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Fuerza Prensil y Parámetros Neuromusculares</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Stöwhas K, Quilobrán D, Vega S, Zárate I, Albornoz L</p>
-  <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 291–294. Editorial Ígneo, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Fuerza+Prensil+y+Par%C3%A1metros+Neuromusculares%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Stöwhas K, Quilobrán D, Vega S, Zárate I, Albornoz L. Fuerza Prensil y Parámetros Neuromusculares. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 291–294. Editorial Ígneo, 2025.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Fuerza Prensil y Parámetros Neuromusculares</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Stöwhas K, Quilobrán D, Vega S, Zárate I, Albornoz L</p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 291–294. Editorial Ígneo</p>
+    <a href="images/chapters/fuerza-prensil.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/fuerza-prensil.jpg" alt="First page of chapter: Fuerza Prensil y Parámetros Neuromusculares" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Fuerza+Prensil+y+Par%C3%A1metros+Neuromusculares%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Stöwhas K, Quilobrán D, Vega S, Zárate I, Albornoz L. Fuerza Prensil y Parámetros Neuromusculares. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 291–294. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Inteligencia Artificial y Desórdenes Musculoesqueléticos</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 314–318. Editorial Ígneo, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Inteligencia+Artificial+y+Des%C3%B3rdenes+Musculoesquel%C3%A9ticos%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. Inteligencia Artificial y Desórdenes Musculoesqueléticos. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 314–318. Editorial Ígneo, 2025.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Inteligencia Artificial y Desórdenes Musculoesqueléticos</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 314–318. Editorial Ígneo</p>
+    <a href="images/chapters/ia-desordenes-musculoesqueleticos.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/ia-desordenes-musculoesqueleticos.jpg" alt="First page of chapter: Inteligencia Artificial y Desórdenes Musculoesqueléticos" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Inteligencia+Artificial+y+Des%C3%B3rdenes+Musculoesquel%C3%A9ticos%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Inteligencia Artificial y Desórdenes Musculoesqueléticos. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 314–318. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Manguito Rotador Postquirúrgico</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Zamorano D</p>
-  <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 116–120. Editorial Ígneo, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Manguito+Rotador+Postquir%C3%BArgico%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Zamorano D. Manguito Rotador Postquirúrgico. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 116–120. Editorial Ígneo, 2025.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Manguito Rotador Postquirúrgico</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Zamorano D</p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 116–120. Editorial Ígneo</p>
+    <a href="images/chapters/manguito-rotador-postquirurgico.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/manguito-rotador-postquirurgico.jpg" alt="First page of chapter: Manguito Rotador Postquirúrgico" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Manguito+Rotador+Postquir%C3%BArgico%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Zamorano D. Manguito Rotador Postquirúrgico. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 116–120. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Síndrome de Dolor Regional Complejo</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 90–93. Editorial Ígneo, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22S%C3%ADndrome+de+Dolor+Regional+Complejo%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. Síndrome de Dolor Regional Complejo. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 90–93. Editorial Ígneo, 2025.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Síndrome de Dolor Regional Complejo</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 90–93. Editorial Ígneo</p>
+    <a href="images/chapters/sindrome-dolor-regional-complejo.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/sindrome-dolor-regional-complejo.jpg" alt="First page of chapter: Síndrome de Dolor Regional Complejo" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22S%C3%ADndrome+de+Dolor+Regional+Complejo%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Síndrome de Dolor Regional Complejo. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 90–93. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Tendinopatía Lateral del Codo</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 63–66. Editorial Ígneo, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Tendinopat%C3%ADa+Lateral+del+Codo%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. Tendinopatía Lateral del Codo. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 63–66. Editorial Ígneo, 2025.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Tendinopatía Lateral del Codo</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 63–66. Editorial Ígneo</p>
+    <a href="images/chapters/tendinopatia-lateral-codo.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/tendinopatia-lateral-codo.jpg" alt="First page of chapter: Tendinopatía Lateral del Codo" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Tendinopat%C3%ADa+Lateral+del+Codo%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Tendinopatía Lateral del Codo. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 63–66. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Tendinopatía Medial del Codo</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 67–71. Editorial Ígneo, 2025</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Tendinopat%C3%ADa+Medial+del+Codo%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. Tendinopatía Medial del Codo. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 67–71. Editorial Ígneo, 2025.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Tendinopatía Medial del Codo</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 67–71. Editorial Ígneo</p>
+    <a href="images/chapters/tendinopatia-medial-codo.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/tendinopatia-medial-codo.jpg" alt="First page of chapter: Tendinopatía Medial del Codo" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Tendinopat%C3%ADa+Medial+del+Codo%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Tendinopatía Medial del Codo. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 67–71. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">50 Años de Evolución de la Mortalidad por Enfermedades No Transmisibles en Chile</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal">In: <em>Desafíos en el Chile Contemporáneo</em>, Universidad del Desarrollo, 2021</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%2250+A%C3%B1os+de+Evoluci%C3%B3n+de+la+Mortalidad+por+Enfermedades+No+Transmisibles+en+Chile%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. 50 Años de Evolución de la Mortalidad por Enfermedades No Transmisibles en Chile. In: Desafíos en el Chile Contemporáneo, Universidad del Desarrollo, 2021.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2022</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Análisis Supervisado en Imágenes: Alcances Prácticos</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Tello M, Feijoo F</p>
+    <p class="pub-journal">In: <em>Medicina y Ciencias Aplicadas al Fútbol</em>, 840–849. Mediterráneo</p>
+    <a href="images/chapters/analisis-supervisado-imagenes.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/analisis-supervisado-imagenes.jpg" alt="First page of chapter: Análisis Supervisado en Imágenes: Alcances Prácticos" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22An%C3%A1lisis+Supervisado+en+Im%C3%A1genes%3A+Alcances+Pr%C3%A1cticos%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Tello M, Feijoo F. Análisis Supervisado en Imágenes: Alcances Prácticos. In: Medicina y Ciencias Aplicadas al Fútbol, 840–849. Mediterráneo, 2022.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Análisis Supervisado en Imágenes: Alcances Prácticos</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Tello M, Feijoo F</p>
-  <p class="pub-journal">In: <em>Medicina y Ciencias del Fútbol</em>, Mediterráneo, 2021</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22An%C3%A1lisis+Supervisado+en+Im%C3%A1genes%3A+Alcances+Pr%C3%A1cticos%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Tello M, Feijoo F. Análisis Supervisado en Imágenes: Alcances Prácticos. In: Medicina y Ciencias del Fútbol, Mediterráneo, 2021.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2021</span></div>
+  <div class="pub-main">
+    <p class="pub-title">50 Años de Evolución de Enfermedades Crónicas No Transmisibles en Chile</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Desafíos del Chile Contemporáneo</em>, Universidad del Desarrollo</p>
+    <a href="images/chapters/50-anos-enfermedades-chile.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/50-anos-enfermedades-chile.jpg" alt="First page of chapter: 50 Años de Evolución de Enfermedades Crónicas No Transmisibles en Chile" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%2250+A%C3%B1os+de+Evoluci%C3%B3n+de+Enfermedades+Cr%C3%B3nicas+No+Transmisibles+en+Chile%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. 50 Años de Evolución de Enfermedades Crónicas No Transmisibles en Chile. In: Desafíos del Chile Contemporáneo, Universidad del Desarrollo, 2021.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Bioética en la Actividad Física y el Deporte</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal">In: <em>Actividad Física y Ejercicio en Salud y Enfermedad</em>, Mediterráneo, 2017</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Bio%C3%A9tica+en+la+Actividad+F%C3%ADsica+y+el+Deporte%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. Bioética en la Actividad Física y el Deporte. In: Actividad Física y Ejercicio en Salud y Enfermedad, Mediterráneo, 2017.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2017</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Bioética en la Actividad Física y el Deporte</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Actividad Física y Ejercicio en Salud y Enfermedad</em>, 427–438. Mediterráneo</p>
+    <a href="images/chapters/bioetica-actividad-fisica.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/bioetica-actividad-fisica.jpg" alt="First page of chapter: Bioética en la Actividad Física y el Deporte" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Bio%C3%A9tica+en+la+Actividad+F%C3%ADsica+y+el+Deporte%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Bioética en la Actividad Física y el Deporte. In: Actividad Física y Ejercicio en Salud y Enfermedad, 427–438. Mediterráneo, 2017.">Cite</button>
+    </p>
+  </div>
 </li>
-<li class="pub">
-  <p class="pub-title">Enfermedades Crónicas No Transmisibles, Actividad Física y Políticas Públicas</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong></p>
-  <p class="pub-journal">In: <em>Actividad Física y Ejercicio en Salud y Enfermedad</em>, Mediterráneo, 2017</p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Enfermedades+Cr%C3%B3nicas+No+Transmisibles%2C+Actividad+F%C3%ADsica+y+Pol%C3%ADticas+P%C3%BAblicas%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G. Enfermedades Crónicas No Transmisibles, Actividad Física y Políticas Públicas. In: Actividad Física y Ejercicio en Salud y Enfermedad, Mediterráneo, 2017.">Cite</button>
-  </p>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2017</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Enfermedades Crónicas No Transmisibles, Actividad Física y Políticas Públicas</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Actividad Física y Ejercicio en Salud y Enfermedad</em>, 415–426. Mediterráneo</p>
+    <a href="images/chapters/enfermedades-cronicas-politicas.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/enfermedades-cronicas-politicas.jpg" alt="First page of chapter: Enfermedades Crónicas No Transmisibles, Actividad Física y Políticas Públicas" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Enfermedades+Cr%C3%B3nicas+No+Transmisibles%2C+Actividad+F%C3%ADsica+y+Pol%C3%ADticas+P%C3%BAblicas%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Enfermedades Crónicas No Transmisibles, Actividad Física y Políticas Públicas. In: Actividad Física y Ejercicio en Salud y Enfermedad, 415–426. Mediterráneo, 2017.">Cite</button>
+    </p>
+  </div>
 </li>
 </ul>
 
 <h2>Manuscripts under review (2026)</h2>
+
 <ul class="pub-list">
 <li class="pub">
-  <p class="pub-title">Assessment of Temporal Health Risks in the Working Population: An Urgent National Challenge</p>
-  <p class="pub-authors">Jorquera R, <strong>Droppelmann G</strong>, Dollmann M, Feijoo F</p>
-  <p class="pub-journal"><em>Journal of Occupational and Environmental Medicine</em> — <span class='badge-review'>under review</span></p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Assessment+of+Temporal+Health+Risks+in+the+Working+Population%3A+An+Urgent+National+Challenge%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Jorquera R, Droppelmann G, Dollmann M, Feijoo F. Assessment of Temporal Health Risks in the Working Population: An Urgent National Challenge. Journal of Occupational and Environmental Medicine, n.d..">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge review">In review</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Assessment of Temporal Health Risks in the Working Population: An Urgent National Challenge</p>
+    <p class="pub-authors">Jorquera R, <strong>Droppelmann G</strong>, Dollmann M, Feijoo F</p>
+    <p class="pub-journal"><em>Journal of Occupational and Environmental Medicine</em></p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Assessment+of+Temporal+Health+Risks+in+the+Working+Population%3A+An+Urgent+National+Challenge%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Jorquera R, Droppelmann G, Dollmann M, Feijoo F. Assessment of Temporal Health Risks in the Working Population: An Urgent National Challenge. Journal of Occupational and Environmental Medicine, n.d..">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Advanced Deep Learning Approaches for Shoulder MRI: GANs and RKANs for Automated Detection of Supraspinatus Tendon Tears</p>
-  <p class="pub-authors">Chahuán L, <strong>Droppelmann G</strong>, Albornoz L, Jorquera C, Kokaly M, Álvarez de Araya I, Feijoo F</p>
-  <p class="pub-journal"><em>BMC Medical Imaging</em> — <span class='badge-review'>under review</span></p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Advanced+Deep+Learning+Approaches+for+Shoulder+MRI%3A+GANs+and+RKANs+for+Automated+Detection+of+Supraspinatus+Tendon+Tears%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Chahuán L, Droppelmann G, Albornoz L, Jorquera C, Kokaly M, Álvarez de Araya I, Feijoo F. Advanced Deep Learning Approaches for Shoulder MRI: GANs and RKANs for Automated Detection of Supraspinatus Tendon Tears. BMC Medical Imaging, n.d..">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge review">In review</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Advanced Deep Learning Approaches for Shoulder MRI: GANs and RKANs for Automated Detection of Supraspinatus Tendon Tears</p>
+    <p class="pub-authors">Chahuán L, <strong>Droppelmann G</strong>, Albornoz L, Jorquera C, Kokaly M, Álvarez de Araya I, Feijoo F</p>
+    <p class="pub-journal"><em>BMC Medical Imaging</em></p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Advanced+Deep+Learning+Approaches+for+Shoulder+MRI%3A+GANs+and+RKANs+for+Automated+Detection+of+Supraspinatus+Tendon+Tears%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Chahuán L, Droppelmann G, Albornoz L, Jorquera C, Kokaly M, Álvarez de Araya I, Feijoo F. Advanced Deep Learning Approaches for Shoulder MRI: GANs and RKANs for Automated Detection of Supraspinatus Tendon Tears. BMC Medical Imaging, n.d..">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Diagnostic Performance of Machine and Deep Learning Models for Cartilage Injury Detection in Medical Imaging: A Meta-Analysis</p>
-  <p class="pub-authors"><strong>Droppelmann G</strong>, Varas E, Villagrán J, Jorquera C, Feijoo F</p>
-  <p class="pub-journal"><em>EFORT Open Reviews</em> — <span class='badge-review'>under review</span></p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Diagnostic+Performance+of+Machine+and+Deep+Learning+Models+for+Cartilage+Injury+Detection+in+Medical+Imaging%3A+A+Meta-Analysis%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Droppelmann G, Varas E, Villagrán J, Jorquera C, Feijoo F. Diagnostic Performance of Machine and Deep Learning Models for Cartilage Injury Detection in Medical Imaging: A Meta-Analysis. EFORT Open Reviews, n.d..">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge review">In review</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Diagnostic Performance of Machine and Deep Learning Models for Cartilage Injury Detection in Medical Imaging: A Meta-Analysis</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Varas E, Villagrán J, Jorquera C, Feijoo F</p>
+    <p class="pub-journal"><em>EFORT Open Reviews</em></p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Diagnostic+Performance+of+Machine+and+Deep+Learning+Models+for+Cartilage+Injury+Detection+in+Medical+Imaging%3A+A+Meta-Analysis%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Varas E, Villagrán J, Jorquera C, Feijoo F. Diagnostic Performance of Machine and Deep Learning Models for Cartilage Injury Detection in Medical Imaging: A Meta-Analysis. EFORT Open Reviews, n.d..">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Effects of Jet and Vibrating Mesh Nebulizers on IPAP and EPAP Ventilatory Pressures during Non-Invasive Ventilation: An In Vitro Study</p>
-  <p class="pub-authors">Wood D, Stöwhas K, Aguilar D, Aguilera C, Jorquera C, <strong>Droppelmann-Díaz G</strong></p>
-  <p class="pub-journal"><em>Life</em> — <span class='badge-review'>under review</span></p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Effects+of+Jet+and+Vibrating+Mesh+Nebulizers+on+IPAP+and+EPAP+Ventilatory+Pressures+during+Non-Invasive+Ventilation%3A+An+In+Vitro+Study%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Wood D, Stöwhas K, Aguilar D, Aguilera C, Jorquera C, Droppelmann-Díaz G. Effects of Jet and Vibrating Mesh Nebulizers on IPAP and EPAP Ventilatory Pressures during Non-Invasive Ventilation: An In Vitro Study. Life, n.d..">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge review">In review</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Effects of Jet and Vibrating Mesh Nebulizers on IPAP and EPAP Ventilatory Pressures during Non-Invasive Ventilation: An In Vitro Study</p>
+    <p class="pub-authors">Wood D, Stöwhas K, Aguilar D, Aguilera C, Jorquera C, <strong>Droppelmann-Díaz G</strong></p>
+    <p class="pub-journal"><em>Life</em></p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Effects+of+Jet+and+Vibrating+Mesh+Nebulizers+on+IPAP+and+EPAP+Ventilatory+Pressures+during+Non-Invasive+Ventilation%3A+An+In+Vitro+Study%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Wood D, Stöwhas K, Aguilar D, Aguilera C, Jorquera C, Droppelmann-Díaz G. Effects of Jet and Vibrating Mesh Nebulizers on IPAP and EPAP Ventilatory Pressures during Non-Invasive Ventilation: An In Vitro Study. Life, n.d..">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Clinical Trial Duration: A Challenge for the Pharmaceutical Industry</p>
-  <p class="pub-authors">Bustos N, <strong>Droppelmann G</strong>, Matis T, Bernstein J, Das TK, Feijoo F</p>
-  <p class="pub-journal"><em>Socio-Economic Planning Sciences</em> — <span class='badge-review'>under review</span></p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Clinical+Trial+Duration%3A+A+Challenge+for+the+Pharmaceutical+Industry%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Bustos N, Droppelmann G, Matis T, Bernstein J, Das TK, Feijoo F. Clinical Trial Duration: A Challenge for the Pharmaceutical Industry. Socio-Economic Planning Sciences, n.d..">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge review">In review</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Clinical Trial Duration: A Challenge for the Pharmaceutical Industry</p>
+    <p class="pub-authors">Bustos N, <strong>Droppelmann G</strong>, Matis T, Bernstein J, Das TK, Feijoo F</p>
+    <p class="pub-journal"><em>Socio-Economic Planning Sciences</em></p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Clinical+Trial+Duration%3A+A+Challenge+for+the+Pharmaceutical+Industry%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Bustos N, Droppelmann G, Matis T, Bernstein J, Das TK, Feijoo F. Clinical Trial Duration: A Challenge for the Pharmaceutical Industry. Socio-Economic Planning Sciences, n.d..">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Arthroscopic Double-Layer Repair of Delaminated Posterosuperior Rotator Cuff Tears</p>
-  <p class="pub-authors">Debandi A, González N, Díaz C, García N, Vargas P, Girardi D, <strong>Droppelmann G</strong></p>
-  <p class="pub-journal"><em>Journal of Shoulder and Elbow Surgery</em> — <span class='badge-review'>under review</span></p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Arthroscopic+Double-Layer+Repair+of+Delaminated+Posterosuperior+Rotator+Cuff+Tears%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Debandi A, González N, Díaz C, García N, Vargas P, Girardi D, Droppelmann G. Arthroscopic Double-Layer Repair of Delaminated Posterosuperior Rotator Cuff Tears. Journal of Shoulder and Elbow Surgery, n.d..">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge review">In review</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Arthroscopic Double-Layer Repair of Delaminated Posterosuperior Rotator Cuff Tears</p>
+    <p class="pub-authors">Debandi A, González N, Díaz C, García N, Vargas P, Girardi D, <strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>Journal of Shoulder and Elbow Surgery</em></p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Arthroscopic+Double-Layer+Repair+of+Delaminated+Posterosuperior+Rotator+Cuff+Tears%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Debandi A, González N, Díaz C, García N, Vargas P, Girardi D, Droppelmann G. Arthroscopic Double-Layer Repair of Delaminated Posterosuperior Rotator Cuff Tears. Journal of Shoulder and Elbow Surgery, n.d..">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Postoperative Evolution of Muscle Atrophy and Fatty Infiltration in Posterosuperior Rotator Cuff Tears: A Retrospective MRI Cohort Study</p>
-  <p class="pub-authors">Debandi A, Torrealba J, Díaz C, García N, Solis D, González C, Spichiger S, <strong>Droppelmann G</strong></p>
-  <p class="pub-journal"><em>Journal of Shoulder and Elbow Surgery</em> — <span class='badge-review'>under review</span></p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Postoperative+Evolution+of+Muscle+Atrophy+and+Fatty+Infiltration+in+Posterosuperior+Rotator+Cuff+Tears%3A+A+Retrospective+MRI+Cohort+Study%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Debandi A, Torrealba J, Díaz C, García N, Solis D, González C, Spichiger S, Droppelmann G. Postoperative Evolution of Muscle Atrophy and Fatty Infiltration in Posterosuperior Rotator Cuff Tears: A Retrospective MRI Cohort Study. Journal of Shoulder and Elbow Surgery, n.d..">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge review">In review</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Postoperative Evolution of Muscle Atrophy and Fatty Infiltration in Posterosuperior Rotator Cuff Tears: A Retrospective MRI Cohort Study</p>
+    <p class="pub-authors">Debandi A, Torrealba J, Díaz C, García N, Solis D, González C, Spichiger S, <strong>Droppelmann G</strong></p>
+    <p class="pub-journal"><em>Journal of Shoulder and Elbow Surgery</em></p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Postoperative+Evolution+of+Muscle+Atrophy+and+Fatty+Infiltration+in+Posterosuperior+Rotator+Cuff+Tears%3A+A+Retrospective+MRI+Cohort+Study%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Debandi A, Torrealba J, Díaz C, García N, Solis D, González C, Spichiger S, Droppelmann G. Postoperative Evolution of Muscle Atrophy and Fatty Infiltration in Posterosuperior Rotator Cuff Tears: A Retrospective MRI Cohort Study. Journal of Shoulder and Elbow Surgery, n.d..">Cite</button>
+    </p>
+  </div>
 </li>
 <li class="pub">
-  <p class="pub-title">Body Composition and Physical Demands in Professional Rugby Players: A Comparative Analysis between Backs and Forwards</p>
-  <p class="pub-authors">Jorquera C, Vargas F, Acosta M, Romero L, Andrades O, Carvajal C, <strong>Droppelmann G</strong>, Araya S, Ulloa D</p>
-  <p class="pub-journal"><em>PeerJ</em> — <span class='badge-review'>under review</span></p>
-  <p class="pub-actions">
-    <a class="btn" href="https://scholar.google.com/scholar?q=%22Body+Composition+and+Physical+Demands+in+Professional+Rugby+Players%3A+A+Comparative+Analysis+between+Backs+and+Forwards%22" target="_blank" rel="noopener">Google Scholar</a>
-    <button class="btn btn-cite" data-cite="Jorquera C, Vargas F, Acosta M, Romero L, Andrades O, Carvajal C, Droppelmann G, Araya S, Ulloa D. Body Composition and Physical Demands in Professional Rugby Players: A Comparative Analysis between Backs and Forwards. PeerJ, n.d..">Cite</button>
-  </p>
+  <div class="pub-side"><span class="year-badge review">In review</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Body Composition and Physical Demands in Professional Rugby Players: A Comparative Analysis between Backs and Forwards</p>
+    <p class="pub-authors">Jorquera C, Vargas F, Acosta M, Romero L, Andrades O, Carvajal C, <strong>Droppelmann G</strong>, Araya S, Ulloa D</p>
+    <p class="pub-journal"><em>PeerJ</em></p>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Body+Composition+and+Physical+Demands+in+Professional+Rugby+Players%3A+A+Comparative+Analysis+between+Backs+and+Forwards%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Jorquera C, Vargas F, Acosta M, Romero L, Andrades O, Carvajal C, Droppelmann G, Araya S, Ulloa D. Body Composition and Physical Demands in Professional Rugby Players: A Comparative Analysis between Backs and Forwards. PeerJ, n.d..">Cite</button>
+    </p>
+  </div>
 </li>
 </ul>
-</main></div>
+
+</main>
+</div>
 <footer class="site-footer">
-  <p>© 2026 Guillermo Droppelmann · <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> · Hosted on GitHub Pages</p>
+  <p>© 2026 Guillermo Droppelmann · <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://www.linkedin.com/in/guillermo-droppelmann-3b06b7385/" target="_blank" rel="noopener">LinkedIn</a></p>
 </footer>
 <script>
 document.addEventListener('click', function(e){
   var b = e.target.closest('.btn-cite');
   if(!b) return;
   navigator.clipboard.writeText(b.dataset.cite).then(function(){
-    var t = b.textContent; b.textContent = 'Copied!';
+    var t = b.textContent; b.textContent = '✓ Copied';
     setTimeout(function(){ b.textContent = t; }, 1600);
   });
 });
