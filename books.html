@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books — Guillermo Droppelmann, PhD</title>
+<meta name="description" content="Edited book and book chapters by Guillermo Droppelmann, with first-page previews for citation.">
+<meta name="author" content="Guillermo Droppelmann">
+<meta property="og:title" content="Books — Guillermo Droppelmann, PhD">
+<meta property="og:description" content="Edited book and book chapters by Guillermo Droppelmann, with first-page previews for citation.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://guillermodroppelmann.github.io/books.html">
+<link rel="canonical" href="https://guillermodroppelmann.github.io/books.html">
+<meta property="og:image" content="https://guillermodroppelmann.github.io/images/profile.jpg">
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;1,400&display=swap');
+:root{
+  --navy:#0e2a4e; --navy-2:#143a6b; --accent:#2f6fdb; --accent-soft:#e8f0fd;
+  --text:#25313f; --muted:#5c6b7a; --line:#e3e8ee; --bg:#fff; --bg-soft:#f6f8fb;
+  --chip-conference:#e8f0fd; --chip-conference-t:#2057b8;
+  --chip-course:#e5f6ec; --chip-course-t:#1b7a45;
+  --chip-symposium:#f1e9fb; --chip-symposium-t:#6d3fb5;
+  --chip-seminar:#fdf0e2; --chip-seminar-t:#a86412;
+  --chip-workshop:#e2f5f5; --chip-workshop-t:#0e7a7a;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  color:var(--text);background:var(--bg);line-height:1.65;font-size:16px;}
+a{color:var(--accent);text-decoration:none;} a:hover{text-decoration:underline;}
+/* ---------- header ---------- */
+.masthead{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);z-index:50;}
+.masthead-inner{max-width:1140px;margin:0 auto;padding:.75em 1.2em;display:flex;flex-wrap:wrap;
+  justify-content:space-between;align-items:center;gap:.5em;}
+.site-title{font-weight:800;font-size:.95em;color:#fff;background:linear-gradient(135deg,var(--navy),var(--accent));
+  width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  letter-spacing:.02em;box-shadow:0 3px 10px rgba(14,42,78,.25);}
+.site-title:hover{text-decoration:none;transform:scale(1.05);transition:transform .15s;}
+.masthead nav{display:flex;flex-wrap:wrap;gap:1.35em;}
+.masthead nav a{color:var(--text);font-weight:600;font-size:.92em;padding:.25em 0;
+  border-bottom:2.5px solid transparent;}
+.masthead nav a.active,.masthead nav a:hover{border-bottom-color:var(--accent);color:var(--accent);text-decoration:none;}
+/* ---------- hero band ---------- */
+.hero-band{height:74px;position:relative;overflow:hidden;
+  background:linear-gradient(120deg,#0b2244 0%,var(--navy-2) 55%,#2158a8 100%);}
+.hero-band::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 120% at 78% 10%,rgba(120,180,255,.28),transparent 60%),
+             radial-gradient(ellipse 40% 90% at 15% 100%,rgba(47,111,219,.35),transparent 65%);}
+/* ---------- layout ---------- */
+.layout{max-width:1140px;margin:0 auto;padding:0 1.2em 3em;display:grid;
+  grid-template-columns:280px 1fr;gap:3em;}
+.sidebar{margin-top:-52px;position:relative;z-index:5;}
+.avatar{width:190px;height:190px;border-radius:50%;object-fit:cover;display:block;
+  border:5px solid #fff;box-shadow:0 6px 22px rgba(14,42,78,.22);}
+.avatar-fallback{width:190px;height:190px;border-radius:50%;background:var(--navy);color:#fff;
+  font-size:3.6em;font-weight:800;align-items:center;justify-content:center;border:5px solid #fff;
+  box-shadow:0 6px 22px rgba(14,42,78,.22);}
+.author-name{font-size:1.28em;margin:.7em 0 .25em;color:var(--navy);font-weight:800;letter-spacing:-.01em;}
+.author-bio{font-size:.86em;color:var(--muted);margin-bottom:1.1em;}
+.author-links{list-style:none;font-size:.9em;}
+.author-links li{margin:.5em 0;overflow-wrap:anywhere;display:flex;gap:.5em;align-items:baseline;}
+.author-links a{font-weight:500;}
+.content{padding-top:2.2em;min-width:0;}
+/* ---------- typography ---------- */
+.content h1{font-family:'Lora',Georgia,serif;font-size:2em;margin-bottom:.5em;color:var(--navy);letter-spacing:-.01em;}
+.content h2{font-size:1.22em;font-weight:700;color:var(--navy);margin:2em 0 .8em;padding-left:.65em;
+  border-left:4px solid var(--accent);}
+.content h3{font-size:1em;margin:1.3em 0 .5em;color:var(--accent);font-weight:700;}
+.content p{margin-bottom:1em;}
+.content ul{margin:0 0 1.2em 1.25em;}
+.content ul li{margin-bottom:.5em;}
+.lead{font-size:1.05em;}
+/* ---------- publications ---------- */
+ul.pub-list{list-style:none;margin-left:0;}
+.pub{display:flex;gap:1.1em;background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:1.05em 1.2em;margin-bottom:.9em;transition:box-shadow .18s,transform .18s;}
+.pub:hover{box-shadow:0 8px 22px rgba(14,42,78,.10);transform:translateY(-2px);}
+.pub-side{flex:0 0 auto;}
+.pub-main{min-width:0;}
+.year-badge{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:700;
+  font-size:.8em;padding:.28em .7em;border-radius:999px;white-space:nowrap;}
+.year-badge.review{background:#fdf3d7;color:#8a6400;}
+.pub-title{font-weight:600;margin-bottom:.2em;line-height:1.45;}
+.pub-authors{font-size:.88em;color:var(--muted);margin-bottom:.15em;}
+.pub-journal{font-size:.88em;margin-bottom:.55em;}
+.pub-actions{display:flex;gap:.6em;margin-bottom:0!important;}
+.btn{display:inline-block;font-size:.78em;font-weight:600;padding:.32em .95em;border:1.5px solid var(--accent);
+  border-radius:999px;color:var(--accent);background:#fff;cursor:pointer;font-family:inherit;transition:all .15s;}
+.btn:hover{background:var(--accent);color:#fff;text-decoration:none;}
+.chapter-thumb{max-width:290px;width:100%;border:1px solid var(--line);border-radius:8px;
+  box-shadow:0 3px 10px rgba(14,42,78,.10);margin:.3em 0 .7em;display:block;transition:transform .18s;}
+.chapter-thumb:hover{transform:scale(1.02);}
+/* ---------- talks ---------- */
+.talk-year{font-family:'Lora',Georgia,serif;font-size:1.35em;color:var(--navy);margin:1.6em 0 .7em;}
+ul.talk-list{list-style:none;margin-left:0;}
+.talk{border-left:3px solid var(--line);padding:.15em 0 .9em 1.15em;position:relative;margin-left:.35em;}
+.talk::before{content:'';position:absolute;left:-7px;top:.42em;width:11px;height:11px;border-radius:50%;
+  background:var(--accent);border:2.5px solid #fff;box-shadow:0 0 0 1.5px var(--accent);}
+.talk-type{display:inline-block;font-size:.7em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  padding:.18em .65em;border-radius:999px;margin-right:.45em;vertical-align:1px;}
+.tt-conference{background:var(--chip-conference);color:var(--chip-conference-t);}
+.tt-course{background:var(--chip-course);color:var(--chip-course-t);}
+.tt-symposium{background:var(--chip-symposium);color:var(--chip-symposium-t);}
+.tt-seminar{background:var(--chip-seminar);color:var(--chip-seminar-t);}
+.tt-workshop{background:var(--chip-workshop);color:var(--chip-workshop-t);}
+.talk-title{font-weight:600;}
+.talk-meta{font-size:.88em;color:var(--muted);}
+.upcoming-box{background:linear-gradient(120deg,var(--accent-soft),#f2f7ff);border:1.5px dashed var(--accent);
+  border-radius:12px;padding:1.2em 1.4em;margin-bottom:1.5em;}
+.upcoming-box p{margin-bottom:.3em;}
+/* ---------- consulting ---------- */
+.consulting-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.1em;margin:1.2em 0;}
+.consult-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.3em 1.4em;
+  transition:box-shadow .18s,transform .18s;display:flex;flex-direction:column;}
+.consult-card:hover{box-shadow:0 10px 26px rgba(14,42,78,.12);transform:translateY(-3px);}
+.consult-tag{align-self:flex-start;font-size:.7em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  background:var(--accent-soft);color:var(--accent);padding:.2em .7em;border-radius:999px;margin-bottom:.7em;}
+.consult-card h3{margin:0 0 .25em;color:var(--navy);font-size:1.02em;}
+.consult-client{font-size:.85em;color:var(--muted);font-weight:600;margin-bottom:.5em;}
+.consult-card p.desc{font-size:.9em;color:var(--text);margin-bottom:0;}
+.cta-box{background:var(--navy);color:#fff;border-radius:14px;padding:1.5em 1.7em;margin-top:1.8em;}
+.cta-box h3{color:#fff;margin-top:0;}
+.cta-box a{color:#9ec3ff;font-weight:600;}
+/* ---------- footer ---------- */
+.brand{display:flex;align-items:center;gap:.6em;}
+.owl-header{width:30px;height:30px;color:var(--navy-2);}
+.footer-owl{display:flex;justify-content:center;padding-top:1.4em;}
+.owl-footer{width:36px;height:36px;color:#fff;opacity:.92;}
+.site-footer{margin-top:3em;background:var(--navy);}
+.site-footer p{max-width:1140px;margin:0 auto;padding:.7em 1.2em 1.6em;font-size:.85em;color:#b9c8dd;text-align:center;}
+.site-footer a{color:#9ec3ff;}
+@media(max-width:840px){
+  .layout{grid-template-columns:1fr;gap:1.5em;}
+  .sidebar{display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:-52px;}
+  .author-links li{justify-content:center;}
+  .hero-band{height:84px;}
+}
+
+</style>
+
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <span class="brand"><a class="site-title" href="index.html" aria-label="Home">GD</a><svg class="owl owl-header" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 26c0-5-1.5-9-1.5-13.5L21 18c3.5-1.5 7-2 11-2s7.5.5 11 2l10.5-5.5C53.5 17 52 21 52 26c0 15-7.5 26-20 26S12 41 12 26z"/><circle cx="24.5" cy="28" r="5.5"/><circle cx="39.5" cy="28" r="5.5"/><circle cx="24.5" cy="28" r="1" fill="currentColor"/><circle cx="39.5" cy="28" r="1" fill="currentColor"/><path d="M32 34.5l-3.5 5h7z"/></svg></span>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="publications.html">Articles</a>
+      <a href="books.html" class="active">Books</a>
+      <a href="talks.html">Talks</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="consulting.html">Consulting</a>
+    </nav>
+  </div>
+</header>
+<div class="hero-band"></div>
+<div class="layout">
+<aside class="sidebar">
+  <img src="images/profile.jpg" alt="Guillermo Droppelmann, PhD" class="avatar"
+       onerror="this.style.display='none';document.getElementById('avatar-fallback').style.display='flex';">
+  <div id="avatar-fallback" class="avatar-fallback" style="display:none;">GD</div>
+  <h2 class="author-name">Guillermo Droppelmann, PhD</h2>
+  <p class="author-bio">Clinical Researcher · Machine &amp; Deep Learning applied to Musculoskeletal Imaging. Deputy Head of Research, Clínica MEDS. Lecturer, PhD Program in Industrial Engineering, PUCV.</p>
+  <ul class="author-links">
+    <li>📍 <span>Santiago, Chile</span></li>
+    <li>🏥 <a href="https://www.meds.cl/especialistas/guillermo-droppelmann/" target="_blank" rel="noopener">Clínica MEDS</a></li>
+    <li>🎓 <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+    <li>💼 <a href="https://www.linkedin.com/in/guillermo-droppelmann-3b06b7385/" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li>✉️ <a href="mailto:guillermo.droppelmann@meds.cl">guillermo.droppelmann@meds.cl</a></li>
+  </ul>
+</aside>
+<main class="content">
+
+<h1>Books</h1>
+
+<h2>Edited book</h2>
+
+<ul class="pub-list">
+<li class="pub">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, González R, Yáñez R, Vargas M (Editors)</p>
+    <p class="pub-journal"><em>Editorial Ígneo</em>, 348 pp. ISBN 978-9564240527</p>
+    <p class="pub-actions">
+      <a class="btn" href="https://www.amazon.com/-/es/Guillermo-Droppelmann-Diaz-ebook/dp/B0G2TGF8L6" target="_blank" rel="noopener">View on Amazon</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, González R, Yáñez R, Vargas M (Editors). Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación. Editorial Ígneo, 348 pp. ISBN 978-9564240527, 2025.">Cite</button>
+    </p>
+  </div>
+</li>
+</ul>
+
+<h2>Book chapters</h2>
+<p>First pages are shown so readers can preview and cite each chapter.</p>
+
+<ul class="pub-list">
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Artrosis Trapeciometacarpiana</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Greene C</p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 99–102. Editorial Ígneo</p>
+    <a href="images/chapters/artrosis-trapeciometacarpiana.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/artrosis-trapeciometacarpiana.jpg" alt="First page of chapter: Artrosis Trapeciometacarpiana" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Artrosis+Trapeciometacarpiana%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Greene C. Artrosis Trapeciometacarpiana. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 99–102. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Atrapamientos Neurales</p>
+    <p class="pub-authors">Maya J, Vega R, <strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 85–89. Editorial Ígneo</p>
+    <a href="images/chapters/atrapamientos-neurales.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/atrapamientos-neurales.jpg" alt="First page of chapter: Atrapamientos Neurales" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Atrapamientos+Neurales%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Maya J, Vega R, Droppelmann G. Atrapamientos Neurales. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 85–89. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Capsulitis Adhesiva de Hombro</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 138–143. Editorial Ígneo</p>
+    <a href="images/chapters/capsulitis-adhesiva.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/capsulitis-adhesiva.jpg" alt="First page of chapter: Capsulitis Adhesiva de Hombro" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Capsulitis+Adhesiva+de+Hombro%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Capsulitis Adhesiva de Hombro. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 138–143. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Fuerza Prensil y Parámetros Neuromusculares</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Stöwhas K, Quilobrán D, Vega S, Zárate I, Albornoz L</p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 291–294. Editorial Ígneo</p>
+    <a href="images/chapters/fuerza-prensil.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/fuerza-prensil.jpg" alt="First page of chapter: Fuerza Prensil y Parámetros Neuromusculares" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Fuerza+Prensil+y+Par%C3%A1metros+Neuromusculares%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Stöwhas K, Quilobrán D, Vega S, Zárate I, Albornoz L. Fuerza Prensil y Parámetros Neuromusculares. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 291–294. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Inteligencia Artificial y Desórdenes Musculoesqueléticos</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 314–318. Editorial Ígneo</p>
+    <a href="images/chapters/ia-desordenes-musculoesqueleticos.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/ia-desordenes-musculoesqueleticos.jpg" alt="First page of chapter: Inteligencia Artificial y Desórdenes Musculoesqueléticos" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Inteligencia+Artificial+y+Des%C3%B3rdenes+Musculoesquel%C3%A9ticos%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Inteligencia Artificial y Desórdenes Musculoesqueléticos. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 314–318. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Manguito Rotador Postquirúrgico</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Zamorano D</p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 116–120. Editorial Ígneo</p>
+    <a href="images/chapters/manguito-rotador-postquirurgico.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/manguito-rotador-postquirurgico.jpg" alt="First page of chapter: Manguito Rotador Postquirúrgico" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Manguito+Rotador+Postquir%C3%BArgico%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Zamorano D. Manguito Rotador Postquirúrgico. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 116–120. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Síndrome de Dolor Regional Complejo</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 90–93. Editorial Ígneo</p>
+    <a href="images/chapters/sindrome-dolor-regional-complejo.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/sindrome-dolor-regional-complejo.jpg" alt="First page of chapter: Síndrome de Dolor Regional Complejo" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22S%C3%ADndrome+de+Dolor+Regional+Complejo%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Síndrome de Dolor Regional Complejo. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 90–93. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Tendinopatía Lateral del Codo</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 63–66. Editorial Ígneo</p>
+    <a href="images/chapters/tendinopatia-lateral-codo.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/tendinopatia-lateral-codo.jpg" alt="First page of chapter: Tendinopatía Lateral del Codo" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Tendinopat%C3%ADa+Lateral+del+Codo%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Tendinopatía Lateral del Codo. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 63–66. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2025</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Tendinopatía Medial del Codo</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación</em>, 67–71. Editorial Ígneo</p>
+    <a href="images/chapters/tendinopatia-medial-codo.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/tendinopatia-medial-codo.jpg" alt="First page of chapter: Tendinopatía Medial del Codo" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Tendinopat%C3%ADa+Medial+del+Codo%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Tendinopatía Medial del Codo. In: Kinesiología Musculoesquelética: Experiencia, Tecnología e Innovación, 67–71. Editorial Ígneo, 2025.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2022</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Análisis Supervisado en Imágenes: Alcances Prácticos</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong>, Tello M, Feijoo F</p>
+    <p class="pub-journal">In: <em>Medicina y Ciencias Aplicadas al Fútbol</em>, 840–849. Mediterráneo</p>
+    <a href="images/chapters/analisis-supervisado-imagenes.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/analisis-supervisado-imagenes.jpg" alt="First page of chapter: Análisis Supervisado en Imágenes: Alcances Prácticos" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22An%C3%A1lisis+Supervisado+en+Im%C3%A1genes%3A+Alcances+Pr%C3%A1cticos%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G, Tello M, Feijoo F. Análisis Supervisado en Imágenes: Alcances Prácticos. In: Medicina y Ciencias Aplicadas al Fútbol, 840–849. Mediterráneo, 2022.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2021</span></div>
+  <div class="pub-main">
+    <p class="pub-title">50 Años de Evolución de Enfermedades Crónicas No Transmisibles en Chile</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Desafíos del Chile Contemporáneo</em>, Universidad del Desarrollo</p>
+    <a href="images/chapters/50-anos-enfermedades-chile.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/50-anos-enfermedades-chile.jpg" alt="First page of chapter: 50 Años de Evolución de Enfermedades Crónicas No Transmisibles en Chile" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%2250+A%C3%B1os+de+Evoluci%C3%B3n+de+Enfermedades+Cr%C3%B3nicas+No+Transmisibles+en+Chile%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. 50 Años de Evolución de Enfermedades Crónicas No Transmisibles en Chile. In: Desafíos del Chile Contemporáneo, Universidad del Desarrollo, 2021.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2017</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Bioética en la Actividad Física y el Deporte</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Actividad Física y Ejercicio en Salud y Enfermedad</em>, 427–438. Mediterráneo</p>
+    <a href="images/chapters/bioetica-actividad-fisica.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/bioetica-actividad-fisica.jpg" alt="First page of chapter: Bioética en la Actividad Física y el Deporte" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Bio%C3%A9tica+en+la+Actividad+F%C3%ADsica+y+el+Deporte%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Bioética en la Actividad Física y el Deporte. In: Actividad Física y Ejercicio en Salud y Enfermedad, 427–438. Mediterráneo, 2017.">Cite</button>
+    </p>
+  </div>
+</li>
+<li class="pub chapter">
+  <div class="pub-side"><span class="year-badge">2017</span></div>
+  <div class="pub-main">
+    <p class="pub-title">Enfermedades Crónicas No Transmisibles, Actividad Física y Políticas Públicas</p>
+    <p class="pub-authors"><strong>Droppelmann G</strong></p>
+    <p class="pub-journal">In: <em>Actividad Física y Ejercicio en Salud y Enfermedad</em>, 415–426. Mediterráneo</p>
+    <a href="images/chapters/enfermedades-cronicas-politicas.jpg" target="_blank" rel="noopener" class="chapter-thumb-link">
+      <img class="chapter-thumb" src="images/chapters/enfermedades-cronicas-politicas.jpg" alt="First page of chapter: Enfermedades Crónicas No Transmisibles, Actividad Física y Políticas Públicas" loading="lazy"
+           onerror="this.parentElement.remove()">
+    </a>
+    <p class="pub-actions">
+      <a class="btn" href="https://scholar.google.com/scholar?q=%22Enfermedades+Cr%C3%B3nicas+No+Transmisibles%2C+Actividad+F%C3%ADsica+y+Pol%C3%ADticas+P%C3%BAblicas%22" target="_blank" rel="noopener">Google Scholar</a>
+      <button class="btn btn-cite" data-cite="Droppelmann G. Enfermedades Crónicas No Transmisibles, Actividad Física y Políticas Públicas. In: Actividad Física y Ejercicio en Salud y Enfermedad, 415–426. Mediterráneo, 2017.">Cite</button>
+    </p>
+  </div>
+</li>
+</ul>
+
+</main>
+</div>
+<footer class="site-footer">
+  <div class="footer-owl"><svg class="owl owl-footer" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 26c0-5-1.5-9-1.5-13.5L21 18c3.5-1.5 7-2 11-2s7.5.5 11 2l10.5-5.5C53.5 17 52 21 52 26c0 15-7.5 26-20 26S12 41 12 26z"/><circle cx="24.5" cy="28" r="5.5"/><circle cx="39.5" cy="28" r="5.5"/><circle cx="24.5" cy="28" r="1" fill="currentColor"/><circle cx="39.5" cy="28" r="1" fill="currentColor"/><path d="M32 34.5l-3.5 5h7z"/></svg></div>
+  <p>© 2026 Guillermo Droppelmann · <a href="https://scholar.google.com/citations?user=iH3HgpwAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://www.linkedin.com/in/guillermo-droppelmann-3b06b7385/" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+<script>
+document.addEventListener('click', function(e){
+  var b = e.target.closest('.btn-cite');
+  if(!b) return;
+  navigator.clipboard.writeText(b.dataset.cite).then(function(){
+    var t = b.textContent; b.textContent = '✓ Copied';
+    setTimeout(function(){ b.textContent = t; }, 1600);
+  });
+});
+</script>
+</body>
+</html>
