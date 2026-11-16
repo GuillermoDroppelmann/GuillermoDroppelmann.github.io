@@ -220,12 +220,8 @@ body{font-size:17px;line-height:1.7;color:var(--ink);
 .talk-year{font-family:var(--mono);letter-spacing:.08em;}
 
 /* ---- scroll reveal ---- */
-.reveal{opacity:0;transform:translateY(14px);
-  transition:opacity .7s var(--ease),transform .7s var(--ease);}
-.reveal.in{opacity:1;transform:none;}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto;}
-  .reveal{opacity:1;transform:none;transition:none;}
   .avatar,.pub,.consult-card,.btn{transition:none;}
 }
 
