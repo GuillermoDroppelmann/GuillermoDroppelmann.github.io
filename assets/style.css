@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
 :root{
   --navy:#0e2a4e; --navy-2:#143a6b; --accent:#2f6fdb; --accent-soft:#e8f0fd;
   --text:#25313f; --muted:#5c6b7a; --line:#e3e8ee; --bg:#fff; --bg-soft:#f6f8fb;
@@ -131,7 +131,7 @@ ul.talk-list{list-style:none;margin-left:0;}
    ============================================================ */
 
 :root{
-  --display:'Fraunces',Georgia,serif;
+  --display:'Lora',Georgia,serif;
   --mono:'JetBrains Mono',ui-monospace,monospace;
   --ink:#16202c;
   --rule:#dfe5ec;
@@ -172,8 +172,7 @@ body{font-size:17px;line-height:1.7;color:var(--ink);
 /* ---- sidebar ---- */
 .avatar{box-shadow:var(--shadow-md);transition:transform .45s var(--ease);}
 .avatar:hover{transform:translateY(-3px) scale(1.015);}
-.author-name{font-family:var(--display);font-weight:500;letter-spacing:-.015em;
-  font-variation-settings:'opsz' 96;}
+.author-name{font-family:var(--display);font-weight:500;letter-spacing:-.015em;}
 .author-bio{color:var(--muted);font-size:.95em;}
 .author-links a{transition:color .2s var(--ease),transform .2s var(--ease);
   display:inline-block;}
@@ -181,8 +180,7 @@ body{font-size:17px;line-height:1.7;color:var(--ink);
 
 /* ---- typography ---- */
 .content h1{font-family:var(--display);font-weight:400;
-  font-size:clamp(2.1rem,4.6vw,3.1rem);line-height:1.08;letter-spacing:-.025em;
-  font-variation-settings:'opsz' 144;margin-bottom:.45em;}
+  font-size:clamp(1.85rem,3.4vw,2.5rem);line-height:1.15;letter-spacing:-.015em;margin-bottom:.45em;}
 .content h2{font-family:var(--display);font-weight:500;font-size:1.35em;
   letter-spacing:-.01em;border-left:none;padding-left:0;
   margin:2.6em 0 1em;padding-bottom:.45em;border-bottom:1px solid var(--rule);
@@ -191,8 +189,7 @@ body{font-size:17px;line-height:1.7;color:var(--ink);
   transform:translateY(-.28em);}
 .content h3{font-family:var(--display);font-weight:500;}
 .lead{font-family:var(--display);font-weight:300;
-  font-size:clamp(1.08rem,1.5vw,1.26rem);line-height:1.6;color:#33414f;
-  font-variation-settings:'opsz' 144;}
+  font-size:clamp(1.02rem,1.2vw,1.13rem);line-height:1.65;color:#33414f;}
 .content p{max-width:68ch;}
 .content ul li{margin-bottom:.5em;}
 .content a{text-decoration:none;
