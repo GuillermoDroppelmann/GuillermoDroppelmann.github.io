@@ -90,6 +90,7 @@ ul.talk-list{list-style:none;margin-left:0;}
 .tt-symposium{background:var(--chip-symposium);color:var(--chip-symposium-t);}
 .tt-seminar{background:var(--chip-seminar);color:var(--chip-seminar-t);}
 .tt-workshop{background:var(--chip-workshop);color:var(--chip-workshop-t);}
+.tt-poster{background:#f1e9fb;color:#6d3fb5;}
 .talk-title{font-weight:600;}
 .talk-meta{font-size:.88em;color:var(--muted);}
 .upcoming-box{background:linear-gradient(120deg,var(--accent-soft),#f2f7ff);border:1.5px dashed var(--accent);
